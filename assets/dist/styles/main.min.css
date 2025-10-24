@@ -9027,7 +9027,9 @@ body .g-button.button:hover, body .g-button.button.active {
 .fc-wrapper .fc-section.fc-section-image,
 .fc-page-header .fc-section.fc-section-image {
   background: rgba(6, 47, 110, 0.66);
+  background: rgba(6, 47, 110, 0.66);
   position: relative;
+  background-blend-mode: multiply;
   background-blend-mode: multiply;
 }
 .fc-wrapper .fc-section.fc-section-image img.fc-section-background-image,
