@@ -7,10 +7,10 @@
 
 // Custom Fonts - Get more fonts here https://fonts.google.com/ and add to lib/setup.php
 
-$sourceSans: "Source Sans 3", sans-serif;
+$avenirNext: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
 $fontawesome: "Font Awesome 6 Free";
 
-$sans:      $sourceSans;
+$sans:      $avenirNext;
 $serif:     $sans;
 
 ///////////////////////////////////////////////
@@ -33,15 +33,17 @@ $grey-border: $gray-border;
 $white:       #ffffff;
 
 // Brand Colors - Set the brand colors here
-$yellow:       #FBA919;
+$yellow:     #FBA919;
+$blue:       #579DBB;
+$navy:       #072F6E;
 $black:      #000000;
 
 $lightGrade: linear-gradient(0deg, rgba(255, 255, 255, 0.00) -6.56%, #EDF4FA 88.2%);
 $darkGrade: linear-gradient(270deg, rgba(0, 43, 73, 0.70) -5%, rgba(0, 34, 57, 0.70) 70%);
 
 
-$primary: $yellow;
-$secondary: $dark-gray;
+$primary: $navy;
+$secondary: $blue;
 $dark: darken($primary, 10%);
 
 ///////////////////////////////////////////////
@@ -72,7 +74,7 @@ $nav-font-size: 15px;
 // Headers
 $header-color: $primary;
 $header-font:  $sans;
-$header-weight: 800;
+$header-weight: 500;
 
 // Anchors
 $anchor-color: $secondary;
@@ -240,7 +242,7 @@ $header-styles: (
   ),
   large: (
     'h1': ('font-size': 46),
-    'h2': ('font-size': 34),
+    'h2': ('font-size': 32),
     'h3': ('font-size': 24),
     'h4': ('font-size': 22),
     'h5': ('font-size': 18),

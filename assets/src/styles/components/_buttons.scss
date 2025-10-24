@@ -1,57 +1,89 @@
+// .button,
+// .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
+// .wpfFilterButton.wpfButton {
+// 	background-color: $primary;
+// 	border-radius: 2px;
+//   border: none;
+// 	color: $white;
+// 	font-family: $sans;
+// 	font-size: 13px !important;
+// 	font-weight: 600;
+//   letter-spacing: .75px;
+// 	margin: 1rem 0 0 0;
+//   min-height: 24px;
+// 	padding: 8px 16px 8px 16px;
+// 	text-transform: uppercase;
+//   text-align: center;
+
+//   i {
+//     margin-left: 11px;
+//     //font-size: 10px;
+//   }
+
+// 	&:hover, &.active {
+// 		background-color: darken($primary,7%);
+//     color: #fff !important;
+// 	}
+
+
+
+// }
+
 .button,
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
 .wpfFilterButton.wpfButton {
-	background-color: $primary;
-	border-radius: 2px;
-  border: none;
-	color: $white;
-	font-family: $sans;
-	font-size: 13px !important;
-	font-weight: 600;
-  letter-spacing: .75px;
-	margin: 1rem 0 0 0;
-  min-height: 24px;
-	padding: 8px 16px 8px 16px;
-	text-transform: uppercase;
-  text-align: center;
-
-  i {
-    margin-left: 11px;
-    //font-size: 10px;
-  }
-
-	&:hover, &.active {
-		background-color: darken($primary,7%);
-    color: #fff !important;
-	}
-
-  &.grey {
-		background-color: #f3f3f3;
-		color: $primary !important;
-
-		&:hover, &.active {
-      background-color: $primary;
-			color: #fff !important;
-		}
-
-	}
-
-  &.button-arrow {
-    padding-right: 40px;
+  
+  padding: 6px 16px 11px 16px;
+  position: relative;
+  color:#fff;
+  
+  &:after {
+    color: #fff;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13" fill="none"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="white"/><path d="M0 5.86865H13.5" stroke="white"/></svg>');
+    font-family: $fontawesome;
+    font-weight: 900;
     position: relative;
-    
-    &:after {
-      color: #fff;
-      content: "\f178";
-      font-family: $fontawesome;
-      font-weight: 900;
-      position: absolute;
-      right: 15px;
-      top: 7.5px;
-    }
-
+    display: inline-block;
   }
 
+}
+
+a.button.button-primary{
+  background-color: $primary !important;
+  color:#fff !important;
+
+  &:hover, &.active {
+    background-color: darken($primary,7%);
+    color: #fff !important;
+  }
+}
+
+a.button.button-secondary{
+  background-color: #fff !important;
+  color:$primary !important;
+
+  &:after{
+    color: $primary;
+  }
+
+  &:hover, &.active {
+    background-color: $primary !important;
+    color: #fff !important;
+    &:after{
+      color: $white;
+    }
+    
+  }
+
+  
 }
 
 

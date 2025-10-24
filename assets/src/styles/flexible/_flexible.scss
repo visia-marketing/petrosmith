@@ -33,8 +33,9 @@
     }
 
     &.fc-section-image {
-      background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+      background: rgba(6, 47, 110, 0.66); // radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
       position: relative;
+      background-blend-mode: multiply;
 
       img.fc-section-background-image {
         height: 100%;
@@ -64,7 +65,7 @@
     }
 
     & p:has(.g-section-subtitle){
-      margin-bottom: 0;
+      margin-bottom: 12px;
 
       & + h2{
         padding-top: 0;
@@ -90,7 +91,7 @@ body *{
     background-color: $white;
   
     //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
-    & * {
+    & *:not(h1, h2, h3, h4, h5, h6, p, a,.button, .g-style-section-title, .g-style-section-heading, .g-section-subtitle)  {
       color: $black;
     }
   
@@ -100,12 +101,11 @@ body *{
   
   }
   
-  & .fc-section-dark,
-  & .fc-section-light {
-    background-color: $black;
+  & .fc-section-dark {
+    background-color: $navy;
   
     //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
-    & * {
+    & *:not(a.button)  {
       color: #fff;
     }
   
@@ -123,7 +123,7 @@ body *{
   }
 
   & .background--image.background--light{
-    & * {
+    & *:not(a.button) {
       color: $black;
     }
   }
