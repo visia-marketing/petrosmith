@@ -8,6 +8,9 @@ module.exports = {
         main: [
             './assets/src/scripts/main.js',
             './assets/src/styles/main.scss'
+        ],
+        admin: [
+            './assets/src/styles/admin.scss'
         ]
     },
     devtool: 'source-map',

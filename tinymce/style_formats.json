@@ -6,20 +6,48 @@
     "wrapper": true
   },
   {
+    "title": "Section Subtitle Large",
+    "inline": "span",
+    "classes": "g-section-subtitle-large",
+    "wrapper": true
+  },
+  {
     "title": "Section Title",
     "inline": "span",
     "classes": "g-section-title",
     "wrapper": true
   },
   {
-    "title": "Large Number - Red",
+    "title": "Text Medium",
     "inline": "span",
-    "classes": "g-section-large-numbers",
+    "classes": "g-section-text-medium",
     "wrapper": true
   },
   {
-    "title": "Button with Arrow",
+    "title": "Large Impactful Text",
+    "inline": "span",
+    "classes": "g-section-impact-text",
+    "wrapper": true
+  },
+  {
+    "title": "Medium Impactful Text",
+    "inline": "span",
+    "classes": "g-section-med-impact-text",
+    "wrapper": true
+  },
+  {
+    "title": "Blue Text Highlight",
+    "inline": "span",
+    "classes": "g-section-blue-highlight",
+  },
+  {
+    "title": "Button Primary (dark)",
     "selector": "a",
-    "classes": "button button-arrow"
+    "classes": "g-button button button-primary"
+  },
+  {
+    "title": "Button Secondary (light)",
+    "selector": "a",
+    "classes": "g-button button button-secondary"
   }
 ]
