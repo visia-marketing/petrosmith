@@ -98,7 +98,7 @@ body *{
     background-color: $white;
   
     //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
-    & *:not(h1, h2, h3, h4, h5, h6, p, a,.button, .g-style-section-title, .g-style-section-heading, .g-section-subtitle)  {
+    & *:not(h1, h2, h3, h4, h5, h6, p, a,.button, [class^="g-"])  {
       color: $black;
     }
   

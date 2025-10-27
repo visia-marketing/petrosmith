@@ -36,49 +36,60 @@
   padding: 6px 16px 11px 16px;
   position: relative;
   color:#fff;
+  text-decoration: none !important;
+  border: 1px solid $primary;
   
   &:after {
     color: #fff;
     content: "";
-    width: 1rem;
-    height: 1rem;
-    margin-left: 2rem;
-    margin-top: 0.5rem;
+    width: 14px;
+    height: 14px;
+    margin-left: 1.5rem;
+    margin-top: 0rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13" fill="none"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="white"/><path d="M0 5.86865H13.5" stroke="white"/></svg>');
     font-family: $fontawesome;
     font-weight: 900;
-    position: relative;
+    position: absolute;
     display: inline-block;
   }
 
 }
 
 a.button.button-primary{
-  background-color: $primary !important;
-  color:#fff !important;
+  background-color: $primary;
+  color:#fff;
 
   &:hover, &.active {
-    background-color: darken($primary,7%);
-    color: #fff !important;
+    background-color: #fff;
+    color: $primary;
+
+    &:after{
+      background-image: url('data:image/svg+xml,<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="%23062F6E"/><path d="M0 5.86865H13.5" stroke="%23062F6E"/></svg>');
+    }
   }
 }
 
 a.button.button-secondary{
-  background-color: #fff !important;
-  color:$primary !important;
+  background-color: #fff;
+  color:$primary;
 
   &:after{
     color: $primary;
+    position: absolute;
+    background-image: url('data:image/svg+xml,<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="%23062F6E"/><path d="M0 5.86865H13.5" stroke="%23062F6E"/></svg>');
   }
 
   &:hover, &.active {
-    background-color: $primary !important;
-    color: #fff !important;
+    background-color: $primary;
+    color: #fff;
+    
     &:after{
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13" fill="none"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="white"/><path d="M0 5.86865H13.5" stroke="white"/></svg>');
       color: $white;
+      position: absolute;
     }
     
   }

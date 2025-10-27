@@ -81,35 +81,34 @@ body{
   
     &-button.button {
       margin-right: 10px;
-      background-color: transparent;
-      border-radius: 2px;
-      border: 1px solid $black;
-      color: $black;
       display: inline-block;
-      font-family: $sans;
       font-size: 14px !important;
-      font-weight: 600;
       margin-top: 1rem;
-      letter-spacing: 1.5px;
-      padding: 8px 54px 8px 20px;
+      padding: 8px 54px 8px 16px;
       position:relative;
-      // text-transform: uppercase;
   
-      a {
-        position: relative;
-      }
+      // a {
+      //   position: relative;
+      // }
 
   
-      i {
-        margin-left: 14px;
-        //font-size: 10px;
-      }
+      // i {
+      //   margin-left: 14px;
+      //   //font-size: 10px;
+      // }
   
-      &:hover, &.active {
-        background-color: darken($primary,7%);
-        color: #fff;
-      }
+      // &:hover, &.active {
+      //   background-color: darken($primary,7%);
+      //   color: #fff;
+      // }
   
+    }
+
+    &-section-max-width-1024{
+      max-width: 1024px;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
     }
   
   }
