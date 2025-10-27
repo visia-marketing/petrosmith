@@ -8749,6 +8749,43 @@ body .g-section-max-width-1024 {
   padding-right: 0.9rem;
   padding-left: 0.9rem;
 }
+.fc-section-cards .cards-style--primary .content-cards {
+  position: relative;
+  overflow: hidden;
+}
+.fc-section-cards .cards-style--primary .content-cards img {
+  margin-bottom: 0;
+  aspect-ratio: 4/3;
+}
+.fc-section-cards .cards-style--primary .content-cards:hover .card-content {
+  top: 0;
+}
+.fc-section-cards .cards-style--primary .content-cards:hover .card-content p {
+  opacity: 1;
+}
+.fc-section-cards .cards-style--primary .content-cards .card-content {
+  position: absolute;
+  top: calc(100% - 4.75rem);
+  padding: 1.7rem;
+  background: rgba(6, 47, 110, 0.8);
+  transition: all 0.5s ease;
+  height: 100%;
+}
+.fc-section-cards .cards-style--primary .content-cards .card-content * {
+  color: #ffffff;
+}
+.fc-section-cards .cards-style--primary .content-cards .card-content a {
+  text-decoration: none;
+  font-size: 1.125rem;
+}
+.fc-section-cards .cards-style--primary .content-cards .card-content h3 {
+  padding-bottom: 0;
+}
+.fc-section-cards .cards-style--primary .content-cards .card-content p {
+  opacity: 0;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
 .fc-section-cards .content-cards img {
   aspect-ratio: 3/2;
   -o-object-fit: cover;
@@ -9108,43 +9145,8 @@ body * .background--image.background--dark * {
 .fc-section-cta {
   padding: 80px 0;
 }
-.fc-section-cta:after {
-  content: "";
-  position: absolute;
-  left: 10%;
-  top: 0;
-  height: 150%;
-  width: 300px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-}
-.fc-section-cta .flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-@media print, screen and (min-width: 40em) {
-  .fc-section-cta .flex {
-    flex-direction: row;
-    gap: 50px;
-  }
-}
-.fc-section-cta .flex h6 {
-  font-size: 22px;
-  margin-bottom: 0;
-  text-align: center;
-}
-@media print, screen and (min-width: 40em) {
-  .fc-section-cta .flex h6 {
-    flex-direction: row;
-    text-align: left;
-  }
-}
-.fc-section-cta .flex .button {
-  margin: 0;
+.fc-section-cta h2 {
+  padding-top: 0 !important;
 }
 
 .home-page .home-hero .home-hero-slides {
