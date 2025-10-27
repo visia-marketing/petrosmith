@@ -36,9 +36,14 @@
     "wrapper": true
   },
   {
+    "title": "max-width 1024px",
+    "inline": "span",
+    "classes": "g-section-max-width-1024"
+  },
+  {
     "title": "Blue Text Highlight",
     "inline": "span",
-    "classes": "g-section-blue-highlight",
+    "classes": "g-section-blue-highlight"
   },
   {
     "title": "Button Primary (dark)",

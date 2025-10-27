@@ -35,8 +35,9 @@ $white:       #ffffff;
 
 // Brand Colors - Set the brand colors here
 $yellow:     #FBA919;
+$navy:       #062F6E;
+$cadet:      #072F6E;
 $blue:       #579DBB;
-$navy:       #072F6E;
 $black:      #000000;
 
 $lightGrade: linear-gradient(0deg, rgba(255, 255, 255, 0.00) -6.56%, #EDF4FA 88.2%);
@@ -242,7 +243,7 @@ $header-styles: (
     'h6': ('font-size': 16),
   ),
   large: (
-    'h1': ('font-size': 46),
+    'h1': ('font-size': 50),
     'h2': ('font-size': 32),
     'h3': ('font-size': 24),
     'h4': ('font-size': 22),
@@ -265,7 +266,7 @@ $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
 $anchor-color: $anchor-color; //$primary-color;
 $anchor-color-hover: $anchor-color-hover;
-$anchor-text-decoration: none;
+$anchor-text-decoration: underline;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
 $hr-border: 1px solid $medium-gray;

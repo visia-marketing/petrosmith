@@ -64,7 +64,7 @@
                   <?php echo esc_html($page_sub_heading); ?>
               </p>
               <?php endif; ?>
-              <h1 class="g-section-title">
+              <h1 class="">
                 <?php if ( $page_heading ): echo esc_html($page_heading); else: the_title(); endif; ?>
               </h1>
               <?php if ( !empty($page_heading_text) ): ?>
