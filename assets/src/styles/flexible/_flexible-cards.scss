@@ -5,6 +5,62 @@
         padding-left: 0.9rem;
     }
 
+    & .cards-style{
+        &--primary{
+            & .content-cards{
+                position: relative;
+                overflow: hidden;
+
+                & img{
+                    margin-bottom: 0;
+                    aspect-ratio: 4/3;
+                }
+
+                &:hover{
+                    & .card-content{
+                        top: 0;
+
+                        & p{
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                & .card-content{
+                    position: absolute;
+                    top: calc( 100% - 4.75rem);
+                    padding: 1.7rem;
+                    background: rgba(6, 47, 110, 0.80);
+                    transition: all 0.5s ease;
+                    height: 100%;
+
+                    
+                    & *{
+                        color: $white;
+                    }
+
+                    & a{
+                        text-decoration: none;
+                        font-size: 1.125rem;
+                    }
+
+                    & h3{
+                        padding-bottom: 0;
+                    }
+
+                    & p{
+                        opacity: 0;
+                        margin-bottom: 0;
+                        padding-bottom: 1rem;
+                    }
+                }
+
+
+
+            }
+        }
+    }
+
     & .content-cards{
 
         & img{

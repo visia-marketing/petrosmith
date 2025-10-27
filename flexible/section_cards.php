@@ -1,8 +1,9 @@
 <?php
 $cards = get_sub_field('cards');
 $per_row = get_sub_field('cards_per_row');
+$card_style = get_sub_field('card_style');
 
-$class = 'columns cards';
+$class = 'columns cards cards-style--'.$card_style;
 
 switch ($per_row) {
     case 2:
@@ -42,28 +43,30 @@ switch ($per_row) {
                 <?php endif; ?>
             </div>
 
-            <h3 class="card-title">
-                <a href="<?php echo $card['card_link']; ?>">
-                    <?php echo $card['card_title']; ?>
-                </a>
-            </h3>
-        
-            <p class="card-p">
-                <?php echo $card['card_description']; ?>
-            </p>
+            <div class="card-content">
 
-            <?php if( array_key_exists( 'card_link', $card) ): ?>
-                <?php if( is_array( $card['card_link']) ): ?>
-                    <a href="<?php echo $card['card_link']['url']; ?>">
-                        <?php if($card['card_link']['title']): ?>
-                            <?php echo $card['card_link']['title']; ?>
-                        <?php else: ?>
-                            Read More
-                        <?php endif; ?>
+                <h3 class="card-title">
+                    <a href="<?php echo $card['card_link']; ?>">
+                        <?php echo $card['card_title']; ?>
                     </a>
-                <?php endif; ?>
-            <?php endif; ?>
+                </h3>
+            
+                <p class="card-p">
+                    <?php echo $card['card_description']; ?>
+                </p>
 
+                <?php if( array_key_exists( 'card_link', $card) ): ?>
+                    <?php if( is_array( $card['card_link']) ): ?>
+                        <a href="<?php echo $card['card_link']['url']; ?>">
+                            <?php if($card['card_link']['title']): ?>
+                                <?php echo $card['card_link']['title']; ?>
+                            <?php else: ?>
+                                Read More
+                            <?php endif; ?>
+                        </a>
+                    <?php endif; ?>
+                <?php endif; ?>
+            </div>
         
         </div>
       </div>
