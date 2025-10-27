@@ -14,11 +14,6 @@ body{
       font-weight: 700;
       line-height: 1;
       margin-bottom: 0px;
-      //text-transform: uppercase;
-  
-      @include breakpoint(medium) {
-        font-size: 1.375rem;
-      }
   
     }
 
@@ -66,14 +61,14 @@ body{
     &-section-impact-text {
       font-size: 3.125rem;
       font-style: normal;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 3.4375rem;
     }
   
     &-section-med-impact-text {
       font-size: 2.7rem;
       font-style: normal;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 3.125rem;
     }
   
@@ -103,18 +98,7 @@ body{
       a {
         position: relative;
       }
-  
-      // &:before {
-      //   font-family: $fontawesome;
-      //   content: "\f054";
-      //   font-weight: 900;
-      //   position: absolute;
-      //    top: 8px;
-      //    right: 14px;
-      //   height: 30px;
-      //   font-size: 14px;
-      //   width: 8px;
-      // }
+
   
       i {
         margin-left: 14px;
