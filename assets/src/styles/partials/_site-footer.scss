@@ -15,6 +15,11 @@ body .main-footer {
     padding-top: 2.6rem;
   }
 
+  & > .row:nth-child(2){
+    border-top: 1px solid $white;
+    padding-top: 2.6rem;
+  }
+
   a {
     color: #fff;
 
@@ -31,6 +36,17 @@ body .main-footer {
     align-items: start;
     max-width: 320px;
     gap: 1.5rem;
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(small) {
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+      text-align: center;
+    }
+
+    
   }
 
   .footer-menu {
@@ -109,6 +125,7 @@ body .main-footer {
   .footer-cta{
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 2.5rem;
   }
 
   a.footer-cta-button{

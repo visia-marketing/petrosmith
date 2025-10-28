@@ -10,14 +10,14 @@ $top-header-link-color: $top-header-link-color;
 
 .main-header {
   background-color: $header-background;
-  height: 50px;
+  //height: 50px;
   padding: 0;
   position: relative;
   width: 100%;
   z-index: 9;
 
   @include breakpoint(large) {
-    height: 128px;
+    height: 92px;
   }
 
   .row, .row > .columns {
@@ -59,7 +59,7 @@ $top-header-link-color: $top-header-link-color;
       //height: 19px;
       width: 100%;
       vertical-align: middle;
-      max-height: 100%;
+      max-height: 60px;
 
       @include breakpoint(medium) {
         //height: 34px;
@@ -95,6 +95,8 @@ $top-header-link-color: $top-header-link-color;
         height: 100%;
         display: flex;
         align-items: center;
+        font-family: $condensed;
+        text-transform: uppercase;
 
         @include breakpoint(medium) {
           //display: inline-block;
@@ -103,7 +105,7 @@ $top-header-link-color: $top-header-link-color;
         > a {
           color: $main-header-link-color;
           font-size: 15px;
-          font-weight: 700;
+          font-weight: 600;
           padding: 0 0;
           position: relative;
           text-decoration: none;
@@ -222,22 +224,22 @@ $top-header-link-color: $top-header-link-color;
           border-radius: 2px;
           border: none;
           color: $white;
-          font-family: $sans;
-          font-size: 14px !important;
+          //font-family: $sans;
+          //font-size: 14px !important;
           font-weight: 600;
           letter-spacing: 1px;
-          padding: 8px 40px 8px 16px;
+          padding: 8px 16px 8px 16px;
           text-transform: uppercase;
           position: relative;
 
-          &:after {
-            color: #fff;
-            content: "\f178";
-            font-family: $fontawesome;
-            font-weight: 900;
-            position: absolute;
-            right: 15px;
-          }
+          // &:after {
+          //   color: #fff;
+          //   content: "\f178";
+          //   font-family: $fontawesome;
+          //   font-weight: 900;
+          //   position: absolute;
+          //   right: 15px;
+          // }
 
           a {
             color: #fff;
@@ -313,6 +315,8 @@ $top-header-link-color: $top-header-link-color;
 .top-header {
   background-color: $top-header-background;
   color: $top-header-color;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 
   .top-header-flex {
     display: flex;
@@ -368,13 +372,16 @@ $top-header-link-color: $top-header-link-color;
 
     li {
       display: inline-block;
+      font-family: $condensed;
+      text-transform: uppercase;
 
       a {
         color: $top-header-link-color;
         display: inline-block;
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 40px;
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 600;
       }
 
       &.top-menu-fa-email,
