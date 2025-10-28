@@ -8821,6 +8821,9 @@ body .g-section-max-width-1024 {
 .fc-section-cards .cards-style--primary .content-cards .card-content * {
   color: #ffffff;
 }
+.fc-section-cards .cards-style--primary .content-cards .card-content a {
+  text-decoration: none !important;
+}
 .fc-section-cards .cards-style--primary .content-cards .card-content a.card-button {
   text-decoration: none;
   align-self: flex-end;
@@ -9207,8 +9210,9 @@ body * .background--image.background--dark * {
   color: #fff;
 }
 
-.fc-section-cta {
+.fc-section-cta .cta-link.row {
   padding: 80px 0;
+  display: flex;
 }
 .fc-section-cta h2 {
   padding-top: 0 !important;
@@ -9219,22 +9223,23 @@ body * .background--image.background--dark * {
   justify-content: center;
   gap: 3rem;
 }
-.fc-section-cta a.card-button {
+.fc-section-cta .card-button {
   text-decoration: none;
   align-self: center;
   background: #ffffff;
   display: flex;
   align-items: center;
   padding: 0.5rem 0.75rem;
+  display: inline-flex;
 }
-.fc-section-cta a.card-button .button-text {
+.fc-section-cta .card-button .button-text {
   width: 0;
   height: 0;
   overflow: hidden;
   padding: 0;
   margin: 0;
 }
-.fc-section-cta a.card-button .arrow {
+.fc-section-cta .card-button .arrow {
   width: 16px;
   height: 14px;
   display: inline-block;
