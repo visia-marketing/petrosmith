@@ -33,6 +33,13 @@ switch ($per_row) {
       <div class="<?php echo $class; ?>">
         <div class="content content-cards" data-equalizer-watch>
 
+        <?php if( array_key_exists( 'card_link', $card) ): ?>
+            <?php if( is_array( $card['card_link']) ): ?>
+                <a href="<?php echo $card['card_link']['url']; ?>" class="card-link-wrapper" aria-label="<?php echo $card['card_title']; ?>">
+            <?php endif; ?>
+        <?php endif; ?>
+
+
             <div class="card-image">
                 <?php $image = wp_get_attachment_image($card['card_icon'], 'thumbnail'); ?>
                 
@@ -45,10 +52,10 @@ switch ($per_row) {
 
             <div class="card-content">
 
+                    
+
                 <h3 class="card-title">
-                    <a href="<?php echo $card['card_link']; ?>">
-                        <?php echo $card['card_title']; ?>
-                    </a>
+                    <?php echo $card['card_title']; ?>
                 </h3>
             
                 <p class="card-p">
@@ -72,6 +79,13 @@ switch ($per_row) {
                     <?php endif; ?>
                 <?php endif; ?>
             </div>
+
+
+            <?php if( array_key_exists( 'card_link', $card) ): ?>
+                <?php if( is_array( $card['card_link']) ): ?>
+                    </a>
+                <?php endif; ?>
+            <?php endif; ?>
         
         </div>
       </div>

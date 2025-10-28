@@ -43,34 +43,43 @@ if ( $source === 'default' ){
 
 <div class="fc-section-cta fc-section-columns call-to-action call-to-action--<?php echo $source;?> call-to-action-<?php echo $background; ?> background--<?php echo $background;?> background--<?php echo $content_color;?>" id="<?php echo $cta_id; ?>">
 
-    <div class="call-to-action--inner row">
-
-        <div class="column small-12 large-10 large-offset-1">
-            <?php echo $content; ?>
+    <div class="call-to-action--inner ">
 
 
-            <?php if( is_array($button) ): ?>
-                <?php if( array_key_exists('url', $button) ): ?>
-                    <a href="<?php echo $buttoncard['url']; ?>" class="card-button">
-                            <span class="button-text">
-                                <?php if($cabuttonrd['title']): ?>
-                                    <?php echo $button['title']; ?>
-                                <?php else: ?>
-                                    Read More
-                                <?php endif; ?>
-                            </span>
-                            <div class="arrow">
+        <?php if( is_array( $button ) ): ?>
+            <?php if( array_key_exists( 'url', $button ) ): ?>
+                <a href="<?php echo $button['url']; ?>" class="cta-link row" aria-label="<?php echo $button['title']; ?>">
+            <?php else: ?>
+                <div class="cta-link row">
+            <?php endif; ?>
+        <?php endif; ?>
 
-                            </div>
-                        </a>
+            <div class="column small-12 large-10 large-offset-1">
+                <?php echo $content; ?>
+
+                <span class="card-button">
+                    <span class="button-text">
+                        <?php if($button['title']): ?>
+                            <?php echo $button['title']; ?>
+                        <?php else: ?>
+                            Read More
+                        <?php endif; ?>
+                    </span>
+                    <div class="arrow">
+
+                    </div>
+                </span>
+            </div>
+
+
+            <?php if( is_array( $button ) ): ?>
+                <?php if( array_key_exists( 'url', $button ) ): ?>
+                    </a>
+                <?php else: ?>
+                    </div>
                 <?php endif; ?>
             <?php endif; ?>
 
-        </div>
-
-        
-
-        
     </div>
 
 </div>
