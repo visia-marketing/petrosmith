@@ -49,9 +49,9 @@ if ( $source === 'default' ){
         <?php if( is_array( $button ) ): ?>
             <?php if( array_key_exists( 'url', $button ) ): ?>
                 <a href="<?php echo $button['url']; ?>" class="cta-link row" aria-label="<?php echo $button['title']; ?>">
-            <?php else: ?>
-                <div class="cta-link row">
             <?php endif; ?>
+        <?php else: ?>
+            <div class="cta-link row">
         <?php endif; ?>
 
             <div class="column small-12 large-10 large-offset-1">
@@ -59,11 +59,14 @@ if ( $source === 'default' ){
 
                 <span class="card-button">
                     <span class="button-text">
-                        <?php if($button['title']): ?>
-                            <?php echo $button['title']; ?>
+                        <?php if( is_array( $button ) ): ?>
+                            <?php if( array_key_exists( 'title', $button ) ): ?>
+                                <?php echo $button['title']; ?>
+                            <?php endif; ?>
                         <?php else: ?>
-                            Read More
+                                Read More
                         <?php endif; ?>
+
                     </span>
                     <div class="arrow">
 
@@ -75,9 +78,9 @@ if ( $source === 'default' ){
             <?php if( is_array( $button ) ): ?>
                 <?php if( array_key_exists( 'url', $button ) ): ?>
                     </a>
-                <?php else: ?>
-                    </div>
                 <?php endif; ?>
+            <?php else: ?>
+                </div>
             <?php endif; ?>
 
     </div>
