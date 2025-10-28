@@ -6585,7 +6585,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
 .fc-page-header img.page-header-image {
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   top: 50%;
@@ -8806,34 +8806,84 @@ body .g-section-max-width-1024 {
   padding-left: 0;
 }
 .column-gap--1 .columns:first-child {
-  padding-right: 1rem;
+  padding-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .column-gap--1 .columns:first-child {
+    padding-right: 1rem;
+  }
 }
 .column-gap--1 .columns:last-child {
-  padding-left: 1rem;
+  padding-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .column-gap--1 .columns:last-child {
+    padding-left: 1rem;
+  }
 }
 .column-gap--2 .columns:first-child {
-  padding-right: 2rem;
+  padding-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .column-gap--2 .columns:first-child {
+    padding-right: 2rem;
+  }
 }
 .column-gap--2 .columns:last-child {
-  padding-left: 2rem;
+  padding-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .column-gap--2 .columns:last-child {
+    padding-right: 2rem;
+  }
 }
 .column-gap--3 .columns:first-child {
-  padding-right: 3rem;
+  padding-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .column-gap--3 .columns:first-child {
+    padding-right: 3rem;
+  }
 }
 .column-gap--3 .columns:last-child {
-  padding-left: 3rem;
+  padding-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .column-gap--3 .columns:last-child {
+    padding-left: 3rem;
+  }
 }
 .column-gap--4 .columns:first-child {
-  padding-right: 4rem;
+  padding-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .column-gap--4 .columns:first-child {
+    padding-right: 4rem;
+  }
 }
 .column-gap--4 .columns:last-child {
-  padding-left: 4rem;
+  padding-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .column-gap--4 .columns:last-child {
+    padding-left: 4rem;
+  }
 }
 .column-gap--5 .columns:first-child {
-  padding-right: 5rem;
+  padding-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .column-gap--5 .columns:first-child {
+    padding-right: 5rem;
+  }
 }
 .column-gap--5 .columns:last-child {
-  padding-left: 5rem;
+  padding-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .column-gap--5 .columns:last-child {
+    padding-right: 5rem;
+  }
 }
 
 .column-align--flex-end.columns .content {
@@ -8845,6 +8895,11 @@ body .g-section-max-width-1024 {
 .fc-section-cards .cards {
   padding-right: 0.9rem;
   padding-left: 0.9rem;
+}
+@media screen and (max-width: 768px) {
+  .fc-section-cards .cards {
+    margin-bottom: 2rem;
+  }
 }
 .fc-section-cards .cards-style--primary .content-cards {
   position: relative;
