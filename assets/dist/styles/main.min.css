@@ -6908,7 +6908,6 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
 */
 .main-header {
   background-color: #e6e6e6;
-  height: 50px;
   padding: 0;
   position: relative;
   width: 100%;
@@ -6916,7 +6915,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
 }
 @media print, screen and (min-width: 64em) {
   .main-header {
-    height: 128px;
+    height: 92px;
   }
 }
 .main-header .row, .main-header .row > .columns {
@@ -6956,7 +6955,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
 .main-header .main-logo img {
   width: 100%;
   vertical-align: middle;
-  max-height: 100%;
+  max-height: 60px;
 }
 .no-js .main-header .primary-navigation {
   display: none;
@@ -6980,11 +6979,13 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
     height: 100%;
     display: flex;
     align-items: center;
+    font-family: "Avenir Next Condensed", Avenir, "Canada Type Gibson", sans-serif;
+    text-transform: uppercase;
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li > a {
-    color: #000000;
+    color: #062F6E;
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 600;
     padding: 0 0;
     position: relative;
     text-decoration: none;
@@ -7002,7 +7003,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
     color: #579DBB;
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li.has-submenu > a {
-    color: #000000;
+    color: #062F6E;
     padding-right: 26px;
     position: relative;
   }
@@ -7071,21 +7072,11 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
     border-radius: 2px;
     border: none;
     color: #ffffff;
-    font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
-    font-size: 14px !important;
     font-weight: 600;
     letter-spacing: 1px;
-    padding: 8px 40px 8px 16px;
+    padding: 8px 16px 8px 16px;
     text-transform: uppercase;
     position: relative;
-  }
-  .main-header .primary-navigation-wrapper .primary-navigation > li:last-child a:after {
-    color: #fff;
-    content: "\f178";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    position: absolute;
-    right: 15px;
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li:last-child a a {
     color: #fff;
@@ -7110,7 +7101,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
     width: 62px;
   }
   .main-header .store-navigation-wrapper .store-navigation > li a {
-    color: #000000;
+    color: #062F6E;
     font-size: 20px;
     font-weight: 400;
     padding: 0 !important;
@@ -7132,8 +7123,10 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   }
 }
 .top-header {
-  background-color: #f3f3f3;
-  color: #000000;
+  background-color: #062F6E;
+  color: #ffffff;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .top-header .top-header-flex {
   display: flex;
@@ -7174,13 +7167,16 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
 }
 .top-header .top-header-navigation li {
   display: inline-block;
+  font-family: "Avenir Next Condensed", Avenir, "Canada Type Gibson", sans-serif;
+  text-transform: uppercase;
 }
 .top-header .top-header-navigation li a {
-  color: #000000;
+  color: #ffffff;
   display: inline-block;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 40px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
 }
 .top-header .top-header-navigation li.top-menu-fa-email, .top-header .top-header-navigation li.top-menu-fa-phone {
   position: relative;
@@ -7422,6 +7418,10 @@ body .main-footer > .row:first-child {
   border-top: 1px solid #ffffff;
   padding-top: 2.6rem;
 }
+body .main-footer > .row:nth-child(2) {
+  border-top: 1px solid #ffffff;
+  padding-top: 2.6rem;
+}
 body .main-footer a {
   color: #fff;
 }
@@ -7434,6 +7434,12 @@ body .main-footer .footer-logo {
   align-items: start;
   max-width: 320px;
   gap: 1.5rem;
+  margin-left: 0;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  text-align: center;
 }
 body .main-footer .footer-menu {
   list-style: none;
@@ -7493,6 +7499,7 @@ body .main-footer .footer-contact p {
 body .main-footer .footer-cta {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 2.5rem;
 }
 body .main-footer a.footer-cta-button {
   color: #062F6E;

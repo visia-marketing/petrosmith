@@ -57,13 +57,13 @@ $body-font-color: $black;
 
 
 // Top Bar
-$top-header-background: #f3f3f3;
-$top-header-color: $black;
-$top-header-link-color: $black;
+$top-header-background: $primary;
+$top-header-color: $white;
+$top-header-link-color: $white;
 
 // Main Header - this is confusing - header nav or headings
 $main-header-background: $light-gray;
-$main-header-link-color: $black;
+$main-header-link-color: $primary;
 $main-header-link-font: $sans;
 $main-header-button-background-color: $primary;
 $main-header-button-link-color: $white;

@@ -1,24 +1,24 @@
 <footer class="main-footer">
   <div class="row">   
-    <div class="small-12 medium-4 columns">
+    <div class="small-12 large-4 columns">
       <div class="footer-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php the_field('footer_logo', 'option');?>" alt="<?php bloginfo('name'); ?>"></a>
         <?php echo bloginfo('description'); ?>
       </div>
     </div>
-    <div class="small-12 medium-3 columns show-for-medium">   
+    <div class="small-12 medium-4 medium-offset-1 large-offset-0 large-3 columns">   
       <?php
       if (has_nav_menu('footer_navigation_1')) :
       wp_nav_menu(['theme_location' => 'footer_navigation_1', 'depth' => 2, 'menu_class' => 'footer-menu' ]); 
       endif;
       ?>
     </div>
-    <div class="small-12 medium-3 columns footer-contact">   
+    <div class="small-12 medium-4 medium-offset-1 large-offset-0 large-3 columns footer-contact">   
       <?php
       echo get_field( 'footer_contact_info', 'option' );
       ?>
     </div>
-    <div class="small-12 medium-2 columns footer-cta"> 
+    <div class="small-12 large-2 columns footer-cta"> 
       
       <?php if( get_field( 'footer_cta_button', 'option' ) ): ?>
         <?php 
@@ -31,7 +31,7 @@
       
       
     </div>
-    <div class="small-12 medium-3 columns">
+    <div class="small-12 large-3 columns">
       
     </div>
   </div>

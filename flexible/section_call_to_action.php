@@ -41,6 +41,14 @@ if ( $source === 'default' ){
         background-color: #072E6E;
         <?php endif; ?>
     }
+
+    @media screen and (max-width: 1500px){
+        <?php echo '#'.$cta_id; ?>.call-to-action-image {
+            <?php if( $image ): ?>
+            background-size: cover;
+            <?php endif; ?>
+        }
+    }
 </style>
 
 <div class="fc-section-cta fc-section-columns call-to-action call-to-action--<?php echo $source;?> call-to-action-<?php echo $background; ?> background--<?php echo $background;?> background--<?php echo $content_color;?>" id="<?php echo $cta_id; ?>">
