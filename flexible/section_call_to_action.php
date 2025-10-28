@@ -51,9 +51,18 @@ if ( $source === 'default' ){
 
             <?php if( is_array($button) ): ?>
                 <?php if( array_key_exists('url', $button) ): ?>
-                    <a href="<?php echo esc_url( $button['url'] ); ?>" class="button" <?php if( $button['target'] ): ?> target="<?php echo esc_attr( $button['target'] ); ?>" <?php endif; ?>>
-                        <?php echo esc_html( $button['title'] ); ?>
-                    </a>
+                    <a href="<?php echo $buttoncard['url']; ?>" class="card-button">
+                            <span class="button-text">
+                                <?php if($cabuttonrd['title']): ?>
+                                    <?php echo $button['title']; ?>
+                                <?php else: ?>
+                                    Read More
+                                <?php endif; ?>
+                            </span>
+                            <div class="arrow">
+
+                            </div>
+                        </a>
                 <?php endif; ?>
             <?php endif; ?>
 

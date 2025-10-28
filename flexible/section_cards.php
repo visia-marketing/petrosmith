@@ -57,12 +57,17 @@ switch ($per_row) {
 
                 <?php if( array_key_exists( 'card_link', $card) ): ?>
                     <?php if( is_array( $card['card_link']) ): ?>
-                        <a href="<?php echo $card['card_link']['url']; ?>">
-                            <?php if($card['card_link']['title']): ?>
-                                <?php echo $card['card_link']['title']; ?>
-                            <?php else: ?>
-                                Read More
-                            <?php endif; ?>
+                        <a href="<?php echo $card['card_link']['url']; ?>" class="card-button">
+                            <span class="button-text">
+                                <?php if($card['card_link']['title']): ?>
+                                    <?php echo $card['card_link']['title']; ?>
+                                <?php else: ?>
+                                    Read More
+                                <?php endif; ?>
+                            </span>
+                            <div class="arrow">
+
+                            </div>
                         </a>
                     <?php endif; ?>
                 <?php endif; ?>

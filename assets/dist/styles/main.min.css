@@ -8813,13 +8813,37 @@ body .g-section-max-width-1024 {
   background: rgba(6, 47, 110, 0.8);
   transition: all 0.5s ease;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .fc-section-cards .cards-style--primary .content-cards .card-content * {
   color: #ffffff;
 }
-.fc-section-cards .cards-style--primary .content-cards .card-content a {
+.fc-section-cards .cards-style--primary .content-cards .card-content a.card-button {
   text-decoration: none;
-  font-size: 1.125rem;
+  align-self: flex-end;
+  justify-self: flex-end;
+  margin-top: auto;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+}
+.fc-section-cards .cards-style--primary .content-cards .card-content a.card-button .button-text {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.fc-section-cards .cards-style--primary .content-cards .card-content a.card-button .arrow {
+  width: 16px;
+  height: 14px;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,<svg width=\"15\" height=\"13\" viewBox=\"0 0 15 13\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 11.8687L14 5.86865L8 0.368652\" stroke=\"%23062F6E\"/><path d=\"M0 5.86865H13.5\" stroke=\"%23062F6E\"/></svg>");
 }
 .fc-section-cards .cards-style--primary .content-cards .card-content h3 {
   padding-bottom: 0;
@@ -8828,6 +8852,7 @@ body .g-section-max-width-1024 {
   opacity: 0;
   margin-bottom: 0;
   padding-bottom: 1rem;
+  transition: opacity 0.5s ease;
 }
 .fc-section-cards .content-cards img {
   aspect-ratio: 3/2;
@@ -9187,6 +9212,34 @@ body * .background--image.background--dark * {
 }
 .fc-section-cta h2 {
   padding-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.fc-section-cta .column, .fc-section-cta .columns {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.fc-section-cta a.card-button {
+  text-decoration: none;
+  align-self: center;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+}
+.fc-section-cta a.card-button .button-text {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.fc-section-cta a.card-button .arrow {
+  width: 16px;
+  height: 14px;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,<svg width=\"15\" height=\"13\" viewBox=\"0 0 15 13\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 11.8687L14 5.86865L8 0.368652\" stroke=\"%23062F6E\"/><path d=\"M0 5.86865H13.5\" stroke=\"%23062F6E\"/></svg>");
 }
 
 .home-page .home-hero .home-hero-slides {

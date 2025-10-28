@@ -152,6 +152,39 @@ body *{
 
   & h2{
     padding-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  & .column{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+
+  a.card-button{
+      text-decoration: none;
+      align-self: center;
+      background: $white;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 0.75rem;
+
+      & .button-text{
+          width: 0;
+          height: 0;
+          overflow: hidden;
+          padding: 0;
+          margin: 0;
+      }
+
+      & .arrow{
+          width: 16px;
+          height: 14px;
+          display: inline-block;
+          background-size: cover;
+          background-image: url('data:image/svg+xml,<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="%23062F6E"/><path d="M0 5.86865H13.5" stroke="%23062F6E"/></svg>');
+      }
   }
 
 
