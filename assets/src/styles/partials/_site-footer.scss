@@ -1,13 +1,18 @@
 .main-footer {
   background: $footer-bg;
   color: $white;
-  padding: 2rem 0 2rem;
+  padding: 0 0 2rem;
   position: relative;
   text-align: center;
 
   @include breakpoint(medium) {
-    padding: 4rem 0 4rem;
+    padding: 0 0 4rem;
     text-align: left;
+  }
+
+  & > .row:first-child{
+    border-top: 1px solid $white;
+    padding-top: 2.6rem;
   }
 
   a {

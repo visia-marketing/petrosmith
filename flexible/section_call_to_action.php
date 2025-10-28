@@ -35,8 +35,10 @@ if ( $source === 'default' ){
     <?php echo '#'.$cta_id; ?>.call-to-action-image {
         <?php if( $image ): ?>
         background-image: url('<?php echo $image[0];?>');
-        background-size: cover;
+        background-size: contain;
         background-position: center;
+        background-repeat: no-repeat;
+        background-color: #072E6E;
         <?php endif; ?>
     }
 </style>

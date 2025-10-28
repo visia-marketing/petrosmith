@@ -7406,17 +7406,21 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
 }
 
 .main-footer {
-  background: #c8c8c8;
+  background: #062F6E;
   color: #ffffff;
-  padding: 2rem 0 2rem;
+  padding: 0 0 2rem;
   position: relative;
   text-align: center;
 }
 @media print, screen and (min-width: 40em) {
   .main-footer {
-    padding: 4rem 0 4rem;
+    padding: 0 0 4rem;
     text-align: left;
   }
+}
+.main-footer > .row:first-child {
+  border-top: 1px solid #ffffff;
+  padding-top: 2.6rem;
 }
 .main-footer a {
   color: #fff;
