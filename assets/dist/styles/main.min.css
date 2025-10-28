@@ -7405,7 +7405,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   margin: 0 9px;
 }
 
-.main-footer {
+body .main-footer {
   background: #062F6E;
   color: #ffffff;
   padding: 0 0 2rem;
@@ -7413,52 +7413,57 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   text-align: center;
 }
 @media print, screen and (min-width: 40em) {
-  .main-footer {
+  body .main-footer {
     padding: 0 0 4rem;
     text-align: left;
   }
 }
-.main-footer > .row:first-child {
+body .main-footer > .row:first-child {
   border-top: 1px solid #ffffff;
   padding-top: 2.6rem;
 }
-.main-footer a {
+body .main-footer a {
   color: #fff;
 }
-.main-footer a:hover {
+body .main-footer a:hover {
   text-decoration: underline;
 }
-.main-footer .footer-logo {
-  max-width: 200px;
-  margin: 0 auto 40px;
+body .main-footer .footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 320px;
+  gap: 1.5rem;
 }
-.main-footer .footer-menu {
+body .main-footer .footer-menu {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 2rem;
 }
-.main-footer .footer-menu li {
+body .main-footer .footer-menu li {
   padding: 0;
 }
-.main-footer .footer-menu li > a {
+body .main-footer .footer-menu li > a {
   color: #ffffff;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 30px;
-  padding: 0;
-  vertical-align: top;
+  font-family: Avenir;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.03438rem;
+  text-transform: uppercase;
+  text-decoration: none;
 }
-.main-footer .footer-menu li ul {
+body .main-footer .footer-menu li ul {
   list-style: none;
   margin: 0 0 30px;
   padding: 0;
 }
-.main-footer .footer-menu li ul li {
+body .main-footer .footer-menu li ul li {
   margin: 0;
   padding: 0;
 }
-.main-footer .footer-menu li ul li a {
+body .main-footer .footer-menu li ul li a {
   color: #ffffff;
   display: inline-block;
   font-size: 15px;
@@ -7467,10 +7472,41 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   padding: 11px 0;
   vertical-align: top;
 }
-.main-footer .footer-menu li ul li a:hover {
+body .main-footer .footer-menu li ul li a:hover {
   color: #062F6E;
 }
-.main-footer .footer-badges {
+body .main-footer .footer-contact {
+  margin-bottom: 2rem;
+}
+body .main-footer .footer-contact h3 {
+  margin-bottom: 1rem;
+}
+body .main-footer .footer-contact h3 a {
+  font-size: 0.9375rem;
+  line-height: 1.28231rem;
+  text-decoration: none;
+}
+body .main-footer .footer-contact p {
+  font-size: 0.9375rem;
+  line-height: 1.28231rem;
+}
+body .main-footer .footer-cta {
+  display: flex;
+  justify-content: flex-end;
+}
+body .main-footer a.footer-cta-button {
+  color: #062F6E;
+  font-family: "Avenir Next";
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;
+  padding: 0.5rem 1.25rem;
+}
+body .main-footer .footer-badges {
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
   margin-top: 50px;
   margin-bottom: 20px;
@@ -7481,12 +7517,12 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   width: 100%;
 }
 @media print, screen and (min-width: 40em) {
-  .main-footer .footer-badges {
+  body .main-footer .footer-badges {
     flex-direction: row;
     gap: 40px;
   }
 }
-.main-footer .footer-badges .badge {
+body .main-footer .footer-badges .badge {
   display: flex;
   gap: 10px;
   font-size: 14px;
@@ -7495,24 +7531,24 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   align-items: center;
 }
 @media print, screen and (min-width: 40em) {
-  .main-footer .footer-badges .badge {
+  body .main-footer .footer-badges .badge {
     justify-content: flex-start;
   }
 }
-.main-footer .footer-badges .badge a {
+body .main-footer .footer-badges .badge a {
   color: #fff;
 }
-.main-footer .footer-badges .badge a:hover {
+body .main-footer .footer-badges .badge a:hover {
   text-decoration: underline;
 }
-.main-footer .footer-badges .badge p {
+body .main-footer .footer-badges .badge p {
   margin-bottom: 0;
 }
-.main-footer .footer-badges .badge img {
+body .main-footer .footer-badges .badge img {
   height: 20px;
   width: auto;
 }
-.main-footer .footer-social {
+body .main-footer .footer-social {
   margin: 10px auto 20px;
   padding: 0;
   display: flex;
@@ -7521,32 +7557,32 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   list-style: none;
 }
 @media print, screen and (min-width: 40em) {
-  .main-footer .footer-social {
+  body .main-footer .footer-social {
     justify-content: flex-start;
   }
 }
-.main-footer .footer-social li {
+body .main-footer .footer-social li {
   color: #fff;
   font-size: 30px;
 }
-.main-footer .footer-social li a {
+body .main-footer .footer-social li a {
   color: #fff;
 }
-.main-footer .footer-copyright {
+body .main-footer .footer-copyright {
   display: flex;
   justify-content: space-between;
 }
-.main-footer .footer-copyright ul {
+body .main-footer .footer-copyright ul {
   display: flex;
   gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.main-footer .footer-copyright ul li {
+body .main-footer .footer-copyright ul li {
   font-size: 14px;
 }
-.main-footer .footer-tagline {
+body .main-footer .footer-tagline {
   display: block;
   align-items: center;
   font-size: 30px;
@@ -7556,12 +7592,12 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   width: 100%;
 }
 @media print, screen and (min-width: 40em) {
-  .main-footer .footer-tagline {
+  body .main-footer .footer-tagline {
     font-size: 50px;
   }
 }
 @media screen and (min-width: 75em) {
-  .main-footer .footer-tagline {
+  body .main-footer .footer-tagline {
     font-size: 90px;
   }
 }
