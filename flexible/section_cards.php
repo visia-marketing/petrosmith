@@ -1,8 +1,9 @@
 <?php
 $cards = get_sub_field('cards');
 $per_row = get_sub_field('cards_per_row');
+$card_style = get_sub_field('card_style');
 
-$class = 'columns cards';
+$class = 'columns cards cards-style--'.$card_style;
 
 switch ($per_row) {
     case 2:
@@ -32,12 +33,15 @@ switch ($per_row) {
       <div class="<?php echo $class; ?>">
         <div class="content content-cards" data-equalizer-watch>
 
+        <?php if( array_key_exists( 'card_link', $card) ): ?>
+            <?php if( is_array( $card['card_link']) ): ?>
+                <a href="<?php echo $card['card_link']['url']; ?>" class="card-link-wrapper" aria-label="<?php echo $card['card_title']; ?>">
+            <?php endif; ?>
+        <?php endif; ?>
+
+
             <div class="card-image">
-                <?php if( $card['post_object_tf'] ): ?>
-                    <?php $image = get_the_post_thumbnail($card['case_study_id'], 'thumbnail'); ?>
-                <?php else: ?>
-                    <?php $image = wp_get_attachment_image($card['card_icon'], 'thumbnail'); ?>
-                <?php endif; ?>
+                <?php $image = wp_get_attachment_image($card['card_icon'], 'thumbnail'); ?>
                 
                 <?php if( $image ): ?>
                     <div class="card-image-inner">
@@ -46,40 +50,42 @@ switch ($per_row) {
                 <?php endif; ?>
             </div>
 
-            <h3 class="card-title">
-                <?php if( $card['post_object_tf'] ): ?>
-                    <a href="<?php echo get_permalink($card['case_study_id']); ?>">
-                        <?php echo get_the_title($card['case_study_id']); ?>
-                    </a>
-                <?php else: ?>
-                    <a href="<?php echo $card['card_link']; ?>">
-                        <?php echo $card['card_title']; ?>
-                    </a>
-                <?php endif; ?>
-            </h2>
-        
-            <p class="card-p">
-                <?php if( !$card['post_object_tf'] ): ?>
+            <div class="card-content">
+
+                    
+
+                <h3 class="card-title">
+                    <?php echo $card['card_title']; ?>
+                </h3>
+            
+                <p class="card-p">
                     <?php echo $card['card_description']; ?>
-                <?php else: ?>
-                    <?php echo get_the_excerpt($card['case_study_id']); ?>
+                </p>
+
+                <?php if( array_key_exists( 'card_link', $card) ): ?>
+                    <?php if( is_array( $card['card_link']) ): ?>
+                        <a href="<?php echo $card['card_link']['url']; ?>" class="card-button">
+                            <span class="button-text">
+                                <?php if($card['card_link']['title']): ?>
+                                    <?php echo $card['card_link']['title']; ?>
+                                <?php else: ?>
+                                    Read More
+                                <?php endif; ?>
+                            </span>
+                            <div class="arrow">
+
+                            </div>
+                        </a>
+                    <?php endif; ?>
                 <?php endif; ?>
-            </p>
+            </div>
 
 
-                <?php if( $card['post_object_tf'] ): ?>
-                    <a href="<?php echo get_permalink($card['case_study_id']); ?>">
-                        Read More
-                    </a>
-                <?php else: ?>
-                    <a href="<?php echo $card['card_link']['url']; ?>">
-                        <?php if($card['card_link']['title']): ?>
-                            <?php echo $card['card_link']['title']; ?>
-                        <?php else: ?>
-                            Read More
-                        <?php endif; ?>
+            <?php if( array_key_exists( 'card_link', $card) ): ?>
+                <?php if( is_array( $card['card_link']) ): ?>
                     </a>
                 <?php endif; ?>
+            <?php endif; ?>
         
         </div>
       </div>

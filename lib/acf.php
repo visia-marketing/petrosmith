@@ -104,9 +104,9 @@ function get_flexible_content() {
         #' . esc_html($id) . '.fc-section {
           display: flex;
           flex-direction: column;
-          gap: ' . esc_html( ($content_spacing * 1.5) ) . 'rem;
           align-items: center;
           justify-content: ' . esc_html($horizontal_align) . ';
+          gap: ' . esc_html( ($content_spacing) ) . 'rem;
         }
 
         #' . esc_html($id) . ' > .fc-section-columns {

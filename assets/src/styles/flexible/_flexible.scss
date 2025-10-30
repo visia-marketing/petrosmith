@@ -32,18 +32,23 @@
 
     }
 
+    &.fc-section-hero-frontpage{
+      &.fc-section-image {
+        background: rgba(6, 47, 110, 0.66);
+      }
+    }
+
     &.fc-section-image {
-      background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
       position: relative;
 
       img.fc-section-background-image {
         height: 100%;
         object-fit: cover;
         position: absolute;
-         top: 0;
-         left: 0;
-         right: 0;
-         bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         width: 100%;
         z-index: -1;
       }
@@ -63,8 +68,9 @@
       padding-top: 2.5rem;
     }
 
-    & p:has(.g-section-subtitle){
-      margin-bottom: 0;
+    & p:has(.g-section-subtitle),
+    & p:has(.g-section-subtitle-large){
+      margin-bottom: 12px;
 
       & + h2{
         padding-top: 0;
@@ -83,6 +89,12 @@
   }
 
 }
+body{
+  p, li, blockquote {
+    font-size: 1.125rem;
+    line-height: 1.6rem;
+  }
+}
 
 body *{
   & .background--light,
@@ -90,7 +102,7 @@ body *{
     background-color: $white;
   
     //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
-    & * {
+    & *:not(h1, h2, h3, h4, h5, h6, p, a,.button, [class^="g-"])  {
       color: $black;
     }
   
@@ -100,12 +112,11 @@ body *{
   
   }
   
-  & .fc-section-dark,
-  & .fc-section-light {
-    background-color: $black;
+  & .fc-section-dark {
+    background-color: $navy;
   
     //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
-    & * {
+    & *:not(a.button)  {
       color: #fff;
     }
   
@@ -123,7 +134,7 @@ body *{
   }
 
   & .background--image.background--light{
-    & * {
+    & *:not(a.button) {
       color: $black;
     }
   }
@@ -141,49 +152,50 @@ body *{
 
 
 .fc-section-cta {
-  padding: 80px 0;
-  
-  &:after {
-    content: "";
-    position: absolute;
-    left: 10%;
-    top: 0;
-    height: 150%;
-    width: 300px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: .5;
-  }
-  
+ 
 
-  .flex {
+  & .cta-link.row{
+    padding: 80px 0;
     display: flex;
-    flex-direction:column;
+  }
+
+  & h2{
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  & .column{
+    display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 30px;
+    gap: 3rem;
+  }
 
-    @include breakpoint(medium) {
-      flex-direction: row;
-      gap: 50px;
-    }
 
-    h6 {
-      font-size: 22px;
-      margin-bottom: 0;
-      text-align: center;
+  .card-button{
+      text-decoration: none;
+      align-self: center;
+      background: $white;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 0.75rem;
+      display: inline-flex;
 
-      @include breakpoint(medium) {
-        flex-direction: row;
-        text-align: left;
+      & .button-text{
+          width: 0;
+          height: 0;
+          overflow: hidden;
+          padding: 0;
+          margin: 0;
       }
 
-    }
-
-    .button {
-      margin: 0;
-    }
-
+      & .arrow{
+          width: 16px;
+          height: 14px;
+          display: inline-block;
+          background-size: cover;
+          background-image: url('data:image/svg+xml,<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="%23062F6E"/><path d="M0 5.86865H13.5" stroke="%23062F6E"/></svg>');
+      }
   }
+
 
 }

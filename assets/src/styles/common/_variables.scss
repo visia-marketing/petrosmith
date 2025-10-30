@@ -7,10 +7,12 @@
 
 // Custom Fonts - Get more fonts here https://fonts.google.com/ and add to lib/setup.php
 
-$sourceSans: "Source Sans 3", sans-serif;
+$avenirNext: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+$avenirNextCondensed: "Avenir Next Condensed", Avenir, "Canada Type Gibson", sans-serif;
 $fontawesome: "Font Awesome 6 Free";
 
-$sans:      $sourceSans;
+$sans:      $avenirNext;
+$condensed: $avenirNextCondensed;
 $serif:     $sans;
 
 ///////////////////////////////////////////////
@@ -33,15 +35,18 @@ $grey-border: $gray-border;
 $white:       #ffffff;
 
 // Brand Colors - Set the brand colors here
-$yellow:       #FBA919;
+$yellow:     #FBA919;
+$navy:       #062F6E;
+$cadet:      #072F6E;
+$blue:       #579DBB;
 $black:      #000000;
 
 $lightGrade: linear-gradient(0deg, rgba(255, 255, 255, 0.00) -6.56%, #EDF4FA 88.2%);
 $darkGrade: linear-gradient(270deg, rgba(0, 43, 73, 0.70) -5%, rgba(0, 34, 57, 0.70) 70%);
 
 
-$primary: $yellow;
-$secondary: $dark-gray;
+$primary: $navy;
+$secondary: $blue;
 $dark: darken($primary, 10%);
 
 ///////////////////////////////////////////////
@@ -52,13 +57,13 @@ $body-font-color: $black;
 
 
 // Top Bar
-$top-header-background: #f3f3f3;
-$top-header-color: $black;
-$top-header-link-color: $black;
+$top-header-background: $primary;
+$top-header-color: $white;
+$top-header-link-color: $white;
 
 // Main Header - this is confusing - header nav or headings
 $main-header-background: $light-gray;
-$main-header-link-color: $black;
+$main-header-link-color: $primary;
 $main-header-link-font: $sans;
 $main-header-button-background-color: $primary;
 $main-header-button-link-color: $white;
@@ -72,7 +77,7 @@ $nav-font-size: 15px;
 // Headers
 $header-color: $primary;
 $header-font:  $sans;
-$header-weight: 800;
+$header-weight: 500;
 
 // Anchors
 $anchor-color: $secondary;
@@ -83,7 +88,7 @@ $breadcrumb-text-color: $grey;
 $breadcrumb-anchor-color: $secondary;;
 
 // Footer
-$footer-bg: $medium-gray;
+$footer-bg: $primary;
 
 
 //  Foundation for Sites Settings
@@ -239,8 +244,8 @@ $header-styles: (
     'h6': ('font-size': 16),
   ),
   large: (
-    'h1': ('font-size': 46),
-    'h2': ('font-size': 34),
+    'h1': ('font-size': 50),
+    'h2': ('font-size': 32),
     'h3': ('font-size': 24),
     'h4': ('font-size': 22),
     'h5': ('font-size': 18),
@@ -262,7 +267,7 @@ $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
 $anchor-color: $anchor-color; //$primary-color;
 $anchor-color-hover: $anchor-color-hover;
-$anchor-text-decoration: none;
+$anchor-text-decoration: underline;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
 $hr-border: 1px solid $medium-gray;

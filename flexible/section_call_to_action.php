@@ -35,33 +35,64 @@ if ( $source === 'default' ){
     <?php echo '#'.$cta_id; ?>.call-to-action-image {
         <?php if( $image ): ?>
         background-image: url('<?php echo $image[0];?>');
-        background-size: cover;
+        background-size: contain;
         background-position: center;
+        background-repeat: no-repeat;
+        background-color: #072E6E;
         <?php endif; ?>
+    }
+
+    @media screen and (max-width: 1500px){
+        <?php echo '#'.$cta_id; ?>.call-to-action-image {
+            <?php if( $image ): ?>
+            background-size: cover;
+            <?php endif; ?>
+        }
     }
 </style>
 
 <div class="fc-section-cta fc-section-columns call-to-action call-to-action--<?php echo $source;?> call-to-action-<?php echo $background; ?> background--<?php echo $background;?> background--<?php echo $content_color;?>" id="<?php echo $cta_id; ?>">
 
-    <div class="call-to-action--inner row">
-
-        <div class="column small-12 large-10 large-offset-1">
-            <?php echo $content; ?>
+    <div class="call-to-action--inner ">
 
 
-            <?php if( is_array($button) ): ?>
-                <?php if( array_key_exists('url', $button) ): ?>
-                    <a href="<?php echo esc_url( $button['url'] ); ?>" class="button" <?php if( $button['target'] ): ?> target="<?php echo esc_attr( $button['target'] ); ?>" <?php endif; ?>>
-                        <?php echo esc_html( $button['title'] ); ?>
+        <?php if( is_array( $button ) ): ?>
+            <?php if( array_key_exists( 'url', $button ) ): ?>
+                <a href="<?php echo $button['url']; ?>" class="cta-link row" aria-label="<?php echo $button['title']; ?>">
+            <?php endif; ?>
+        <?php else: ?>
+            <div class="cta-link row">
+        <?php endif; ?>
+
+            <div class="column small-12 large-10 large-offset-1">
+                <?php echo $content; ?>
+
+                <span class="card-button">
+                    <span class="button-text">
+                        <?php if( is_array( $button ) ): ?>
+                            <?php if( array_key_exists( 'title', $button ) ): ?>
+                                <?php echo $button['title']; ?>
+                            <?php endif; ?>
+                        <?php else: ?>
+                                Read More
+                        <?php endif; ?>
+
+                    </span>
+                    <div class="arrow">
+
+                    </div>
+                </span>
+            </div>
+
+
+            <?php if( is_array( $button ) ): ?>
+                <?php if( array_key_exists( 'url', $button ) ): ?>
                     </a>
                 <?php endif; ?>
+            <?php else: ?>
+                </div>
             <?php endif; ?>
 
-        </div>
-
-        
-
-        
     </div>
 
 </div>

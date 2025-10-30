@@ -261,3 +261,20 @@ function assets() {
 }
 // Hook with priority 100 to load after most other scripts/styles
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+
+/**
+ * Enqueue Editor Assets
+ * 
+ * Loads styles and scripts for the WordPress block editor (Gutenberg).
+ */
+function admin_custom_assets() {
+  /**
+   * Enqueue Editor Stylesheet
+   * Matches the front-end styles for a consistent editing experience
+   */
+  //wp_enqueue_style('sage/admin.css', Assets\asset_path('dist/styles/admin.min.css'), false, null);
+  add_editor_style(Assets\asset_path('dist/styles/admin.min.css'));
+
+}
+add_action('admin_init', __NAMESPACE__ . '\\admin_custom_assets');
