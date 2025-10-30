@@ -106,6 +106,7 @@ function get_flexible_content() {
           flex-direction: column;
           align-items: center;
           justify-content: ' . esc_html($horizontal_align) . ';
+          gap: ' . esc_html( ($content_spacing) ) . 'rem;
         }
 
         #' . esc_html($id) . ' > .fc-section-columns {

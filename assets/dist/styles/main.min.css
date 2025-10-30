@@ -6595,7 +6595,18 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   align-self: flex-end;
   width: 100%;
 }
+<<<<<<< HEAD
 .fc-page-header .page-header-content-wrapper.page-header-expanded {
+=======
+.fc-page-header .page-header-content-wrapper.fc-section-image {
+  background: linear-gradient(18deg, rgba(0, 0, 0, 0.6) 4.96%, rgba(102, 102, 102, 0.11) 59.19%);
+}
+.fc-page-header .page-header-content-wrapper.page-header-expanded {
+  padding-top: 22.5rem;
+  padding-bottom: 2.5rem;
+}
+.fc-page-header .page-header-content-wrapper.fc-section-hero-frontpage {
+>>>>>>> 617a917ad4faade0aa9a74d664508fabc3932488
   padding-top: 13.5rem;
   padding-bottom: 15.5rem;
 }
@@ -8933,6 +8944,7 @@ body .g-section-max-width-1024 {
 .fc-section-cards .cards-style--primary .content-cards .card-content a {
   text-decoration: none !important;
 }
+<<<<<<< HEAD
 .fc-section-cards .cards-style--primary .content-cards .card-content a.card-button {
   text-decoration: none;
   align-self: flex-end;
@@ -8957,6 +8969,8 @@ body .g-section-max-width-1024 {
   background-size: cover;
   background-image: url("data:image/svg+xml,<svg width=\"15\" height=\"13\" viewBox=\"0 0 15 13\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 11.8687L14 5.86865L8 0.368652\" stroke=\"%23062F6E\"/><path d=\"M0 5.86865H13.5\" stroke=\"%23062F6E\"/></svg>");
 }
+=======
+>>>>>>> 617a917ad4faade0aa9a74d664508fabc3932488
 .fc-section-cards .cards-style--primary .content-cards .card-content h3 {
   padding-bottom: 0;
 }
@@ -8973,12 +8987,41 @@ body .g-section-max-width-1024 {
   margin-bottom: 2rem;
   min-width: 100%;
 }
+<<<<<<< HEAD
 .fc-section-cards .content-cards h3 a {
+=======
+.fc-section-cards .content-cards a.card-button {
+  text-decoration: none;
+  align-self: flex-end;
+  justify-self: flex-end;
+  margin-top: auto;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+}
+.fc-section-cards .content-cards a.card-button .button-text {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.fc-section-cards .content-cards a.card-button .arrow {
+  width: 16px;
+  height: 14px;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,<svg width=\"15\" height=\"13\" viewBox=\"0 0 15 13\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 11.8687L14 5.86865L8 0.368652\" stroke=\"%23062F6E\"/><path d=\"M0 5.86865H13.5\" stroke=\"%23062F6E\"/></svg>");
+}
+.fc-section-cards .content-cards a {
+>>>>>>> 617a917ad4faade0aa9a74d664508fabc3932488
   font-size: 1.125rem;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.3;
   color: #000000;
+  text-decoration: none;
 }
 .fc-section-cards .content-cards p {
   margin-bottom: 1.5rem;
@@ -9232,9 +9275,16 @@ body .g-section-max-width-1024 {
     padding: 70px 0 50px;
   }
 }
+.fc-wrapper .fc-section.fc-section-hero-frontpage.fc-section-image,
+.fc-page-header .fc-section.fc-section-hero-frontpage.fc-section-image {
+  background: rgba(6, 47, 110, 0.66);
+}
 .fc-wrapper .fc-section.fc-section-image,
 .fc-page-header .fc-section.fc-section-image {
+<<<<<<< HEAD
   background: rgba(6, 47, 110, 0.66);
+=======
+>>>>>>> 617a917ad4faade0aa9a74d664508fabc3932488
   position: relative;
 }
 .fc-wrapper .fc-section.fc-section-image img.fc-section-background-image,

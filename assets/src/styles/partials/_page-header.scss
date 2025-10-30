@@ -19,7 +19,20 @@
     align-self: flex-end;
     width: 100%;
 
+<<<<<<< HEAD
     &.page-header-expanded{
+=======
+    &.fc-section-image{
+      background: linear-gradient(18deg, rgba(0, 0, 0, 0.60) 4.96%, rgba(102, 102, 102, 0.11) 59.19%);
+    }
+
+    &.page-header-expanded{
+      padding-top: 22.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    &.fc-section-hero-frontpage{
+>>>>>>> 617a917ad4faade0aa9a74d664508fabc3932488
       padding-top: 13.5rem;
       padding-bottom: 15.5rem;
     }
