@@ -8658,6 +8658,9 @@ body .g-section-max-width-1024 {
   color: #3A3A3A;
 }
 
+.fc-section-accordion-simple, .fc-section-accordion-tabs {
+  width: 100%;
+}
 .fc-section-accordion-simple .tabs, .fc-section-accordion-tabs .tabs {
   margin: 0;
   border: 1px solid #000000;
@@ -8764,7 +8767,7 @@ body .g-section-max-width-1024 {
   background-color: #F6F5F3;
 }
 .fc-section-accordion-simple .accordion .accordion-response h1, .fc-section-accordion-simple .accordion .accordion-response h2, .fc-section-accordion-simple .accordion .accordion-response h3, .fc-section-accordion-simple .accordion .accordion-response h4, .fc-section-accordion-simple .accordion .accordion-response h5, .fc-section-accordion-simple .accordion .accordion-response h6, .fc-section-accordion-simple .accordion .accordion-response ul, .fc-section-accordion-simple .accordion .accordion-response p, .fc-section-accordion-tabs .accordion .accordion-response h1, .fc-section-accordion-tabs .accordion .accordion-response h2, .fc-section-accordion-tabs .accordion .accordion-response h3, .fc-section-accordion-tabs .accordion .accordion-response h4, .fc-section-accordion-tabs .accordion .accordion-response h5, .fc-section-accordion-tabs .accordion .accordion-response h6, .fc-section-accordion-tabs .accordion .accordion-response ul, .fc-section-accordion-tabs .accordion .accordion-response p {
-  max-width: 600px;
+  max-width: 1070px;
 }
 .fc-section-accordion-simple .accordion .accordion-response p, .fc-section-accordion-simple .accordion .accordion-response li, .fc-section-accordion-tabs .accordion .accordion-response p, .fc-section-accordion-tabs .accordion .accordion-response li {
   font-size: 20px;
