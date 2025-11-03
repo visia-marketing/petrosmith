@@ -31,7 +31,7 @@
 
   .accordion {
     background: transparent;
-    border-top: 1px solid $grey-border;
+    border-bottom: 1px solid $grey-border;
 
     &.separated {
       border-top: none;
@@ -41,11 +41,7 @@
       }
 
       .accordion-topic {
-       
-        border: 1px solid $grey-border;
         border-top: 1px solid $grey-border;
-        border-radius: 10px;
-
         overflow: hidden;
       }
 
@@ -56,21 +52,23 @@
     }
 
     .accordion-topic {
-      border: 1px solid $grey-border;
-      border-top: none;
-      padding: 22px 30px;
+      //border: 0px solid transparent;
+      border-top: 1px solid $grey-border;
+      padding: 2.5rem 0;
       position: relative;
       background: $white;
 
       h4 {
         font-family: $sans;
-        font-size: 24px;
-        font-weight: 400;
-        margin: 0;
+        margin-bottom: 0;
+        font-size: 1.6875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.6875rem; 
       }
 
       .accordion-arrow {
-        border-left: 1px solid $grey-border;
+        border-left: 0px solid transparent;
         display: flex;
          align-items: center;
          justify-content: center;
@@ -79,7 +77,6 @@
          top: 0;
          right: 0;
          bottom: 0;
-        width: 120px;
         transition: all .5s ease;
 
         i {
@@ -90,35 +87,31 @@
       }
 
       &:hover .accordion-arrow {
-        background-color: $primary;
+        //background-color: $primary;
 
         i {
-          color: #fff;
+          color: $primary; // #fff;
         }
 
       }
 
-      &.current  {
-        border-radius: 10px 10px 0 0;
-      }
 
-      &.current .accordion-arrow i {
-        transform: rotate(-90deg);
-      }
+      // &.current .accordion-arrow i {
+      //   transform: rotate(-90deg);
+      // }
 
-      &:xafter { 
-        position:absolute;  
-        color: $black; 
-        content: "›"; 
-        font-size:20px; 
-        top: -4px; 
-        right: 10px; 
-        
+
+      & .accordion-close{
+        display: none;
       }
 
       &.current {
-        background-color: $gray-bg;
-        font-weight: 700;
+        & .accordion-open{
+          display: none;
+        }
+        & .accordion-close{
+          display: inline-block;
+        }
       }
 
       
@@ -126,14 +119,12 @@
     }
 
     .accordion-response {
-      border-left: 1px solid $grey-border;
-      border-right: 1px solid $grey-border;
-      border-bottom: 1px solid $grey-border;
-      padding: 22px 30px;
+      padding: 22px 0;
+      padding-bottom: 10rem;
       display: none;
 
       &.current {
-        background-color: $gray-bg;
+        background-color: $white; 
       }
 
       h1, h2, h3, h4, h5, h6, ul, p {
