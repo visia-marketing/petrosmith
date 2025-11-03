@@ -8663,17 +8663,26 @@ body .g-section-max-width-1024 {
 }
 .fc-section-accordion-simple .tabs, .fc-section-accordion-tabs .tabs {
   margin: 0;
-  border: 1px solid #000000;
+  border: 0px solid transparent;
   background: #fff;
   list-style-type: none;
 }
+.fc-section-accordion-simple .tabs-content, .fc-section-accordion-tabs .tabs-content {
+  border: none;
+  padding: 0;
+}
+.fc-section-accordion-simple .tabs-title, .fc-section-accordion-tabs .tabs-title {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
 .fc-section-accordion-simple .tabs-title > a, .fc-section-accordion-tabs .tabs-title > a {
-  border-right: 1px solid #000000;
+  border: 1px solid #062F6E;
   display: block;
-  padding: 1.5rem 2rem;
+  padding: 1rem 3rem;
   font-size: 0.925rem;
   line-height: 1;
   color: #000000;
+  text-decoration: none;
 }
 .fc-section-accordion-simple .tabs-title > a:focus, .fc-section-accordion-simple .tabs-title > a[aria-selected=true], .fc-section-accordion-tabs .tabs-title > a:focus, .fc-section-accordion-tabs .tabs-title > a[aria-selected=true] {
   background: #062F6E;
@@ -8689,12 +8698,14 @@ body .g-section-max-width-1024 {
 }
 .fc-section-accordion-simple .accordion.separated, .fc-section-accordion-tabs .accordion.separated {
   border-top: none;
+  border-bottom: 0px solid transparent;
 }
 .fc-section-accordion-simple .accordion.separated .accordion-item, .fc-section-accordion-tabs .accordion.separated .accordion-item {
   margin-bottom: 24px;
 }
 .fc-section-accordion-simple .accordion.separated .accordion-topic, .fc-section-accordion-tabs .accordion.separated .accordion-topic {
   border-top: 1px solid #737373;
+  border-bottom: 1px solid #737373;
   overflow: hidden;
 }
 .fc-section-accordion-simple .accordion.in-tabs, .fc-section-accordion-tabs .accordion.in-tabs {
