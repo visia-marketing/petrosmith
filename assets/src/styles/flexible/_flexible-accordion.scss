@@ -4,19 +4,33 @@
 
   .tabs {
     margin: 0;
-    border: 1px solid $black;
-    
+    //border: 1px solid $black;
+    border: 0px solid transparent;
     background: #fff;
     list-style-type: none;
+    // display: flex;
+    // gap: 1rem;
+
+    &-content{
+      border: none;
+      padding: 0;
+    }
   } 
 
+  .tabs-title{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
   .tabs-title>a {
-    border-right: 1px solid $black;
+    border: 1px solid $primary;
     display: block;
-    padding: 1.5rem 2rem;
+    padding: 1rem 3rem;
+    
     font-size: .925rem;
     line-height: 1;
     color: $black;
+    text-decoration: none;
+    
   }
 
   .tabs-title>a:focus, .tabs-title>a[aria-selected=true] {
@@ -35,6 +49,7 @@
 
     &.separated {
       border-top: none;
+      border-bottom: 0px solid transparent;
 
       .accordion-item {
         margin-bottom: 24px;
@@ -42,6 +57,7 @@
 
       .accordion-topic {
         border-top: 1px solid $grey-border;
+        border-bottom: 1px solid $grey-border;
         overflow: hidden;
       }
 
