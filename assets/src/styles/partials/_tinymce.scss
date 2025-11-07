@@ -112,6 +112,13 @@ body{
       margin-left: auto;
       margin-right: auto;
     }
+
+    &-section-max-width-768{
+      max-width: 768px;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+    }
   
   }
 }
