@@ -2,6 +2,7 @@
 $cards = get_sub_field('cards');
 $per_row = get_sub_field('cards_per_row');
 $card_style = get_sub_field('card_style');
+$card_padding = get_sub_field('card_padding');
 
 $class = 'columns cards cards-style--'.$card_style;
 
@@ -31,7 +32,7 @@ switch ($per_row) {
     <?php foreach( $cards as $card ): ?>
 
       <div class="<?php echo $class; ?>">
-        <div class="content content-cards" data-equalizer-watch>
+        <div class="content content-cards card-padding-<?php echo $card_padding; ?>" data-equalizer-watch>
 
         <?php if( array_key_exists( 'card_link', $card) ): ?>
             <?php if( is_array( $card['card_link']) ): ?>
