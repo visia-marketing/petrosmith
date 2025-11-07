@@ -9339,6 +9339,44 @@ body .g-section-max-width-768 {
 }
 
 */
+.fc-section-edge-grid .edge-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.fc-section-edge-grid .edge-grid-container .grid-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 2rem 0;
+}
+.fc-section-edge-grid .edge-grid-container .grid-cell img {
+  margin-bottom: 1rem;
+  border-radius: 100px;
+}
+.fc-section-edge-grid .edge-grid-container .grid-cell .edge-cell-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+.fc-section-edge-grid .edge-grid-container .grid-cell .edge-cell-descr {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+.fc-section-edge-grid .edge-grid-container .grid-cell:nth-child(2) {
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.fc-section-edge-grid .edge-grid-container .grid-cell:nth-child(3) {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.fc-section-edge-grid .edge-grid-container .grid-cell:nth-child(4) {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
 .fc-wrapper .top-border > .fc-section-heading,
 .fc-page-header .top-border > .fc-section-heading {
   border-top: 1px solid #000000;

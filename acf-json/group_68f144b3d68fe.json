@@ -262,6 +262,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_690e5d31565d6": {
+                    "key": "layout_690e5d31565d6",
+                    "name": "section_edge_grid",
+                    "label": "Edge Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_690e5d3a565d9",
+                            "label": "Edge Grid",
+                            "name": "edge_grid",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_690e5c09a8c62"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -288,5 +320,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761232429
+    "modified": 1762549064
 }
