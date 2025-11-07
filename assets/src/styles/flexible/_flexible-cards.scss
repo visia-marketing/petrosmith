@@ -24,10 +24,20 @@
                 &:hover{
                     & .card-content{
                         top: 0;
+                        //justify-content: center;
+
+                        & > a.card-link-wrapper{
+                            height: 100%;
+                            justify-content: center;
+                            align-items: center;
+                            display: flex;
+                            flex-direction: column;
+                        }
 
                         & p{
                             opacity: 1;
                         }
+
                     }
                 }
 
@@ -36,33 +46,48 @@
                     top: calc( 100% - 4.75rem);
                     padding: 1.7rem;
                     background: rgba(6, 47, 110, 0.80);
-                    transition: all 0.5s ease;
+                    transition: all 0.3s ease;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
-                    align-items: flex-start;
+                    align-items: center;
+                    
+
 
                     
                     & *{
                         color: $white;
                     }
 
-                    & a{
+                    & > a.card-link-wrapper{
                         text-decoration: none !important;
+                        transition: margin 0.4s ease;
+                        margin-top: 0;
+                        margin-bottom: 0;
                     }
 
 
 
                     & h3{
                         padding-bottom: 0;
+                        text-align: center;
+                        text-transform: uppercase;
+                    
                     }
 
                     & p{
                         opacity: 0;
                         margin-bottom: 0;
                         padding-bottom: 1rem;
-                        transition: opacity 0.5s ease;
+                        transition: opacity 0.4s ease;
+                        text-align: center;
+                    }
+
+                    & .card-button{
+                        position: absolute;
+                        bottom: 1.5rem;
+                        right: 1.5rem;
                     }
                 }
 
@@ -76,7 +101,11 @@
 
             & .content-cards{
                 transition: background-color 0.3s ease;
-                padding: 1.75rem;
+
+                &.card-padding-1{
+                    padding: 1.75rem;
+                }
+                
             }
         }
 
@@ -121,7 +150,7 @@
         & .card-button{
             text-decoration: none;
             align-self: center;
-            background: $white;
+            background: transparent;
             display: flex;
             align-items: center;
             padding: 0.5rem 0.75rem;
@@ -142,7 +171,7 @@
                 height: 14px;
                 display: inline-block;
                 background-size: cover;
-                background-image: url('data:image/svg+xml,<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="%23062F6E"/><path d="M0 5.86865H13.5" stroke="%23062F6E"/></svg>');
+                background-image: url('data:image/svg+xml,<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="%23FFFFFF"/><path d="M0 5.86865H13.5" stroke="%23FFFFFF"/></svg>');
             }
         }
 
@@ -221,7 +250,7 @@
             & .card-button{
                 text-decoration: none;
                 align-self: center;
-                background-color: $white;
+                background-color: transparent;
                 display: flex;
                 align-items: center;
                 padding: 0.5rem 0.75rem;
@@ -242,21 +271,21 @@
                     height: 14px;
                     display: inline-block;
                     background-size: cover;
-                    background-image: url('data:image/svg+xml,<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="%23062F6E"/><path d="M0 5.86865H13.5" stroke="%23062F6E"/></svg>') !important;
+                    background-image: url('data:image/svg+xml,<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="%23FFFFFF"/><path d="M0 5.86865H13.5" stroke="%23FFFFFF"/></svg>') !important;
 
                 }
             }
 
          
 
-            &:hover{
+            &.card-padding-1:hover{
                 background-color: #F6F6F6;
 
                 & .card-button{
-                    background-color: $primary;
+                    //background-color: $primary;
 
                     & .arrow{
-                        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13" fill="none"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="white"/><path d="M0 5.86865H13.5" stroke="white"/></svg>') !important;
+                        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13" fill="none"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="%23062F6E"/><path d="M0 5.86865H13.5" stroke="%23062F6E"/></svg>') !important;
 
                     }
                 }

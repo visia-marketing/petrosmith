@@ -38,11 +38,15 @@
   color:#fff;
   text-decoration: none !important;
   border: 1px solid $primary;
+  text-transform: uppercase;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
   
   &:after {
     color: #fff;
     content: "";
-    width: 14px;
+    width: 15px;
     height: 14px;
     margin-left: 1.5rem;
     margin-top: 0rem;
@@ -62,29 +66,33 @@ a.button.button-primary{
   background-color: $primary;
   color:#fff;
 
-  &:hover, &.active {
-    background-color: #fff;
-    color: $primary;
 
-    &:after{
-      background-image: url('data:image/svg+xml,<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="%23062F6E"/><path d="M0 5.86865H13.5" stroke="%23062F6E"/></svg>');
-    }
+  &:hover, &.active {
+    background-color: $pet-md-gray;
+    color:$white;
+    border-color: $pet-md-gray;
+
+    // &:after{
+    //   background-image: url('data:image/svg+xml,<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="%23062F6E"/><path d="M0 5.86865H13.5" stroke="%23062F6E"/></svg>');
+    // }
   }
 }
 
 a.button.button-secondary{
-  background-color: #fff;
-  color:$primary;
+  background-color: $pet-md-gray;
+  color:$white;
+  border-color: $pet-md-gray;
 
   &:after{
     color: $primary;
     position: absolute;
-    background-image: url('data:image/svg+xml,<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="%23062F6E"/><path d="M0 5.86865H13.5" stroke="%23062F6E"/></svg>');
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13" fill="none"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="white"/><path d="M0 5.86865H13.5" stroke="white"/></svg>');
   }
 
   &:hover, &.active {
     background-color: $primary;
     color: #fff;
+    border-color: $primary;
     
     &:after{
       background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13" fill="none"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="white"/><path d="M0 5.86865H13.5" stroke="white"/></svg>');
