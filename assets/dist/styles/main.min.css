@@ -7734,6 +7734,12 @@ body .g-section-max-width-1024 {
   margin-left: auto;
   margin-right: auto;
 }
+body .g-section-max-width-768 {
+  max-width: 768px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .wc-card {
   background-color: #fff;

@@ -36,6 +36,11 @@
     "wrapper": true
   },
   {
+    "title": "max-width 768px",
+    "inline": "span",
+    "classes": "g-section-max-width-768"
+  },
+  {
     "title": "max-width 1024px",
     "inline": "span",
     "classes": "g-section-max-width-1024"
