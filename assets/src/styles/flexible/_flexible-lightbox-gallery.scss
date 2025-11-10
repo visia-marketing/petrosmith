@@ -1,0 +1,37 @@
+.flexible-lightbox-gallery{
+
+    & > .lightbox-gallery{
+
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: auto;
+
+        & > .column{
+            padding-top: 0.78125rem;
+            padding-bottom: 0.78125rem;
+        }
+    
+
+        & a.lightbox-anchor{
+            display: flex;
+            width: 100%;
+
+            & > img{
+                aspect-ratio: 4/3;
+                width: 100%;
+            }
+        }
+
+
+
+    }
+}
+
+body .sl-overlay{
+    background: rgba(6,45,110,0.8) !important;
+    backdrop-filter: blur(4px) !important;
+}
+
+body .sl-wrapper .sl-navigation button{
+    color: #fff;
+}

@@ -9377,6 +9377,33 @@ body .g-section-max-width-768 {
   border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+.flexible-lightbox-gallery > .lightbox-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: auto;
+}
+.flexible-lightbox-gallery > .lightbox-gallery > .column, .flexible-lightbox-gallery > .lightbox-gallery > .columns {
+  padding-top: 0.78125rem;
+  padding-bottom: 0.78125rem;
+}
+.flexible-lightbox-gallery > .lightbox-gallery a.lightbox-anchor {
+  display: flex;
+  width: 100%;
+}
+.flexible-lightbox-gallery > .lightbox-gallery a.lightbox-anchor > img {
+  aspect-ratio: 4/3;
+  width: 100%;
+}
+
+body .sl-overlay {
+  background: rgba(6, 45, 110, 0.8) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+body .sl-wrapper .sl-navigation button {
+  color: #fff;
+}
+
 .fc-wrapper .top-border > .fc-section-heading,
 .fc-page-header .top-border > .fc-section-heading {
   border-top: 1px solid #000000;
