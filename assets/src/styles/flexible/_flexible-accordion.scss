@@ -45,7 +45,7 @@
 
   .accordion {
     background: transparent;
-    border-bottom: 1px solid $grey-border;
+    //border-bottom: 1px solid $grey-border;
 
     &.separated {
       border-top: none;
@@ -69,7 +69,7 @@
 
     .accordion-topic {
       //border: 0px solid transparent;
-      border-top: 1px solid $grey-border;
+      border-bottom: 1px solid $grey-border;
       padding: 2.5rem 0;
       position: relative;
       background: $white;

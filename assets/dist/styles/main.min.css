@@ -8756,7 +8756,6 @@ body .g-section-max-width-768 {
 }
 .fc-section-accordion-simple .accordion, .fc-section-accordion-tabs .accordion {
   background: transparent;
-  border-bottom: 1px solid #737373;
 }
 .fc-section-accordion-simple .accordion.separated, .fc-section-accordion-tabs .accordion.separated {
   border-top: none;
@@ -8774,7 +8773,7 @@ body .g-section-max-width-768 {
   border-top: none;
 }
 .fc-section-accordion-simple .accordion .accordion-topic, .fc-section-accordion-tabs .accordion .accordion-topic {
-  border-top: 1px solid #737373;
+  border-bottom: 1px solid #737373;
   padding: 2.5rem 0;
   position: relative;
   background: #ffffff;
