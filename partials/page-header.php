@@ -2,6 +2,8 @@
   $page_header_content = get_field('page_header_content');
   $page_header_style = get_field('page_header_style');
   $show_page_header = get_field('show_page_header');
+
+  $show_page_breadcrumbs = get_field('show_page_breadcrumbs');
   // if( is_front_page() ){
   //   $show_page_header = false;
   // }
@@ -41,12 +43,20 @@
 
 
   $hero_class = "";
+
   if( is_front_page() ){
     $hero_class = "fc-section-hero-frontpage";
   }
 
+  $parent = wp_get_post_parent_id( get_the_ID() );
+  $parent_name = get_the_title( $parent );
 
- 
+  $grandparent = wp_get_post_parent_id( $parent );
+  $grandparent_name = get_the_title( $grandparent );
+
+  $great_grandparent = wp_get_post_parent_id( $grandparent );
+  $great_grandparent_name = get_the_title( $great_grandparent );
+
 ?>
 
 
@@ -81,4 +91,42 @@
       </div>
     </div>
   </header>
+<?php endif; ?>
+
+<?php if( $show_page_breadcrumbs ): ?>
+
+<div class="row breadcrumbs-container">
+  <div class="column small-12">
+  <ul class="breadcrumbs">
+
+  <li>
+    <a href="/">Home</a>
+  </li>
+
+  <?php if( $great_grandparent ): ?>
+    <li>
+      <a href="<?php echo get_the_permalink($great_grandparent); ?>"><?php echo $great_grandparent_name; ?></a>
+    </li>
+  <?php endif; ?>
+
+  <?php if( $grandparent ): ?>
+    <li>
+      <a href="<?php echo get_the_permalink($grandparent); ?>"><?php echo $grandparent_name; ?></a>
+    </li>
+  <?php endif; ?>
+
+  <?php if( $parent ): ?>
+    <li>
+      <a href="<?php echo get_the_permalink($parent); ?>"><?php echo $parent_name; ?></a>
+    </li>
+  <?php endif; ?>
+
+  <li>
+    <?php echo get_the_title( get_the_ID() ); ?>
+  </li>
+
+  </ul>
+  </div>
+</div>
+
 <?php endif; ?>
