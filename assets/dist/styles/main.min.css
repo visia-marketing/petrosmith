@@ -6630,6 +6630,9 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   padding-top: 13.5rem;
   padding-bottom: 15.5rem;
 }
+.fc-page-header .page-header-content-wrapper .page-header-content .letter-case--caps {
+  text-transform: uppercase;
+}
 .fc-page-header .page-header-content-wrapper .page-header-content p:last-child {
   margin-bottom: 0;
 }

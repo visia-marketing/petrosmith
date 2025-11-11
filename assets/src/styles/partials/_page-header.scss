@@ -37,6 +37,10 @@
 
     .page-header-content {
 
+      & .letter-case--caps{
+        text-transform: uppercase;
+      }
+
      & p:last-child{
       margin-bottom: 0;
      }
@@ -59,7 +63,7 @@
     line-height: 1;
     letter-spacing: 0.03625rem;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem;  
   }
 
   & p{

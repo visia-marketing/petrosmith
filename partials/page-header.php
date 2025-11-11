@@ -14,6 +14,13 @@
       $page_heading = $page_header_content['heading'];
     }    
   }
+
+  if( array_key_exists( 'letter_case', $page_header_content) ){
+    if( $page_header_content['letter_case'] ){
+      $letter_case = $page_header_content['letter_case'];
+    }    
+  }
+
   if( array_key_exists( 'sub_heading', $page_header_content) ){
     if( $page_header_content['sub_heading'] ){
       $page_sub_heading = $page_header_content['sub_heading'];
@@ -71,16 +78,13 @@
       <div class="row">
         <div class="small-12 large-8 <?php if( is_front_page() ): ?>large-offset-2 text-center<?php endif; ?>  columns">
           <div class="page-header-content">
-            <?php 
-            $header_content = get_field('page_header_content');
-          // if ( $page_heading || $page_sub_heading ): 
-            ?>
+
               <?php if ( !empty($page_sub_heading) ): ?>
                 <p class="g-section-subtitle">
                   <?php echo esc_html($page_sub_heading); ?>
-              </p>
+               </p>
               <?php endif; ?>
-              <h1 class=""><?php if ( $page_heading ): echo esc_html($page_heading); else: the_title(); endif; ?></h1>
+              <h1 class="letter-case--<?php echo $letter_case;?>"><?php if ( $page_heading ): echo esc_html($page_heading); else: the_title(); endif; ?></h1>
               <?php if ( !empty($page_heading_text) ): ?>
                 <p>
                     <?php echo esc_html($page_heading_text); ?>
