@@ -46,9 +46,14 @@
     "classes": "g-section-max-width-1024"
   },
   {
-    "title": "Blue Text Highlight",
+    "title": "Gray Text Highlight",
     "inline": "span",
     "classes": "g-section-blue-highlight"
+  },
+  {
+    "title": "Avenir Next 900",
+    "inline": "span",
+    "classes": "g-section-avenir-next-900"
   },
   {
     "title": "Button Primary (dark)",
