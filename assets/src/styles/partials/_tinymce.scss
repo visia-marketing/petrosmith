@@ -80,6 +80,11 @@ body{
         color: $secondary !important;
       }
     }
+
+    &-section-avenir-next-900{
+      font-family: $avenirNext !important;
+      font-weight: 900 !important;
+    }
   
     &-button.button {
       margin-right: 10px;

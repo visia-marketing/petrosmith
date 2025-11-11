@@ -7748,6 +7748,10 @@ body .g-section-blue-highlight {
 body .g-section-blue-highlight a {
   color: #A4A2A3 !important;
 }
+body .g-section-avenir-next-900 {
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif !important;
+  font-weight: 900 !important;
+}
 body .g-button.button {
   margin-right: 10px;
   display: inline-block;
