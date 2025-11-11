@@ -9422,11 +9422,22 @@ body .g-section-max-width-768 {
 }
 .flexible-lightbox-gallery > .lightbox-gallery a.lightbox-anchor {
   display: flex;
+  flex-direction: column;
   width: 100%;
+  text-decoration: none;
 }
 .flexible-lightbox-gallery > .lightbox-gallery a.lightbox-anchor > img {
   aspect-ratio: 4/3;
   width: 100%;
+}
+.flexible-lightbox-gallery > .lightbox-gallery .caption-text {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  font-style: normal;
+  font-weight: 400;
 }
 
 body .sl-overlay {
@@ -9436,6 +9447,15 @@ body .sl-overlay {
 
 body .sl-wrapper .sl-navigation button {
   color: #fff;
+}
+
+body .sl-wrapper .sl-image .sl-caption {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000000;
+}
+
+body .sl-wrapper .sl-counter {
+  color: #ffffff;
 }
 
 .fc-wrapper .top-border > .fc-section-heading,

@@ -14,12 +14,24 @@
 
         & a.lightbox-anchor{
             display: flex;
+            flex-direction: column;
             width: 100%;
+            text-decoration: none;
 
             & > img{
                 aspect-ratio: 4/3;
                 width: 100%;
             }
+        }
+
+        & .caption-text{
+            display: inline-block;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            line-height: 1.2;
+            font-style: normal;
+            font-weight: 400;
         }
 
 
@@ -34,4 +46,13 @@ body .sl-overlay{
 
 body .sl-wrapper .sl-navigation button{
     color: #fff;
+}
+
+body .sl-wrapper .sl-image .sl-caption{
+    background: rgba( 255, 255,255, 0.8);
+    color: $black;
+}
+
+body .sl-wrapper .sl-counter{
+    color: $white;
 }
