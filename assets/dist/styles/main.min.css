@@ -8857,6 +8857,9 @@ body .g-section-max-width-768 {
   border-left: 1px solid #c3c3c3;
   padding-left: 20px;
 }
+.fc-section.lines .fc-section-columns .content-columns figcaption {
+  padding: 1rem;
+}
 .fc-section.lines .card-cell-columns {
   background-color: #fff;
   border: 1px solid #f2f2f2;

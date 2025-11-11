@@ -13,7 +13,7 @@ $lightbox_gallery = get_sub_field('lightbox_gallery');
                 <div class="column small-12 medium-6 large-4">
                     <a href="<?php echo wp_get_attachment_image_src( $image['image'], 'full' )[0]; ?>" data-lightbox="gallery" class="lightbox-anchor">
                         <img src="<?php echo wp_get_attachment_image_src( $image['image'], 'medium' )[0]; ?>" alt="<?php echo esc_attr($image['alt']); ?>" data-caption="<?php echo $image['caption'];?> "/>
-                        <span class="caption-text"><?php echo $image['caption'];?></span>
+                        <figcaption class="caption-text"><?php echo $image['caption'];?></span>
                     </a>
                 </div>
             <?php endforeach; ?>
