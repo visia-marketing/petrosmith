@@ -28,9 +28,6 @@ import SimpleLightbox from "simplelightbox";
         $(document).foundation(); // Foundation JavaScript
 
         new SimpleLightbox('.some-element a', { /* options */ });
-
-
-        
       
       },
       finalize: function() {

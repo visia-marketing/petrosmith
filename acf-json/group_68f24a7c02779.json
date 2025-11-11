@@ -1,6 +1,6 @@
 {
     "key": "group_68f24a7c02779",
-    "title": "Page Header",
+    "title": "PAGE COMPONENT: Page Header",
     "fields": [
         {
             "key": "field_68f78dae9a4d7",
@@ -30,7 +30,28 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_69136aed0885f",
+            "label": "Show Breadcrumbs",
+            "name": "show_page_breadcrumbs",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -304,5 +325,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761320809
+    "modified": 1762880259
 }

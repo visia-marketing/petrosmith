@@ -24,7 +24,6 @@ $lightbox_gallery = get_sub_field('lightbox_gallery');
     <script>
     jQuery(document).ready(function($) {
         if ($('[data-lightbox="gallery"]').length) {
-            //new SimpleLightbox('[data-lightbox="gallery"]');
 
             var options = {
                 overlayOpacity: 1,

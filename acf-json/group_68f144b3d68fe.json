@@ -135,6 +135,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6913718baf76c": {
+                    "key": "layout_6913718baf76c",
+                    "name": "section_four_column",
+                    "label": "Four Column",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6913719aaf76f",
+                            "label": "Four Column",
+                            "name": "four_column",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6913716194307"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_68f147bf15582": {
                     "key": "layout_68f147bf15582",
                     "name": "section_cards",
@@ -352,5 +384,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1762812692
+    "modified": 1762882020
 }

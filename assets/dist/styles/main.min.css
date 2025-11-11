@@ -2594,7 +2594,7 @@ select[multiple] {
 .breadcrumbs li:not(:last-child)::after {
   position: relative;
   top: 1px;
-  margin: 0 0.75rem;
+  margin: 0 0rem;
   opacity: 1;
   content: "/";
   color: #c8c8c8;
@@ -6346,18 +6346,38 @@ a, button, .button, [type=submit] {
   color: #062F6E;
 }
 
-.page-breadcrumbs {
-  color: #000000;
-  font-size: 0.925rem;
+.breadcrumbs {
   margin: 1.35rem 0 4rem;
 }
-.page-breadcrumbs span > a > span {
-  color: #000000;
-  font-weight: 600;
+.breadcrumbs li {
+  font-size: 1.125rem;
+  text-transform: none;
+  margin-right: 0.25rem;
 }
-.page-breadcrumbs span {
-  font-size: 0.925rem;
-  font-weight: 400;
+@media screen and (max-width: 768px) {
+  .breadcrumbs li {
+    font-size: 0.875rem;
+  }
+}
+.breadcrumbs li a {
+  text-decoration: none;
+  color: #888;
+}
+.breadcrumbs li a:hover {
+  text-decoration: underline;
+}
+.breadcrumbs span > a > span {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1rem;
+}
+.breadcrumbs span {
+  font-weight: 500;
+}
+.breadcrumbs li:not(:last-child)::after {
+  content: ">";
+  color: #888;
+  font-weight: 500;
 }
 
 .button,
