@@ -8831,7 +8831,7 @@ body .g-section-max-width-768 {
 
 .fc-section-columns + .fc-section-accordion-simple,
 .fc-section-columns + .fc-section-accordion-tabs {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .fc-faq-section:not(.fc-section-accordion-simple) {
