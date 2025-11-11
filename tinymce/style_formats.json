@@ -36,6 +36,11 @@
     "wrapper": true
   },
   {
+    "title": "Text Transform Uppercase",
+    "inline": "span",
+    "classes": "g-section-text-uppercase"
+  },
+  {
     "title": "max-width 768px",
     "inline": "span",
     "classes": "g-section-max-width-768"

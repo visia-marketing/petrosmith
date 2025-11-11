@@ -85,6 +85,10 @@ body{
       font-family: $avenirNext !important;
       font-weight: 900 !important;
     }
+
+    &-section-text-uppercase{
+      text-transform: uppercase !important;
+    }
   
     &-button.button {
       margin-right: 10px;

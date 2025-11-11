@@ -7752,6 +7752,9 @@ body .g-section-avenir-next-900 {
   font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif !important;
   font-weight: 900 !important;
 }
+body .g-section-text-uppercase {
+  text-transform: uppercase !important;
+}
 body .g-button.button {
   margin-right: 10px;
   display: inline-block;

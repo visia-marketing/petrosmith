@@ -90,6 +90,10 @@ body#tinymce.wp-editor {
         font-weight: 900 !important;
       }
 
+      &-section-text-uppercase{
+        text-transform: uppercase !important;
+      }
+
         &-max-width-1024 {
           max-width: 1024px;
           margin-left: auto;
