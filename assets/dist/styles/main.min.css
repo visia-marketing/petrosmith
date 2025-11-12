@@ -7174,7 +7174,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   background-color: #fff;
   border: none;
   border-top: 4px solid #A4A2A3;
-  border-radius: 4px 4px 4px 10px;
+  border-radius: 4px 4px 4px 4px;
   box-shadow: 0 2px 3px rgba(153, 153, 153, 0.1);
   top: 100%;
   left: 50% !important;
@@ -7230,7 +7230,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   background-color: #fbfbfb;
   border: none;
   border-left: 1px solid #f4f4f4;
-  border-radius: 0 0 10px 0;
+  border-radius: 0 0 4px 0;
   box-shadow: 2px 2px 3px rgba(153, 153, 153, 0.1);
   margin-left: -4px;
 }
