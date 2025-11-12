@@ -24,11 +24,11 @@
 		</div>
     <div class="small-4 medium-8 columns show-for-large">
       <div class="primary-navigation-wrapper">
-        <?php
+      <?php
         if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(['theme_location' => 'primary_navigation', 'depth' => 3, 'menu_class' => 'vertical medium-horizontal menu primary-navigation', 'items_wrap' => '<ul class="%2$s" id="primary-navigation" data-responsive-menu="drilldown medium-dropdown">%3$s</ul>' ]); 
-          endif;
-        ?>
+	        wp_nav_menu(['theme_location' => 'primary_navigation', 'depth' => 3, 'menu_class' => 'vertical medium-horizontal menu primary-navigation', 'items_wrap' => '<ul class="%2$s" id="primary-navigation" data-responsive-menu="drilldown medium-dropdown" data-closing-time="100">%3$s</ul>' ]); 
+	        endif;
+	      ?>
       </div>
     </div>
   </div>
