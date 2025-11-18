@@ -9189,15 +9189,6 @@ body .g-section-max-width-768 {
   background-size: cover;
   background-image: url("data:image/svg+xml,<svg width=\"15\" height=\"13\" viewBox=\"0 0 15 13\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 11.8687L14 5.86865L8 0.368652\" stroke=\"%23FFFFFF\"/><path d=\"M0 5.86865H13.5\" stroke=\"%23FFFFFF\"/></svg>") !important;
 }
-.fc-section-dark .cards-style--basic .content-cards.card-padding-1:hover {
-  background-color: #F6F6F6;
-}
-.fc-section-dark .cards-style--basic .content-cards.card-padding-1:hover .card-button .arrow {
-  background-image: url("data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15\" height=\"13\" viewBox=\"0 0 15 13\" fill=\"none\"><path d=\"M8 11.8687L14 5.86865L8 0.368652\" stroke=\"%23062F6E\"/><path d=\"M0 5.86865H13.5\" stroke=\"%23062F6E\"/></svg>") !important;
-}
-.fc-section-dark .cards-style--basic .content-cards.card-padding-1:hover * {
-  color: #062F6E;
-}
 
 .fc-page-header.page-header .page-header-content-wrapper {
   position: relative;
