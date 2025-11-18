@@ -170,7 +170,7 @@
                 "layout_68f147bf15582": {
                     "key": "layout_68f147bf15582",
                     "name": "section_cards",
-                    "label": "Cards",
+                    "label": "Cards Hover",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -189,6 +189,38 @@
                             },
                             "clone": [
                                 "group_672b86eae0ac8"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_691cd29728e4b": {
+                    "key": "layout_691cd29728e4b",
+                    "name": "section_cards_simple",
+                    "label": "Cards Simple",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_691cd29728e4d",
+                            "label": "Cards",
+                            "name": "cards_simple",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_691cd25295e00"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -384,5 +416,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1762882020
+    "modified": 1763496826
 }

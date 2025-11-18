@@ -1,6 +1,6 @@
 {
     "key": "group_672b86eae0ac8",
-    "title": "COMPONENT: Cards",
+    "title": "COMPONENT: Hover Cards",
     "fields": [
         {
             "key": "field_672b86eb2abcd",
@@ -31,72 +31,6 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_68ffbb22f8fd4",
-            "label": "Card Style",
-            "name": "card_style",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "primary": "Text visible on hover",
-                "basic": "Text below image"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "create_options": 0,
-            "save_options": 0
-        },
-        {
-            "key": "field_690928fb98859",
-            "label": "Card Padding",
-            "name": "card_padding",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_68ffbb22f8fd4",
-                        "operator": "==",
-                        "value": "basic"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "choices": [
-                "No Padding",
-                "Padding with Hover Effect"
-            ],
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "create_options": 0,
-            "save_options": 0
-        },
-        {
             "key": "field_672b87402abce",
             "label": "Cards",
             "name": "cards",
@@ -119,30 +53,86 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_672b87492abcf",
-                    "label": "Card Image",
-                    "name": "card_icon",
+                    "key": "field_691cce1dbc16a",
+                    "label": "Background",
+                    "name": "bg_group",
                     "aria-label": "",
-                    "type": "image",
+                    "type": "group",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "20",
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "id",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 1,
-                    "preview_size": "medium",
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_691ccd80c5cf3",
+                            "label": "Card Background",
+                            "name": "card_background",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "blue": "Blue",
+                                "gray": "Gray",
+                                "image": "Image"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_672b87492abcf",
+                            "label": "Background Image",
+                            "name": "card_icon",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_691ccd80c5cf3",
+                                        "operator": "==",
+                                        "value": "image"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 1,
+                            "preview_size": "thumbnail"
+                        }
+                    ],
                     "parent_repeater": "field_672b87402abce"
                 },
                 {
@@ -155,12 +145,13 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "20",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
                     "maxlength": "",
+                    "allow_in_bindings": 1,
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
@@ -227,5 +218,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1762208174
+    "modified": 1763496488
 }
