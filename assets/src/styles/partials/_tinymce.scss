@@ -66,6 +66,15 @@ body{
       font-weight: 500;
       line-height: 3.4375rem;
     }
+
+    &-section-impact-number {
+      color: $pet-md-gray;
+      font-size: 5rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 1;
+    }
+  
   
     &-section-med-impact-text {
       font-size: 2.375rem;
@@ -74,7 +83,7 @@ body{
       line-height: 3.0625rem;
     }
   
-    &-section-blue-highlight{
+    &-section-gray-highlight{
       color: $secondary !important;
       & a {
         color: $secondary !important;
@@ -127,6 +136,12 @@ body{
       display: inline-block;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    &-round-image{
+      border-radius: 50%;
+      aspect-ratio: 1;
+      object-fit: cover;
     }
   
   }
