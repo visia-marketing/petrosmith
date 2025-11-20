@@ -10,6 +10,13 @@ body#tinymce.wp-editor {
 
     & .g {
 
+
+      &-round-image{
+        border-radius: 50%;
+        aspect-ratio: 1;
+        object-fit: cover;
+      }
+
       &-section-subtitle {
         color: $pet-dk-gray;
         display: block;
@@ -77,8 +84,16 @@ body#tinymce.wp-editor {
         font-weight: 500;
         line-height: 3.0625rem;
       }
+
+      &-section-impact-number {
+        color: $pet-md-gray;
+        font-size: 5rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 1;
+      }
     
-      &-section-blue-highlight{
+      &-section-gray-highlight{
         color: $secondary !important;
         & a {
           color: $secondary !important;

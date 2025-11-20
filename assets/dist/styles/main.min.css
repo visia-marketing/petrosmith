@@ -7748,16 +7748,23 @@ body .g-section-impact-text {
   font-weight: 500;
   line-height: 3.4375rem;
 }
+body .g-section-impact-number {
+  color: #A7A8A9;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+}
 body .g-section-med-impact-text {
   font-size: 2.375rem;
   font-style: normal;
   font-weight: 500;
   line-height: 3.0625rem;
 }
-body .g-section-blue-highlight {
+body .g-section-gray-highlight {
   color: #A4A2A3 !important;
 }
-body .g-section-blue-highlight a {
+body .g-section-gray-highlight a {
   color: #A4A2A3 !important;
 }
 body .g-section-avenir-next-900 {
@@ -7785,6 +7792,12 @@ body .g-section-max-width-768 {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
+}
+body .g-round-image {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .wc-card {
@@ -9189,15 +9202,6 @@ body .g-section-max-width-768 {
   background-size: cover;
   background-image: url("data:image/svg+xml,<svg width=\"15\" height=\"13\" viewBox=\"0 0 15 13\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 11.8687L14 5.86865L8 0.368652\" stroke=\"%23FFFFFF\"/><path d=\"M0 5.86865H13.5\" stroke=\"%23FFFFFF\"/></svg>") !important;
 }
-.fc-section-dark .cards-style--basic .content-cards.card-padding-1:hover {
-  background-color: #F6F6F6;
-}
-.fc-section-dark .cards-style--basic .content-cards.card-padding-1:hover .card-button .arrow {
-  background-image: url("data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15\" height=\"13\" viewBox=\"0 0 15 13\" fill=\"none\"><path d=\"M8 11.8687L14 5.86865L8 0.368652\" stroke=\"%23062F6E\"/><path d=\"M0 5.86865H13.5\" stroke=\"%23062F6E\"/></svg>") !important;
-}
-.fc-section-dark .cards-style--basic .content-cards.card-padding-1:hover * {
-  color: #062F6E;
-}
 
 .fc-page-header.page-header .page-header-content-wrapper {
   position: relative;
@@ -9600,7 +9604,7 @@ body * .fc-section-dark a.button.grey {
   color: #062F6E;
 }
 body * .fc-section-grey, body * .fc-section-gray, body * .background--gray, body * .background--grey {
-  background-color: #EEEDED;
+  background-color: #F1F1F1;
 }
 body * .background--image.background--light *:not(a.button) {
   color: #000000;

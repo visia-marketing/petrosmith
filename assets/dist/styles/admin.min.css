@@ -13,6 +13,12 @@ $badge-font-size: 0.6rem;
 body#tinymce.wp-editor * {
   font-family: "Avenir", "Canada Type Gibson", sans-serif !important;
 }
+body#tinymce.wp-editor .g-round-image {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 body#tinymce.wp-editor .g-section-subtitle {
   color: #737373;
   display: block;
@@ -75,10 +81,17 @@ body#tinymce.wp-editor .g-section-med-impact-text {
   font-weight: 500;
   line-height: 3.0625rem;
 }
-body#tinymce.wp-editor .g-section-blue-highlight {
+body#tinymce.wp-editor .g-section-impact-number {
+  color: #A7A8A9;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+}
+body#tinymce.wp-editor .g-section-gray-highlight {
   color: #A4A2A3 !important;
 }
-body#tinymce.wp-editor .g-section-blue-highlight a {
+body#tinymce.wp-editor .g-section-gray-highlight a {
   color: #A4A2A3 !important;
 }
 body#tinymce.wp-editor .g-section-avenir-next-900 {

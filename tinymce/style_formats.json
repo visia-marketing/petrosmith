@@ -36,6 +36,12 @@
     "wrapper": true
   },
   {
+    "title": "Large Impactful Number",
+    "inline": "span",
+    "classes": "g-section-impact-number g-section-gray-highlight",
+    "wrapper": true
+  },
+  {
     "title": "Text Transform Uppercase",
     "inline": "span",
     "classes": "g-section-text-uppercase"
@@ -53,7 +59,7 @@
   {
     "title": "Gray Text Highlight",
     "inline": "span",
-    "classes": "g-section-blue-highlight"
+    "classes": "g-section-gray-highlight"
   },
   {
     "title": "Avenir Next 900",
@@ -69,5 +75,10 @@
     "title": "Button Secondary (light)",
     "selector": "a",
     "classes": "g-button button button-secondary"
+  },
+  {
+    "title": "Round Image",
+    "selector": "img",
+    "classes": "g-round-image"
   }
 ]
