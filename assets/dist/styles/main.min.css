@@ -9506,6 +9506,17 @@ body .sl-wrapper .sl-counter {
   grid-template-columns: repeat(5, 1fr);
   gap: 4.5rem;
 }
+@media screen and (max-width: 1024px) {
+  .download-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .download-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .download-grid .download-cell {
   display: flex;
   flex-direction: column;
