@@ -9524,6 +9524,14 @@ body .sl-wrapper .sl-counter {
   gap: 1.31rem;
   text-decoration: none;
 }
+.download-grid .download-cell img {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border-radius: 3px;
+}
+.download-grid .download-cell:hover img {
+  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.3);
+}
 .download-grid .download-cell .download-title {
   color: #000;
   font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
