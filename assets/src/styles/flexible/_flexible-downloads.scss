@@ -1,0 +1,36 @@
+
+.download-category-grid .download-category-title{
+    font-family: $avenirNext;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height:1;
+    text-transform: uppercase;
+    margin-bottom: 2.88rem;
+}
+
+
+.download-grid{
+    display: grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap: 4.5rem;
+
+    .download-cell{
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.31rem;
+        text-decoration: none;
+
+        & .download-title{
+            color: #000;
+            font-family: $avenirNext;
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.44;
+        }
+
+    }
+}

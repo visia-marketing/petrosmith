@@ -9491,6 +9491,37 @@ body .sl-wrapper .sl-counter {
   color: #ffffff;
 }
 
+.download-category-grid .download-category-title {
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 2.88rem;
+}
+
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4.5rem;
+}
+.download-grid .download-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.31rem;
+  text-decoration: none;
+}
+.download-grid .download-cell .download-title {
+  color: #000;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.44;
+}
+
 .fc-wrapper .top-border > .fc-section-heading,
 .fc-page-header .top-border > .fc-section-heading {
   border-top: 1px solid #000000;

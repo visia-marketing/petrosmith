@@ -1,6 +1,6 @@
 {
     "key": "group_68f144b3d68fe",
-    "title": "COMPONENT: Flexible Section",
+    "title": "!COMPONENT: Flexible Section",
     "fields": [
         {
             "key": "field_68f145e511540",
@@ -390,6 +390,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_691f8a45717ea": {
+                    "key": "layout_691f8a45717ea",
+                    "name": "section_download_category_grid",
+                    "label": "Category Download Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_691f8a54717ed",
+                            "label": "Download Grid",
+                            "name": "download_grid",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_691f88df2536e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -416,5 +448,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1763496826
+    "modified": 1763675072
 }
