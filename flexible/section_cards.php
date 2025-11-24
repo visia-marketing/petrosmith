@@ -2,7 +2,7 @@
 $cards = get_sub_field('cards');
 $per_row = get_sub_field('cards_per_row');
 $card_style = 'primary';
-$card_hover = get_sub_field('hover_effect');
+$card_hover = get_sub_field('hover_effect') ? 'enabled' : 'disabled';
 
 
 
