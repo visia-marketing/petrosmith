@@ -9085,8 +9085,12 @@ body .g-round-image {
   height: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: row;
+  -moz-column-gap: 2.25rem;
+       column-gap: 2.25rem;
+  padding: 0.75rem 1.5rem;
+  min-height: 76px;
 }
 .fc-section-cards .cards-style--primary.card-hover--disable .content-cards .card-content > a.card-link-wrapper {
   height: 100%;
@@ -9100,6 +9104,9 @@ body .g-round-image {
 }
 .fc-section-cards .cards-style--primary.card-hover--disable .content-cards .card-content p {
   opacity: 1;
+}
+.fc-section-cards .cards-style--primary.card-hover--disable .content-cards .card-content h3 {
+  text-align: left;
 }
 .fc-section-cards .cards-style--primary.card-hover--disable .content-cards .card-content .card-button {
   position: relative;
