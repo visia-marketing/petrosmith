@@ -2,6 +2,7 @@
 $cards = get_sub_field('cards');
 $per_row = get_sub_field('cards_per_row');
 $card_style = 'primary';
+$card_hover = get_sub_field('hover_effect');
 
 
 
@@ -33,7 +34,7 @@ switch ($per_row) {
     <?php foreach( $cards as $card ): ?>
 
 
-      <div class="<?php echo $class. ' card-background--'.$card['bg_group']['card_background'] ?> ">
+      <div class="<?php echo $class. ' card-hover--'.$card_hover.' card-background--'.$card['bg_group']['card_background'] ?> ">
         <div class="content content-cards" data-equalizer-watch>
 
         <?php if( array_key_exists( 'card_link', $card) ): ?>
