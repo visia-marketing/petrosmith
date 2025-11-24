@@ -1,6 +1,6 @@
 {
     "key": "group_672b86eae0ac8",
-    "title": "COMPONENT: Hover Cards",
+    "title": "COMPONENT: Boxed Cards",
     "fields": [
         {
             "key": "field_672b86eb2abcd",
@@ -256,5 +256,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1763995380
+    "modified": 1764008642
 }
