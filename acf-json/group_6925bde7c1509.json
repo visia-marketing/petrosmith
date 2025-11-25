@@ -1,52 +1,57 @@
 {
-    "key": "group_691f88df2536e",
-    "title": "COMPONENT: Download Category Grid",
+    "key": "group_6925bde7c1509",
+    "title": "COMPONENT: News Grid",
     "fields": [
         {
-            "key": "field_691f892a6af0b",
-            "label": "Title",
-            "name": "title",
+            "key": "field_6925bde8a93e9",
+            "label": "Posts Per Page",
+            "name": "per_page",
             "aria-label": "",
-            "type": "text",
+            "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
+            "min": "",
+            "max": "",
             "allow_in_bindings": 0,
-            "placeholder": "Leave blank for default category title",
+            "placeholder": "",
+            "step": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_691f88df05ace",
-            "label": "Choose Category",
-            "name": "download_category_ids",
+            "key": "field_6925be20a93ea",
+            "label": "Exclude Posts",
+            "name": "exclude_posts",
             "aria-label": "",
-            "type": "taxonomy",
+            "type": "post_object",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "dlm_download_category",
-            "add_term": 0,
-            "save_terms": 0,
-            "load_terms": 0,
-            "return_format": "object",
-            "field_type": "select",
+            "post_type": [
+                "post"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 1,
             "allow_null": 0,
             "allow_in_bindings": 0,
             "bidirectional": 0,
-            "multiple": 0,
+            "ui": 1,
             "bidirectional_target": []
         }
     ],
@@ -69,5 +74,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764082977
+    "modified": 1764082983
 }
