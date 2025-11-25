@@ -9563,7 +9563,7 @@ body .sl-wrapper .sl-counter {
 }
 @media screen and (max-width: 768px) {
   .icon-column {
-    max-width: 10rem;
+    max-width: 9rem;
   }
 }
 .icon-column .market-icon-card {
@@ -9582,6 +9582,17 @@ body .sl-wrapper .sl-counter {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .icon-column .market-icon-card__icon {
+    width: 85px;
+  }
+  .icon-column .market-icon-card__icon img {
+    max-width: 36px !important;
+  }
+}
+.icon-column .market-icon-card__icon img {
+  max-width: 55px;
+}
 .icon-column .market-icon-card__name {
   color: #062F6E;
   text-align: center;
@@ -9591,8 +9602,10 @@ body .sl-wrapper .sl-counter {
   font-weight: 600;
   line-height: 1;
 }
-.icon-column .market-icon-card img {
-  max-width: 55px;
+@media screen and (max-width: 768px) {
+  .icon-column .market-icon-card__name {
+    font-size: 1.125rem;
+  }
 }
 
 .fc-section-dark .market-icon-card__name {

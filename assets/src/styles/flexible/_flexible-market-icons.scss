@@ -29,8 +29,9 @@
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1.5rem;
+
     @media screen and (max-width: 768px){
-        max-width: 10rem;
+        max-width: 9rem;
      }
    
 
@@ -49,6 +50,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @media screen and (max-width: 768px){
+                width: 85px;
+                & img{
+                    max-width: 36px !important;
+                }
+            }
+
+            & img{
+                max-width: 55px;
+            }
         }
 
         &__name{
@@ -59,12 +71,16 @@
             font-style: normal;
             font-weight: 600;
             line-height: 1;
+
+            @media screen and (max-width: 768px){
+                font-size: 1.125rem;
+            }
+
+
         }
 
 
-        img{
-            max-width: 55px;
-        }
+
     }
 }
 
