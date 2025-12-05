@@ -6353,6 +6353,7 @@ a, button, .button, [type=submit] {
   font-size: 1.125rem;
   text-transform: none;
   margin-right: 0.25rem;
+  color: #062F6E;
 }
 @media screen and (max-width: 768px) {
   .breadcrumbs li {
@@ -8877,6 +8878,9 @@ body .g-round-image {
 .fc-section-columns .content-columns {
   padding-right: 20px;
 }
+.fc-section-columns .column:last-child:not(:first-child), .fc-section-columns .columns:last-child:not(:first-child) {
+  float: left;
+}
 
 .fc-section.lines .fc-section-columns .content-columns {
   border-left: 1px solid #c3c3c3;
@@ -8989,11 +8993,7 @@ body .g-round-image {
 .fc-section-cards .cards {
   padding-right: 0.9rem;
   padding-left: 0.9rem;
-}
-@media screen and (max-width: 768px) {
-  .fc-section-cards .cards {
-    margin-bottom: 2rem;
-  }
+  margin-bottom: 1.8rem;
 }
 .fc-section-cards .cards-style--primary.card-background--image .content-cards, .fc-section-cards .cards-style--primary.card-background--blue .content-cards {
   background-color: #062F6E;

@@ -120,7 +120,7 @@ function setup() {
    * This ensures the editor matches the front-end styling.
    * Custom editor styles can be added in /assets/styles/layouts/_tinymce.scss
    */
-  add_editor_style(Assets\asset_path('styles/main.css'));
+  add_editor_style(Assets\asset_path('styles/main.min.css'));
 }
 
 // Hook the setup function to run after the theme is initialized

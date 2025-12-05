@@ -76,7 +76,7 @@
     ?>
     <div class="page-header-content-wrapper fc-section fc-section-<?php echo $page_heading_background;?> <?php echo $hero_class;?> page-header-<?php echo $page_heading_size; ?>">
       <div class="row">
-        <div class="small-12 large-8 <?php if( is_front_page() ): ?>large-offset-2 text-center<?php endif; ?>  columns">
+        <div class="small-12 large-10 <?php if( is_front_page() ): ?>large-offset-2 text-center<?php endif; ?>  columns">
           <div class="page-header-content">
 
               <?php if ( !empty($page_sub_heading) ): ?>
