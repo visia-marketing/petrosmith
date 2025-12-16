@@ -34,7 +34,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "pet_market"
+                "value": "page"
             }
         ]
     ],
@@ -48,5 +48,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764089551
+    "modified": 1765908836
 }
