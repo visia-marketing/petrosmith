@@ -1,0 +1,93 @@
+.row:has(.icon-column){
+    display: flex;
+}
+
+
+.icon-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0rem;
+
+    @media screen and (max-width: 768px){
+       //max-width: 12rem;
+        align-items: space-between;
+    }
+
+    &--more-than-8{
+        & .market-icon-card{
+            min-width: 11rem;
+        }
+    }
+}
+
+.icon-column{
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
+
+    @media screen and (max-width: 768px){
+        max-width: 9rem;
+     }
+   
+
+    & .market-icon-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+
+        &__icon{
+            background: $white;
+            border-radius: 50%;
+            width: 105px;
+            aspect-ratio: 1/1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (max-width: 768px){
+                width: 85px;
+                & img{
+                    max-width: 36px !important;
+                }
+            }
+
+            & img{
+                max-width: 55px;
+            }
+        }
+
+        &__name{
+            color: $primary;
+            text-align: center;
+            font-family:$avenirNext, sans-serif;
+            font-size: 1.375rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1;
+
+            @media screen and (max-width: 768px){
+                font-size: 1.125rem;
+            }
+
+
+        }
+
+
+
+    }
+}
+
+
+
+.fc-section-dark{
+    .market-icon-card__name{
+        color: #FFF;
+    }
+}

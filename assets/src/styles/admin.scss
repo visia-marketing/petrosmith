@@ -10,83 +10,104 @@ body#tinymce.wp-editor {
 
     & .g {
 
-        &-section-subtitle {
-          color: $black;
-          display: block;
-          font-family: $sans;
-          font-size: 1.125rem;
-          font-weight: 700;
-          line-height: 1;
-          margin-bottom: 0px;
-          //text-transform: uppercase;
-      
-          @include breakpoint(medium) {
-            font-size: 1.375rem;
-          }
-      
+
+      &-round-image{
+        border-radius: 50%;
+        aspect-ratio: 1;
+        object-fit: cover;
+      }
+
+      &-section-subtitle {
+        color: $pet-dk-gray;
+        display: block;
+        font-family: $sans;
+        font-size: 1rem;
+        letter-spacing: 0.03rem;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 0px;
+        text-transform: uppercase;
+    
+      }
+  
+      &-section-subtitle-large {
+        color: $pet-dk-gray;
+        display: block;
+        font-family: $sans;
+        font-size: 1.375rem;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 0px;
+        text-transform: uppercase;
+    
+        @include breakpoint(medium) {
+          font-size: 1.375rem;
         }
     
-        &-section-subtitle-large {
-          color: $black;
-          display: block;
-          font-family: $sans;
-          font-size: 1.375rem;
-          font-weight: 700;
-          line-height: 1;
-          margin-bottom: 0px;
-          //text-transform: uppercase;
-      
-          @include breakpoint(medium) {
-            font-size: 1.375rem;
-          }
-      
+      }
+    
+      &-section-title {
+        color: $black;
+        display: block;
+        font-family: $sans;
+        font-size: 26px;
+        font-weight: 700;
+        margin: 0 0 30px;
+    
+        @include breakpoint(medium) {
+          font-size: 36px;
         }
-      
-        &-section-title {
-          color: $black;
-          display: block;
-          font-family: $sans;
-          font-size: 26px;
-          font-weight: 700;
-          margin: 0 0 30px;
-      
-          @include breakpoint(medium) {
-            font-size: 36px;
-          }
-      
-          @include breakpoint(xlarge) {
-            font-size: 46px;
-          }
-      
+    
+        @include breakpoint(xlarge) {
+          font-size: 46px;
         }
-      
-        &-section-text-medium {
-          font-size: 1.25rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 1.875rem;
-        }
-      
-        &-section-impact-text {
-          font-size: 3.125rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 3.4375rem;
-        }
-      
-        &-section-med-impact-text {
-          font-size: 2.7rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 3.125rem;
-        }
-      
-        &-section-blue-highlight{
+    
+      }
+    
+      &-section-text-medium {
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.875rem;
+      }
+    
+      &-section-impact-text {
+        font-size: 3.125rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 3.4375rem;
+      }
+    
+      &-section-med-impact-text {
+        font-size: 2.375rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 3.0625rem;
+      }
+
+      &-section-impact-number {
+        color: $pet-md-gray;
+        font-size: 5rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 1;
+      }
+    
+      &-section-gray-highlight{
+        color: $secondary !important;
+        & a {
           color: $secondary !important;
-          & a {
-            color: $secondary !important;
-          }
         }
+      }
+  
+      &-section-avenir-next-900{
+        font-family: $avenirNext !important;
+        font-weight: 900 !important;
+      }
+
+      &-section-text-uppercase{
+        text-transform: uppercase !important;
+      }
 
         &-max-width-1024 {
           max-width: 1024px;

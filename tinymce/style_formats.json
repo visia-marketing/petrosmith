@@ -36,14 +36,35 @@
     "wrapper": true
   },
   {
+    "title": "Large Impactful Number",
+    "inline": "span",
+    "classes": "g-section-impact-number g-section-gray-highlight",
+    "wrapper": true
+  },
+  {
+    "title": "Text Transform Uppercase",
+    "inline": "span",
+    "classes": "g-section-text-uppercase"
+  },
+  {
+    "title": "max-width 768px",
+    "inline": "span",
+    "classes": "g-section-max-width-768"
+  },
+  {
     "title": "max-width 1024px",
     "inline": "span",
     "classes": "g-section-max-width-1024"
   },
   {
-    "title": "Blue Text Highlight",
+    "title": "Gray Text Highlight",
     "inline": "span",
-    "classes": "g-section-blue-highlight"
+    "classes": "g-section-gray-highlight"
+  },
+  {
+    "title": "Avenir Next 900",
+    "inline": "span",
+    "classes": "g-section-avenir-next-900"
   },
   {
     "title": "Button Primary (dark)",
@@ -54,5 +75,10 @@
     "title": "Button Secondary (light)",
     "selector": "a",
     "classes": "g-button button button-secondary"
+  },
+  {
+    "title": "Round Image",
+    "selector": "img",
+    "classes": "g-round-image"
   }
 ]

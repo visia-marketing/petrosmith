@@ -12,7 +12,7 @@
 import $ from 'jquery';
 import 'foundation-sites';
 // import 'slick-carousel';
-// import 'simple-lightbox';
+import SimpleLightbox from "simplelightbox";
 
 // If you only need specific modules:
 // import { Foundation, Accordion, Tabs } from 'foundation-sites';
@@ -27,7 +27,7 @@ import 'foundation-sites';
         
         $(document).foundation(); // Foundation JavaScript
 
-        
+        new SimpleLightbox('.some-element a', { /* options */ });
       
       },
       finalize: function() {

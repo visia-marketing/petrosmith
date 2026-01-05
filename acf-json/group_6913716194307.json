@@ -1,9 +1,9 @@
 {
-    "key": "group_6722779581887",
-    "title": "COMPONENT: Three Columns",
+    "key": "group_6913716194307",
+    "title": "COMPONENT: Four Columns",
     "fields": [
         {
-            "key": "field_6722779586d0d",
+            "key": "field_6913716196281",
             "label": "Column 1",
             "name": "column_1",
             "aria-label": "",
@@ -12,18 +12,19 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
+            "allow_in_bindings": 1,
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
         },
         {
-            "key": "field_6722779586d46",
+            "key": "field_6913716196657",
             "label": "Column 2",
             "name": "column_2",
             "aria-label": "",
@@ -32,18 +33,19 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
+            "allow_in_bindings": 1,
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
         },
         {
-            "key": "field_672277ae03d2b",
+            "key": "field_6913716196a6b",
             "label": "Column 3",
             "name": "column_3",
             "aria-label": "",
@@ -52,11 +54,33 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
+            "allow_in_bindings": 1,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_6913716d98b99",
+            "label": "Column 4",
+            "name": "column_4",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1,
@@ -82,5 +106,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764082994
+    "modified": 1764082979
 }

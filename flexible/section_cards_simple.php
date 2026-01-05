@@ -1,8 +1,8 @@
 <?php
-$cards = get_sub_field('cards');
+$cards = get_sub_field('cards_simple');
 $per_row = get_sub_field('cards_per_row');
-$card_style = 'primary';
-$card_hover = get_sub_field('hover_effect') ?? 'disabled';
+$card_style = 'basic';
+$card_padding = get_sub_field('card_padding');
 
 
 
@@ -13,13 +13,13 @@ switch ($per_row) {
         $class .= ' small-12 medium-6';
         break;
     case 3:
-        $class .= ' small-12 medium-4';
+        $class .= ' small-12 medium-6 large-4';
         break;
     case 4:
-        $class .= ' small-12 medium-3';
+        $class .= ' small-12 medium-6 large-3';
         break; 
     default:
-        $class .= ' small-12 medium-4'; // Default to 3 per row
+        $class .= ' small-12 medium-6 large-4'; // Default to 3 per row
 }
 
 
@@ -34,8 +34,8 @@ switch ($per_row) {
     <?php foreach( $cards as $card ): ?>
 
 
-      <div class="<?php echo $class. ' card-hover--'.$card_hover.' card-background--'.$card['bg_group']['card_background']; ?> ">
-        <div class="content content-cards" data-equalizer-watch>
+      <div class="<?php echo $class; ?> ">
+        <div class="content content-cards card-padding-<?php echo $card_padding;?>" data-equalizer-watch>
 
         <?php if( array_key_exists( 'card_link', $card) ): ?>
             <?php if( is_array( $card['card_link']) ): ?>
@@ -45,14 +45,7 @@ switch ($per_row) {
 
 
             <div class="card-image">
-                <?php
-                if( $card['bg_group']['card_background'] == 'image' ) {
-                    $image = wp_get_attachment_image($card['bg_group']['card_icon'], 'thumbnail');
-                }else{
-                    $image = false;
-                }
-                 
-                  ?>
+                <?php $image = wp_get_attachment_image($card['card_icon'], 'thumbnail'); ?>
                 
                 <?php if( $image ): ?>
                     <div class="card-image-inner">

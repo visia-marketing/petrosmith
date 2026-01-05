@@ -1,16 +1,43 @@
-.page-breadcrumbs {
-  color: $black;
-  font-size: .925rem;
+.breadcrumbs {
   margin: 1.35rem 0 4rem;
 
+  & li{
+    font-size: 1.125rem;
+    text-transform: none;
+    margin-right: 0.25rem;
+    color: $primary;
+
+    @media screen and (max-width: 768px){
+      font-size: 0.875rem;
+    }
+
+
+    & a{
+      text-decoration: none;
+      color: #888;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+
   span > a > span {
-    color: $black;
-    font-weight: 600;
+    
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1rem;
   }
 
   span {
-    font-size: .925rem;
-    font-weight: 400;
+    font-weight: 500;
   }
 
+
+  & li:not(:last-child)::after{
+    content: '>';
+    color: #888;
+    font-weight: 500;
+  }
 }

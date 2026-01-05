@@ -1,6 +1,6 @@
 {
     "key": "group_68f24a7c02779",
-    "title": "Page Header",
+    "title": "PAGE COMPONENT: Page Header",
     "fields": [
         {
             "key": "field_68f78dae9a4d7",
@@ -30,7 +30,28 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_69136aed0885f",
+            "label": "Show Breadcrumbs",
+            "name": "show_page_breadcrumbs",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -114,7 +135,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "75",
                         "class": "",
                         "id": ""
                     },
@@ -124,6 +145,35 @@
                     "placeholder": "",
                     "prepend": "H1",
                     "append": ""
+                },
+                {
+                    "key": "field_691375a0ff1c9",
+                    "label": "Letter Case",
+                    "name": "letter_case",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "caps": "Uppercase",
+                        "normal": "Normal"
+                    },
+                    "default_value": "caps",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "allow_in_bindings": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "create_options": 0,
+                    "save_options": 0
                 },
                 {
                     "key": "field_68f24af3154af",
@@ -304,5 +354,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761320809
+    "modified": 1762883018
 }

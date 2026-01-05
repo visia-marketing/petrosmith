@@ -1,49 +1,53 @@
 {
-    "key": "group_6733848806c2d",
-    "title": "COMPONENT: One Column",
+    "key": "group_691f88df2536e",
+    "title": "COMPONENT: Download Category Grid",
     "fields": [
         {
-            "key": "field_673384880bc6d",
-            "label": "Column 1",
-            "name": "column_1",
+            "key": "field_691f892a6af0b",
+            "label": "Title",
+            "name": "title",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "75",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "allow_in_bindings": 1,
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "Leave blank for default category title",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_67869a431115a",
-            "label": "Column Width",
-            "name": "column_width",
+            "key": "field_691f88df05ace",
+            "label": "Choose Category",
+            "name": "download_category_ids",
             "aria-label": "",
-            "type": "range",
+            "type": "taxonomy",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "100",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": 12,
-            "min": 1,
-            "max": 12,
+            "taxonomy": "dlm_download_category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "object",
+            "field_type": "select",
+            "allow_null": 0,
             "allow_in_bindings": 0,
-            "step": "",
-            "prepend": "",
-            "append": ""
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -65,5 +69,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764083004
+    "modified": 1764082977
 }

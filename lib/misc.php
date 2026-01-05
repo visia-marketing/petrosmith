@@ -136,3 +136,17 @@ function my_theme_register_required_plugins() {
 }
 add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
 
+
+/*
+* Hide Download Monitor Upsells in admin area
+*/
+add_action( 'admin_head-post.php', 'my_admin_inline_css' );
+add_action( 'admin_head-post-new.php', 'my_admin_inline_css' );
+
+function my_admin_inline_css() {
+    echo '<style>
+        /* Only loads in editor */
+        .postbox:has(.wpchill-upsell) { display: none; }
+		.postbox .options_upsell_link { display: none; }
+    </style>';
+}
