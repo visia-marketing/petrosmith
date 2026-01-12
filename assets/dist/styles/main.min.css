@@ -9800,6 +9800,12 @@ body * .background--image.background--dark * {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  #page_header_home_page .page-header-content-wrapper {
+    height: 23.5rem;
+    padding: 0 1rem;
+  }
+}
 #page_header_home_page .page-header-content-wrapper:after {
   width: 100%;
   height: 100%;
