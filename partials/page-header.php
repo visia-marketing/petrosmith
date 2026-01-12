@@ -2,11 +2,14 @@
   $page_header_content = get_field('page_header_content');
   $page_header_style = get_field('page_header_style');
   $show_page_header = get_field('show_page_header');
+  $show_home_hero = false;
 
   $show_page_breadcrumbs = get_field('show_page_breadcrumbs');
-  // if( is_front_page() ){
-  //   $show_page_header = false;
-  // }
+
+  if( is_front_page() ){
+    $show_page_header = false;
+    $show_home_hero = true;
+  }
 
 
   if( array_key_exists( 'heading', $page_header_content) ){
@@ -132,5 +135,14 @@
   </ul>
   </div>
 </div>
+
+<?php endif; ?>
+
+
+
+
+<?php if( $show_home_hero): ?>
+
+  <?php get_template_part( 'partials/home', 'hero' ); ?>
 
 <?php endif; ?>
