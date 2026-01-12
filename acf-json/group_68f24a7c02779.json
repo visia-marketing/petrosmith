@@ -339,6 +339,11 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "template-flexible.php"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
             }
         ]
     ],
@@ -354,5 +359,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1762883018
+    "modified": 1768253132
 }
