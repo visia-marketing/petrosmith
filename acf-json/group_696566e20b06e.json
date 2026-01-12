@@ -5,7 +5,7 @@
         {
             "key": "field_6965671525361",
             "label": "Background Image",
-            "name": "background_image",
+            "name": "home_hero_background_image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -31,7 +31,7 @@
         {
             "key": "field_6965672625362",
             "label": "Background Video",
-            "name": "background_video",
+            "name": "home_hero_background_video",
             "aria-label": "",
             "type": "file",
             "instructions": "",
@@ -42,7 +42,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
+            "return_format": "array",
             "library": "all",
             "min_size": "",
             "max_size": "",
@@ -52,7 +52,7 @@
         {
             "key": "field_6965676425364",
             "label": "Hero Headline",
-            "name": "hero_headline",
+            "name": "home_hero_headline",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -92,5 +92,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1768253319
+    "modified": 1768254082
 }
