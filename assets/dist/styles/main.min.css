@@ -7105,6 +7105,9 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
     padding: 20px 0 20px;
   }
 }
+.main-header > .row {
+  max-width: 1500px !important;
+}
 .main-header .menu-icon {
   margin-top: 9px;
   float: right;
@@ -7132,8 +7135,8 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
 
 .main-header ul.primary-navigation {
   display: flex !important;
-  gap: 7px;
   justify-content: flex-end;
+  gap: 1.25rem;
   align-items: center;
   line-height: 50px;
   height: 50px;
@@ -7152,7 +7155,8 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  font-family: "Avenir Next Condensed", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  padding: 0;
 }
 .main-header ul.primary-navigation > li:hover > a {
   color: #e6e6e6;
@@ -7161,9 +7165,9 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   margin-left: 10px;
 }
 .main-header ul.primary-navigation > li:last-child a {
-  background-color: #062F6E;
+  background-color: #31969E;
   border-bottom: none;
-  border-radius: 4px;
+  border-radius: 3rem;
   color: #fff;
   font-weight: 500;
   padding: 11px 17px;
@@ -7180,7 +7184,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
 }
 .main-header ul.primary-navigation > li.active > a {
   background-color: transparent;
-  color: #A4A2A3;
+  color: #ffffff;
 }
 .main-header ul.primary-navigation > li.active > ul > li.active {
   background-color: transparent;
@@ -7214,7 +7218,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
 }
 .main-header ul.primary-navigation > li ul.submenu.first-sub > li > a {
   border-radius: 0;
-  border: 1px solid transparent;
+  border: 0px solid transparent;
   color: #062F6E;
   font-size: 15px;
   font-weight: 500;
