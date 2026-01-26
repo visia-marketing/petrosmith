@@ -18,6 +18,9 @@ module.exports = {
         filename: 'assets/dist/scripts/[name].min.js',
         path: path.resolve(__dirname)
     },
+    externals: {
+        jquery: 'jQuery'
+    },
     resolve: {
         alias: {
             'jquery': 'jquery/src/jquery',
