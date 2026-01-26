@@ -7816,6 +7816,18 @@ body .g-button.button {
   padding: 1rem 4rem 1rem 2.5rem !important;
   position: relative;
 }
+body .g-button.button-download-icon {
+  text-decoration: none;
+  font-weight: 600;
+}
+body .g-button.button-download-icon:before {
+  content: "\f019";
+  font-family: "Font Awesome 6 Free";
+  font-weight: normal;
+  font-weight: 800;
+  padding-right: 0.5rem;
+  color: #31969E;
+}
 body .g-section-max-width-1024 {
   max-width: 1024px;
   display: inline-block;

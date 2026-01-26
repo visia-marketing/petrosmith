@@ -131,5 +131,17 @@ body#tinymce.wp-editor .g-button.button:hover, body#tinymce.wp-editor .g-button.
   background-color: rgb(4.1534482759, 32.5353448276, 76.1465517241);
   color: #fff;
 }
+body#tinymce.wp-editor .g-button.button-download-icon {
+  text-decoration: none;
+  font-weight: 600;
+}
+body#tinymce.wp-editor .g-button.button-download-icon:before {
+  content: "\f019";
+  font-family: "Font Awesome 6 Free";
+  font-weight: normal;
+  font-weight: 800;
+  padding-right: 0.5rem;
+  color: #31969E;
+}
 
 /*# sourceMappingURL=admin.min.css.map*/

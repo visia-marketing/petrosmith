@@ -158,6 +158,25 @@ body#tinymce.wp-editor {
           }
       
         }
+
+        &-button.button-download-icon{
+          //padding-left: 2.5rem !important;
+          text-decoration: none;
+          font-weight: 600;
+          
+    
+    
+          &:before{
+            content: '\f019';
+            font-family: $fontawesome;
+            font-weight: normal;
+            font-weight: 800;
+            padding-right: 0.5rem;
+            color: $tertiary;
+          }
+          
+          
+        }
       
       }
 
