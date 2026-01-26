@@ -43,7 +43,6 @@ $top-header-link-color: $top-header-link-color;
         @include breakpoint(medium) {
           margin-left: 20px;
         }
-        
 
         i {
           color: $secondary;
@@ -146,6 +145,10 @@ $top-header-link-color: $top-header-link-color;
     padding: 20px 0 20px;
   }
 
+  & > .row{
+    max-width: 1500px !important;
+  }
+
   .menu-icon {
     margin-top: 9px;
     float: right;
@@ -180,8 +183,8 @@ $top-header-link-color: $top-header-link-color;
 .main-header ul.primary-navigation {
   //margin: 10px 0 0;
   display: flex !important;
-  gap: 7px;
   justify-content: flex-end;
+  gap: 1.25rem;
   align-items: center;
   line-height: 50px;
   //height: 40px;
@@ -204,7 +207,8 @@ $top-header-link-color: $top-header-link-color;
       font-weight: 600;
       text-transform: uppercase;
       text-decoration: none;
-      font-family: $avenirNextCondensed;
+      font-family: $avenirNext;
+      padding: 0;
     }
 
     &:hover > a {
@@ -215,9 +219,9 @@ $top-header-link-color: $top-header-link-color;
       margin-left: 10px;
 
       a {
-        background-color: $primary;
+        background-color: $tertiary;
         border-bottom: none;
-        border-radius: 4px;
+        border-radius: 3rem;
         color: #fff;
         font-weight: 500;
         padding: 11px 17px;
@@ -245,7 +249,7 @@ $top-header-link-color: $top-header-link-color;
 
       > a {
         background-color: transparent;
-        color: $secondary;
+        color: $white;
       }
 
       > ul > li.active {
@@ -276,6 +280,7 @@ $top-header-link-color: $top-header-link-color;
     ul.submenu.first-sub {
       background-color: #fff;
       border: none; //1px solid #f4f4f4;
+      
       border-top: 4px solid $secondary;
       border-radius: 4px 4px 4px 4px;
       box-shadow: 0 2px 3px rgba(#999,.1);
@@ -296,7 +301,7 @@ $top-header-link-color: $top-header-link-color;
 
         & > a {
           border-radius: 0;
-          border: 1px solid transparent;
+          border: 0px solid transparent;
           color: $primary;
           font-size: 15px;
           font-weight: 500;
