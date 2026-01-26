@@ -6346,37 +6346,46 @@ a, button, .button, [type=submit] {
   color: #062F6E;
 }
 
-.breadcrumbs {
-  margin: 1.35rem 0 4rem;
+.page-breadcrumbs nav {
+  margin: 0.75rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+  color: #888;
 }
-.breadcrumbs li {
+.page-breadcrumbs nav span {
   font-size: 1.125rem;
   text-transform: none;
-  margin-right: 0.25rem;
-  color: #062F6E;
+  margin-right: 0;
+  color: #31969E;
+  font-weight: 400 !important;
 }
 @media screen and (max-width: 768px) {
-  .breadcrumbs li {
+  .page-breadcrumbs nav span {
     font-size: 0.875rem;
   }
 }
-.breadcrumbs li a {
+.page-breadcrumbs nav span a {
   text-decoration: none;
-  color: #888;
+  color: #888 !important;
 }
-.breadcrumbs li a:hover {
+.page-breadcrumbs nav span a > span {
+  color: #888 !important;
+}
+.page-breadcrumbs nav span a:hover {
   text-decoration: underline;
 }
-.breadcrumbs span > a > span {
+.page-breadcrumbs nav span > a > span {
   font-style: normal;
   font-weight: 500;
   line-height: 1rem;
 }
-.breadcrumbs span {
+.page-breadcrumbs nav span {
   font-weight: 500;
 }
-.breadcrumbs li:not(:last-child)::after {
-  content: ">";
+.page-breadcrumbs nav li:not(:last-child)::after {
+  content: "/";
   color: #888;
   font-weight: 500;
 }
@@ -6414,8 +6423,11 @@ a, button, .button, [type=submit] {
 }
 
 a.button.button-primary {
-  background-color: #062F6E;
+  background-color: #31969E;
   color: #fff;
+  border: #31969E;
+  border-radius: 3rem;
+  padding: 1.5rem;
 }
 a.button.button-primary:hover, a.button.button-primary.active {
   background-color: #A7A8A9;
@@ -6607,6 +6619,9 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   position: relative;
   overflow: hidden;
 }
+.fc-page-header:not(#page_header_home_page) {
+  background: linear-gradient(180deg, #062F6E -13.82%, #31969E 110.77%);
+}
 .fc-page-header img.page-header-image {
   position: absolute;
   width: 100%;
@@ -6619,23 +6634,32 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
 .fc-page-header .page-header-content-wrapper {
   align-self: flex-end;
   width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
 }
-.fc-page-header .page-header-content-wrapper.fc-section-image {
-  background: linear-gradient(18deg, rgba(0, 0, 0, 0.6) 4.96%, rgba(102, 102, 102, 0.11) 59.19%);
+.fc-page-header .page-header-content-wrapper.fc-section {
+  padding: 30px 0;
+  position: relative;
+  overflow: hidden;
 }
-.fc-page-header .page-header-content-wrapper.page-header-expanded {
-  padding-top: 22.5rem;
-  padding-bottom: 2.5rem;
+@media print, screen and (min-width: 40em) {
+  .fc-page-header .page-header-content-wrapper.fc-section {
+    padding: 5rem 0 2rem 0;
+  }
 }
 .fc-page-header .page-header-content-wrapper.fc-section-hero-frontpage {
   padding-top: 13.5rem;
   padding-bottom: 15.5rem;
 }
-.fc-page-header .page-header-content-wrapper .page-header-content .letter-case--caps {
-  text-transform: uppercase;
-}
 .fc-page-header .page-header-content-wrapper .page-header-content h1 {
   font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  color: #ffffff;
+  font-size: 2.875rem;
+  letter-spacing: 0.14375rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
 }
 .fc-page-header .page-header-content-wrapper .page-header-content p:last-child {
   margin-bottom: 0;
@@ -7073,6 +7097,8 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   position: relative;
   width: 100%;
   z-index: 10;
+  background-color: #062F6E;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 @media print, screen and (min-width: 40em) {
   .main-header {
@@ -7119,7 +7145,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   align-items: center;
 }
 .main-header ul.primary-navigation > li > a {
-  color: #062F6E;
+  color: #ffffff;
   display: block;
   font-size: 1rem;
   font-style: normal;
@@ -7129,7 +7155,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   font-family: "Avenir Next Condensed", Avenir, "Canada Type Gibson", sans-serif;
 }
 .main-header ul.primary-navigation > li:hover > a {
-  color: #000000;
+  color: #e6e6e6;
 }
 .main-header ul.primary-navigation > li:last-child {
   margin-left: 10px;
@@ -7783,7 +7809,7 @@ body .g-button.button {
   margin-right: 10px;
   display: inline-block;
   margin-top: 1rem;
-  padding: 9px 54px 8px 16px;
+  padding: 1rem 4rem 1rem 2.5rem !important;
   position: relative;
 }
 body .g-section-max-width-1024 {
@@ -8796,17 +8822,16 @@ body .g-round-image {
 }
 .fc-section-accordion-simple .accordion.separated .accordion-topic, .fc-section-accordion-tabs .accordion.separated .accordion-topic {
   border-top: 1px solid #737373;
-  border-bottom: 1px solid #737373;
+  border-bottom: 1px solid #DEDEDE;
   overflow: hidden;
 }
 .fc-section-accordion-simple .accordion.in-tabs, .fc-section-accordion-tabs .accordion.in-tabs {
   border-top: none;
 }
 .fc-section-accordion-simple .accordion .accordion-topic, .fc-section-accordion-tabs .accordion .accordion-topic {
-  border-bottom: 1px solid #737373;
+  border-bottom: 1px solid #DEDEDE;
   padding: 2.5rem 0;
   position: relative;
-  background: #ffffff;
 }
 .fc-section-accordion-simple .accordion .accordion-topic h4, .fc-section-accordion-tabs .accordion .accordion-topic h4 {
   font-family: "Avenir", "Canada Type Gibson", sans-serif;
@@ -8828,6 +8853,19 @@ body .g-round-image {
   bottom: 0;
   transition: all 0.5s ease;
 }
+.fc-section-accordion-simple .accordion .accordion-topic .accordion-arrow .accordion-open svg path:first-child, .fc-section-accordion-tabs .accordion .accordion-topic .accordion-arrow .accordion-open svg path:first-child {
+  stroke: #31969E;
+}
+.fc-section-accordion-simple .accordion .accordion-topic .accordion-arrow .accordion-open svg path:last-child, .fc-section-accordion-tabs .accordion .accordion-topic .accordion-arrow .accordion-open svg path:last-child {
+  fill: #31969E;
+}
+.fc-section-accordion-simple .accordion .accordion-topic .accordion-arrow .accordion-close svg path:first-child, .fc-section-accordion-tabs .accordion .accordion-topic .accordion-arrow .accordion-close svg path:first-child {
+  stroke: #31969E;
+  fill: #31969E;
+}
+.fc-section-accordion-simple .accordion .accordion-topic .accordion-arrow .accordion-close svg path:last-child, .fc-section-accordion-tabs .accordion .accordion-topic .accordion-arrow .accordion-close svg path:last-child {
+  fill: #ffffff;
+}
 .fc-section-accordion-simple .accordion .accordion-topic .accordion-arrow i, .fc-section-accordion-tabs .accordion .accordion-topic .accordion-arrow i {
   color: #000000;
   font-size: 34px;
@@ -8846,11 +8884,11 @@ body .g-round-image {
 }
 .fc-section-accordion-simple .accordion .accordion-response, .fc-section-accordion-tabs .accordion .accordion-response {
   padding: 22px 0;
-  padding-bottom: 10rem;
+  padding-bottom: 2.5rem;
   display: none;
 }
 .fc-section-accordion-simple .accordion .accordion-response.current, .fc-section-accordion-tabs .accordion .accordion-response.current {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 .fc-section-accordion-simple .accordion .accordion-response h1, .fc-section-accordion-simple .accordion .accordion-response h2, .fc-section-accordion-simple .accordion .accordion-response h3, .fc-section-accordion-simple .accordion .accordion-response h4, .fc-section-accordion-simple .accordion .accordion-response h5, .fc-section-accordion-simple .accordion .accordion-response h6, .fc-section-accordion-simple .accordion .accordion-response ul, .fc-section-accordion-simple .accordion .accordion-response p, .fc-section-accordion-tabs .accordion .accordion-response h1, .fc-section-accordion-tabs .accordion .accordion-response h2, .fc-section-accordion-tabs .accordion .accordion-response h3, .fc-section-accordion-tabs .accordion .accordion-response h4, .fc-section-accordion-tabs .accordion .accordion-response h5, .fc-section-accordion-tabs .accordion .accordion-response h6, .fc-section-accordion-tabs .accordion .accordion-response ul, .fc-section-accordion-tabs .accordion .accordion-response p {
   max-width: 1070px;
@@ -8875,12 +8913,15 @@ body .g-round-image {
 }
 .fc-faq-section:not(.fc-section-accordion-simple) .faq_answer {
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #737373;
+  border-bottom: 1px solid #DEDEDE;
   margin-bottom: 2.5rem;
 }
 
 .fc-section-columns .content-columns {
   padding-right: 20px;
+}
+.fc-section-columns p img, .fc-section-columns p figure {
+  border-radius: 1rem;
 }
 .fc-section-columns .column:last-child:not(:first-child), .fc-section-columns .columns:last-child:not(:first-child) {
   float: left;
@@ -9730,7 +9771,7 @@ body * .fc-section-dark a.button.grey {
   color: #062F6E;
 }
 body * .fc-section-grey, body * .fc-section-gray, body * .background--gray, body * .background--grey {
-  background-color: #F1F1F1;
+  background-color: #F7F7F7;
 }
 body * .background--image.background--light *:not(a.button) {
   color: #000000;

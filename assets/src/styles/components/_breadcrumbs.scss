@@ -1,43 +1,58 @@
-.breadcrumbs {
-  margin: 1.35rem 0 4rem;
 
-  & li{
-    font-size: 1.125rem;
-    text-transform: none;
-    margin-right: 0.25rem;
-    color: $primary;
+.page-breadcrumbs{
 
-    @media screen and (max-width: 768px){
-      font-size: 0.875rem;
-    }
+  nav {
+    margin: 0.75rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+    color: #888;
+  
+    & span{
+      font-size: 1.125rem;
+      text-transform: none;
+      margin-right: 0;
+      color: $tertiary;
+      font-weight: 400 !important;
+  
+      @media screen and (max-width: 768px){
+        font-size: 0.875rem;
+      }
 
+  
+      & a{
+        text-decoration: none;
+        color: #888 !important;
 
-    & a{
-      text-decoration: none;
-      color: #888;
-
-      &:hover {
-        text-decoration: underline;
+        &>span{
+          color: #888 !important;
+        }
+  
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
-  }
-
-
-  span > a > span {
-    
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1rem;
-  }
-
-  span {
-    font-weight: 500;
-  }
-
-
-  & li:not(:last-child)::after{
-    content: '>';
-    color: #888;
-    font-weight: 500;
+  
+  
+    span > a > span {
+      
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1rem;
+    }
+  
+    span {
+      font-weight: 500;
+    }
+  
+  
+    & li:not(:last-child)::after{
+      content: '/';
+      color: #888;
+      font-weight: 500;
+    }
   }
 }
+

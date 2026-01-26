@@ -1,15 +1,15 @@
 <?php if (has_nav_menu('top_navigation')) : ?>
-<div class="top-header">
-	<div class="row">
-		<div class="small-12 columns">
-      <div class="top-header-flex">
-        <?php
-          wp_nav_menu(['theme_location' => 'top_navigation', 'depth' => 1, 'menu_class' => 'top-header-navigation top-header-navigation-right']); 
-        ?>
+  <div class="top-header">
+    <div class="row">
+      <div class="small-12 columns">
+        <div class="top-header-flex">
+          <?php
+            wp_nav_menu(['theme_location' => 'top_navigation', 'depth' => 1, 'menu_class' => 'top-header-navigation top-header-navigation-right']); 
+          ?>
+        </div>
       </div>
-		</div>
-	</div>
-</div>
+    </div>
+  </div>
 <?php endif; ?>
 
 <header class="main-header">
