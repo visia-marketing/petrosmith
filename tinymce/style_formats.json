@@ -77,6 +77,11 @@
     "classes": "g-button button button-secondary"
   },
   {
+    "title": "Download Icon Text Link",
+    "selector": "a",
+    "classes": "g-button button-download-icon"
+  },
+  {
     "title": "Round Image",
     "selector": "img",
     "classes": "g-round-image"

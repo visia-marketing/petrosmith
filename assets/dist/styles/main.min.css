@@ -7736,6 +7736,14 @@ body .g-section-subtitle {
   line-height: 1;
   margin-bottom: 0px;
   text-transform: uppercase;
+  color: #31969E;
+  font-family: "Avenir Next";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1rem; /* 88.889% */
+  letter-spacing: 0.1125rem;
+  text-transform: uppercase;
 }
 body .g-section-subtitle-large {
   color: #737373;
@@ -7815,6 +7823,18 @@ body .g-button.button {
   margin-top: 1rem;
   padding: 1rem 4rem 1rem 2.5rem !important;
   position: relative;
+}
+body .g-button.button-download-icon {
+  text-decoration: none;
+  font-weight: 600;
+}
+body .g-button.button-download-icon:before {
+  content: "\f019";
+  font-family: "Font Awesome 6 Free";
+  font-weight: normal;
+  font-weight: 800;
+  padding-right: 0.5rem;
+  color: #31969E;
 }
 body .g-section-max-width-1024 {
   max-width: 1024px;
