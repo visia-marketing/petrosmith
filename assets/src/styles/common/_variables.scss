@@ -39,6 +39,7 @@ $white:       #ffffff;
 $yellow:     #FBA919;
 $navy:       #062F6E;
 $cadet:      #072F6E;
+$teal:        #31969E;
 $pet-dk-gray: #737373;
 $pet-md-gray: #A7A8A9;
 $pet-lt-gray: #A4A2A3;
@@ -50,6 +51,8 @@ $darkGrade: linear-gradient(270deg, rgba(0, 43, 73, 0.70) -5%, rgba(0, 34, 57, 0
 
 $primary: $navy;
 $secondary: $pet-lt-gray;
+$tertiary: $teal;
+
 $dark: darken($primary, 10%);
 
 ///////////////////////////////////////////////

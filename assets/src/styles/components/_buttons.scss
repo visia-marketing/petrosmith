@@ -63,8 +63,11 @@
 }
 
 a.button.button-primary{
-  background-color: $primary;
+  background-color: $tertiary;
   color:#fff;
+  border: $tertiary;
+  border-radius: 3rem;
+  padding: 1.5rem;
 
 
   &:hover, &.active {

@@ -6,6 +6,14 @@
     padding-right: 20px;
   }
 
+ 
+  & p{
+    & img,
+    & figure{
+      border-radius: 1rem;
+    }
+  }
+
   .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
       float: left;
   }

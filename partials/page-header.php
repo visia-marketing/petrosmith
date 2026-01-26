@@ -16,39 +16,8 @@
     if( $page_header_content['heading'] ){
       $page_heading = $page_header_content['heading'];
     }    
-  }
-
-  if( array_key_exists( 'letter_case', $page_header_content) ){
-    if( $page_header_content['letter_case'] ){
-      $letter_case = $page_header_content['letter_case'];
-    }    
-  }
-
-  if( array_key_exists( 'sub_heading', $page_header_content) ){
-    if( $page_header_content['sub_heading'] ){
-      $page_sub_heading = $page_header_content['sub_heading'];
-    }    
-  }
-  if( array_key_exists( 'heading_text', $page_header_content) ){
-    if( $page_header_content['heading_text'] ){
-      $page_heading_text = $page_header_content['heading_text'];
-    }    
-  }
-
-  if( array_key_exists( 'background', $page_header_style) ){
-    if( $page_header_style['background'] ){
-      $page_heading_background = $page_header_style['background'];
-    }    
-  }
-  if( array_key_exists( 'background_image', $page_header_style) ){
-    if( $page_header_style['background_image'] ){
-      $page_heading_background_image = $page_header_style['background_image'];
-    }    
-  }
-  if( array_key_exists( 'header_size', $page_header_style) ){
-    if( $page_header_style['header_size'] ){
-      $page_heading_size = $page_header_style['header_size'];
-    }    
+  }else{
+    $page_heading = get_the_title();
   }
 
 
@@ -72,27 +41,11 @@
 
 <?php if( $show_page_header  ): ?>
   <header class="fc-page-header page-header" id="page_header_<?php echo get_the_ID();?>">
-    <?php 
-    if( $page_heading_background === 'image' ){
-        echo wp_get_attachment_image( $page_heading_background_image, 'large', false, array( "class" => "page-header-image" ) );
-    }
-    ?>
-    <div class="page-header-content-wrapper fc-section fc-section-<?php echo $page_heading_background;?> <?php echo $hero_class;?> page-header-<?php echo $page_heading_size; ?>">
+    <div class="page-header-content-wrapper fc-section <?php echo $hero_class;?>" >
       <div class="row">
         <div class="small-12 large-10 <?php if( is_front_page() ): ?> small-centered text-center<?php endif; ?>  columns">
           <div class="page-header-content">
-
-              <?php if ( !empty($page_sub_heading) ): ?>
-                <p class="g-section-subtitle">
-                  <?php echo esc_html($page_sub_heading); ?>
-               </p>
-              <?php endif; ?>
-              <h1 class="letter-case--<?php echo $letter_case;?>"><?php if ( $page_heading ): echo esc_html($page_heading); else: the_title(); endif; ?></h1>
-              <?php if ( !empty($page_heading_text) ): ?>
-                <p>
-                    <?php echo esc_html($page_heading_text); ?>
-                </p>
-            <?php  endif; ?>
+            <h1 class="page-header-heading"><?php echo $page_heading; ?></h1>
           </div>
         </div>
       </div>
@@ -101,42 +54,20 @@
 <?php endif; ?>
 
 <?php if( $show_page_breadcrumbs ): ?>
-
-<div class="row breadcrumbs-container">
-  <div class="column small-12">
-  <ul class="breadcrumbs">
-
-  <li>
-    <a href="/">Home</a>
-  </li>
-
-  <?php if( $great_grandparent ): ?>
-    <li>
-      <a href="<?php echo get_the_permalink($great_grandparent); ?>"><?php echo $great_grandparent_name; ?></a>
-    </li>
-  <?php endif; ?>
-
-  <?php if( $grandparent ): ?>
-    <li>
-      <a href="<?php echo get_the_permalink($grandparent); ?>"><?php echo $grandparent_name; ?></a>
-    </li>
-  <?php endif; ?>
-
-  <?php if( $parent ): ?>
-    <li>
-      <a href="<?php echo get_the_permalink($parent); ?>"><?php echo $parent_name; ?></a>
-    </li>
-  <?php endif; ?>
-
-  <li>
-    <?php echo get_the_title( get_the_ID() ); ?>
-  </li>
-
-  </ul>
+  <div class="page-breadcrumbs">
+    <div class="row">
+      <div class="medium-12 columns">
+        <nav class="">      
+          <?php if(function_exists('bcn_display')) { bcn_display(); } ?>
+        </nav>     
+      </div>
+    </div>  
   </div>
-</div>
 
 <?php endif; ?>
+
+
+
 
 
 
