@@ -16,6 +16,15 @@ body{
       line-height: 1;
       margin-bottom: 0px;
       text-transform: uppercase;
+
+      color: #31969E;
+      font-family: "Avenir Next";
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1rem; /* 88.889% */
+      letter-spacing: 0.1125rem;
+      text-transform: uppercase;
   
     }
 
@@ -123,6 +132,25 @@ body{
       //   color: #fff;
       // }
   
+    }
+
+    &-button.button-download-icon{
+      //padding-left: 2.5rem !important;
+      text-decoration: none;
+      font-weight: 600;
+      
+
+
+      &:before{
+        content: '\f019';
+        font-family: $fontawesome;
+        font-weight: normal;
+        font-weight: 800;
+        padding-right: 0.5rem;
+        color: $tertiary;
+      }
+      
+      
     }
 
     &-section-max-width-1024{
