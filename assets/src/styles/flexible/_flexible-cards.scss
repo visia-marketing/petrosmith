@@ -66,8 +66,8 @@
                 & .card-content{
                     width: 100%;
                     position: absolute;
-                    top: calc( 100% - 4.75rem);
-                    padding: 1.7rem;
+                    top: calc( 100% - 3.8rem);
+                    padding: 1.5rem;
                     background: rgba(6, 47, 110, 0.80);
                     transition: all 0.3s ease;
                     height: 100%;
@@ -93,11 +93,12 @@
 
 
                     & h3{
-                      font-size: 1.25rem;
-                        padding-bottom: 0;
-                        text-align: center;
-                        text-transform: uppercase;
-                    
+                    font-family: $avenirNext;
+                      font-size: 1rem;
+                      padding-bottom: 0;
+                      text-align: center;
+                      text-transform: uppercase;
+                        font-weight: 700;
                     }
 
                     & p{
@@ -120,6 +121,50 @@
             }
 
             &.card-hover--enable{
+
+
+                &.card-hover--overlay-white{
+                    & .content-cards {
+                        & .card-content{
+                            background: rgba(255, 255, 255, 0.78);
+
+                            & *{
+                                color: $primary;
+                            }
+
+                            & .arrow{
+                                width: 16px;
+                                height: 14px;
+                                display: inline-block;
+                                background-size: cover;
+                                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13" fill="none"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="%23072E6E"/><path d="M0 5.86865H13.5" stroke="%23072E6E"/></svg>');
+                            }
+                        }
+                    }
+                }
+
+                &.card-hover--overlay-teal{
+                    & .content-cards {
+                        & .card-content{
+                            background: rgba(49, 150, 158, 0.78);
+
+                            & *{
+                                color: $white;
+                            }
+
+                            & .arrow{
+                                width: 16px;
+                                height: 14px;
+                                display: inline-block;
+                                background-size: cover;
+                                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13" fill="none"><path d="M8 11.8687L14 5.86865L8 0.368652" stroke="%23FFFFFF"/><path d="M0 5.86865H13.5" stroke="%23FFFFFF"/></svg>');
+                            }
+                        }
+                    }
+                }
+                
+
+
                 & .content-cards:hover{
                     & .card-content{
                         top: 0;
@@ -221,6 +266,9 @@
     }
 
     & .content-cards{
+
+        border-radius: 1rem;
+        overflow: hidden;
 
         & img{
             aspect-ratio: 3/2;

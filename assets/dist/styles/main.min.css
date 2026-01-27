@@ -9162,8 +9162,8 @@ body .g-round-image {
 .fc-section-cards .cards-style--primary .content-cards .card-content {
   width: 100%;
   position: absolute;
-  top: calc(100% - 4.75rem);
-  padding: 1.7rem;
+  top: calc(100% - 3.8rem);
+  padding: 1.5rem;
   background: rgba(6, 47, 110, 0.8);
   transition: all 0.3s ease;
   height: 100%;
@@ -9182,10 +9182,12 @@ body .g-round-image {
   margin-bottom: 0;
 }
 .fc-section-cards .cards-style--primary .content-cards .card-content h3 {
-  font-size: 1.25rem;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-size: 1rem;
   padding-bottom: 0;
   text-align: center;
   text-transform: uppercase;
+  font-weight: 700;
 }
 .fc-section-cards .cards-style--primary .content-cards .card-content p {
   opacity: 0;
@@ -9198,6 +9200,32 @@ body .g-round-image {
   position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;
+}
+.fc-section-cards .cards-style--primary.card-hover--enable.card-hover--overlay-white .content-cards .card-content {
+  background: rgba(255, 255, 255, 0.78);
+}
+.fc-section-cards .cards-style--primary.card-hover--enable.card-hover--overlay-white .content-cards .card-content * {
+  color: #062F6E;
+}
+.fc-section-cards .cards-style--primary.card-hover--enable.card-hover--overlay-white .content-cards .card-content .arrow {
+  width: 16px;
+  height: 14px;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15\" height=\"13\" viewBox=\"0 0 15 13\" fill=\"none\"><path d=\"M8 11.8687L14 5.86865L8 0.368652\" stroke=\"%23072E6E\"/><path d=\"M0 5.86865H13.5\" stroke=\"%23072E6E\"/></svg>");
+}
+.fc-section-cards .cards-style--primary.card-hover--enable.card-hover--overlay-teal .content-cards .card-content {
+  background: rgba(49, 150, 158, 0.78);
+}
+.fc-section-cards .cards-style--primary.card-hover--enable.card-hover--overlay-teal .content-cards .card-content * {
+  color: #ffffff;
+}
+.fc-section-cards .cards-style--primary.card-hover--enable.card-hover--overlay-teal .content-cards .card-content .arrow {
+  width: 16px;
+  height: 14px;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15\" height=\"13\" viewBox=\"0 0 15 13\" fill=\"none\"><path d=\"M8 11.8687L14 5.86865L8 0.368652\" stroke=\"%23FFFFFF\"/><path d=\"M0 5.86865H13.5\" stroke=\"%23FFFFFF\"/></svg>");
 }
 .fc-section-cards .cards-style--primary.card-hover--enable .content-cards:hover .card-content {
   top: 0;
@@ -9265,6 +9293,10 @@ body .g-round-image {
 }
 .fc-section-cards .cards-style--basic .content-cards.card-padding-0 .card-content {
   padding: 0 1.5rem 1rem;
+}
+.fc-section-cards .content-cards {
+  border-radius: 1rem;
+  overflow: hidden;
 }
 .fc-section-cards .content-cards img {
   aspect-ratio: 3/2;
@@ -9844,6 +9876,12 @@ body p, body li, body blockquote {
   line-height: 1.6rem;
 }
 
+body * .fc-section-gradient {
+  background: linear-gradient(142deg, #062F6E 20.23%, #31969E 75.99%);
+}
+body * .fc-section-gradient *:not(a.button) {
+  color: #fff;
+}
 body * .background--light, body * .fc-section-light {
   background-color: #ffffff;
 }
