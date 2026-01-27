@@ -2,11 +2,17 @@
 $cards = get_sub_field('cards');
 $per_row = get_sub_field('cards_per_row');
 $card_style = 'primary';
-$card_hover = get_sub_field('hover_effect') ?? 'disable';
 
+$card_hover = get_sub_field('hover_effect') ?? 'disabled';
+$display = get_sub_field('card_display') ?? 'grid';
 
 
 $class = 'columns cards cards-style--'.$card_style;
+
+if( $card_hover != 'disable'){
+    $class .= ' card-hover--enable';
+    $class .= ' card-hover--'.$card_hover;
+}
 
 
 
@@ -36,7 +42,7 @@ switch ($per_row) {
     <?php foreach( $cards as $card ): ?>
 
 
-      <div class="<?php echo $class. ' card-hover--'.$card_hover.' card-background--'.$card['bg_group']['card_background']; ?> ">
+      <div class="<?php echo $class; ?>">
         <div class="content content-cards" data-equalizer-watch>
 
         <?php if( array_key_exists( 'card_link', $card) ): ?>
@@ -47,14 +53,8 @@ switch ($per_row) {
 
 
             <div class="card-image">
-                <?php
-                if( $card['bg_group']['card_background'] == 'image' ) {
-                    $image = wp_get_attachment_image($card['bg_group']['card_icon'], 'thumbnail');
-                }else{
-                    $image = false;
-                }
-                 
-                  ?>
+
+                <?php $image = wp_get_attachment_image($card['card_icon'], 'medium');  ?>
                 
                 <?php if( $image ): ?>
                     <div class="card-image-inner">
