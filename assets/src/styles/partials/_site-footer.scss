@@ -143,6 +143,17 @@ body .main-footer {
 
   .footer-cta{
     margin-bottom: 1.5rem;
+
+    @media screen and (max-width: 767px) {
+
+      text-align: center;
+
+      & a{
+        max-width: 260px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
 
   .linkedin-link{
@@ -157,6 +168,10 @@ body .main-footer {
     line-height: normal;
     text-transform: uppercase;
     text-decoration: none;
+
+    @media screen and (max-width: 767px) {
+      justify-content: center;
+    }
   }
 
   a.footer-cta-button{
@@ -178,6 +193,9 @@ body .main-footer {
     &:after{
       right: 1.5rem;
       margin-top: 0.125rem;
+    }
+    &:hover{
+      background-color: $pet-md-gray;
     }
   }
 
@@ -258,6 +276,14 @@ body .main-footer {
   .footer-copyright {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 400px) {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
 
     ul {
       display: flex;
