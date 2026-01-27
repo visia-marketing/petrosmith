@@ -1,13 +1,18 @@
 body .main-footer {
-  background: $footer-bg;
+  background: linear-gradient(171deg, #062F6E 44.37%, #31969E 195.56%); //$footer-bg;
   color: $white;
   padding: 0 0 2rem;
   position: relative;
   text-align: center;
 
   @include breakpoint(medium) {
-    padding: 0 0 4rem;
+    padding: 0rem;
     text-align: left;
+  }
+
+
+  & > .row{
+    max-width: 1440px !important;
   }
 
   & > .row:first-child{
@@ -49,13 +54,19 @@ body .main-footer {
       text-align: center;
     }
 
-    img {
+    img:not(.footer-badge) {
       width: 100%;
       max-width: 240px;
     }
 
+    .footer-badge{
+      max-width: 64px;
+    }
+
 
   }
+
+
 
   .footer-menu {
     list-style: none;
@@ -131,13 +142,26 @@ body .main-footer {
   }
 
   .footer-cta{
+    margin-bottom: 1.5rem;
+  }
+
+  .linkedin-link{
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 2.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    color: $white;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    text-decoration: none;
   }
 
   a.footer-cta-button{
-    color: #062F6E;
+    color: $white;
+    background: $tertiary;
     font-family: "Avenir Next";
     font-size: 0.8125rem;
     font-style: normal;
@@ -145,8 +169,16 @@ body .main-footer {
     line-height: normal;
     text-transform: uppercase;
     text-decoration: none;
-    background: $white;
-    padding: 0.5rem 1.25rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3.5rem;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2.5rem;
+
+    &:after{
+      right: 1.5rem;
+      margin-top: 0.125rem;
+    }
   }
 
   .footer-badges {
@@ -235,11 +267,27 @@ body .main-footer {
       padding: 0;
 
       li {
-        font-size: 14px;
+        
+      }
+
+      & .copyright{
+        font-size: 1.25rem;
       }
 
     }
 
+
+  }
+
+  .footer-menu-legal{
+    font-size: 1.25rem;
+
+    & a{
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
 
   }
 

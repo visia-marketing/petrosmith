@@ -139,7 +139,7 @@ $top-header-link-color: $top-header-link-color;
   width: 100%;
   z-index: 10;
   background-color: $primary;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  // box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
   @include breakpoint(medium) {
     padding: 20px 0 20px;

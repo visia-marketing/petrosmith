@@ -7098,7 +7098,6 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   width: 100%;
   z-index: 10;
   background-color: #062F6E;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 @media print, screen and (min-width: 40em) {
   .main-header {
@@ -7498,7 +7497,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
 }
 
 body .main-footer {
-  background: #062F6E;
+  background: linear-gradient(171deg, #062F6E 44.37%, #31969E 195.56%);
   color: #ffffff;
   padding: 0 0 2rem;
   position: relative;
@@ -7506,9 +7505,12 @@ body .main-footer {
 }
 @media print, screen and (min-width: 40em) {
   body .main-footer {
-    padding: 0 0 4rem;
+    padding: 0rem;
     text-align: left;
   }
+}
+body .main-footer > .row {
+  max-width: 1440px !important;
 }
 body .main-footer > .row:first-child {
   border-top: 1px solid #ffffff;
@@ -7544,9 +7546,12 @@ body .main-footer .footer-logo {
     text-align: center;
   }
 }
-body .main-footer .footer-logo img {
+body .main-footer .footer-logo img:not(.footer-badge) {
   width: 100%;
   max-width: 240px;
+}
+body .main-footer .footer-logo .footer-badge {
+  max-width: 64px;
 }
 body .main-footer .footer-menu {
   list-style: none;
@@ -7604,12 +7609,24 @@ body .main-footer .footer-contact p {
   line-height: 1.28231rem;
 }
 body .main-footer .footer-cta {
+  margin-bottom: 1.5rem;
+}
+body .main-footer .linkedin-link {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 2.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 body .main-footer a.footer-cta-button {
-  color: #062F6E;
+  color: #ffffff;
+  background: #31969E;
   font-family: "Avenir Next";
   font-size: 0.8125rem;
   font-style: normal;
@@ -7617,8 +7634,15 @@ body .main-footer a.footer-cta-button {
   line-height: normal;
   text-transform: uppercase;
   text-decoration: none;
-  background: #ffffff;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3.5rem;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+body .main-footer a.footer-cta-button:after {
+  right: 1.5rem;
+  margin-top: 0.125rem;
 }
 body .main-footer .footer-badges {
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
@@ -7693,8 +7717,17 @@ body .main-footer .footer-copyright ul {
   margin: 0;
   padding: 0;
 }
-body .main-footer .footer-copyright ul li {
-  font-size: 14px;
+body .main-footer .footer-copyright ul .copyright {
+  font-size: 1.25rem;
+}
+body .main-footer .footer-menu-legal {
+  font-size: 1.25rem;
+}
+body .main-footer .footer-menu-legal a {
+  text-decoration: none;
+}
+body .main-footer .footer-menu-legal a:hover {
+  text-decoration: underline;
 }
 body .main-footer .footer-tagline {
   display: block;

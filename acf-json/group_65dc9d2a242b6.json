@@ -221,11 +221,11 @@
             "selected": 0
         },
         {
-            "key": "field_67212ce65468b",
-            "label": "Footer Logo",
-            "name": "footer_logo",
+            "key": "field_6977f4c8d1d4d",
+            "label": "Footer Images",
+            "name": "footer_images",
             "aria-label": "",
-            "type": "image",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -234,17 +234,61 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 1,
-            "preview_size": "medium"
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_67212ce65468b",
+                    "label": "Footer Logo",
+                    "name": "footer_logo",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 1,
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_6977eef2018b3",
+                    "label": "Footer Badge",
+                    "name": "footer_badge",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 1,
+                    "preview_size": "medium"
+                }
+            ]
         },
         {
             "key": "field_690107d056aac",
@@ -268,11 +312,11 @@
             "delay": 0
         },
         {
-            "key": "field_6901081356aad",
-            "label": "Footer CTA Button",
-            "name": "footer_cta_button",
+            "key": "field_6977f50ad1d4e",
+            "label": "Footer Links",
+            "name": "footer_links",
             "aria-label": "",
-            "type": "link",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -281,8 +325,44 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "allow_in_bindings": 0
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6901081356aad",
+                    "label": "Footer CTA Button",
+                    "name": "cta_button",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "allow_in_bindings": 0
+                },
+                {
+                    "key": "field_6977f6013e139",
+                    "label": "LinkedIn Url",
+                    "name": "linkedin_url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": ""
+                }
+            ]
         },
         {
             "key": "field_67212cfd5468c",
@@ -294,15 +374,33 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "66",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_6977f90b336b5",
+            "label": "Terms & Conditions",
+            "name": "terms_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
         },
         {
             "key": "field_65dc9d2a51c1d",
@@ -404,5 +502,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761676249
+    "modified": 1769470293
 }
