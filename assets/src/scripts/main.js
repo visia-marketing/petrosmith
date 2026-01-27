@@ -11,7 +11,7 @@
  * ======================================================================== */
 import $ from 'jquery';
 import 'foundation-sites';
-// import 'slick-carousel';
+import 'slick-carousel';
 import SimpleLightbox from "simplelightbox";
 
 // If you only need specific modules:

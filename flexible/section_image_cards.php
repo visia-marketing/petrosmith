@@ -4,7 +4,7 @@ $per_row = get_sub_field('cards_per_row');
 $card_style = 'primary';
 
 $card_hover = get_sub_field('hover_effect') ?? 'disabled';
-$display = get_sub_field('card_display') ?? 'grid';
+$slider = get_sub_field('card_display') ?? 0;
 
 
 $class = 'columns cards cards-style--'.$card_style;
@@ -12,100 +12,125 @@ $class = 'columns cards cards-style--'.$card_style;
 if( $card_hover != 'disable'){
     $class .= ' card-hover--enable';
     $class .= ' card-hover--'.$card_hover;
+}else{
+    $class .= ' card-hover--disable';
 }
 
+$component = 'grid';
 
-
-switch ($per_row) {
-    case 2:
-        $class .= ' small-12 medium-6';
-        break;
-    case 3:
-        $class .= ' small-12 medium-4';
-        break;
-    case 4:
-        $class .= ' small-12 medium-3';
-        break; 
-    default:
-        $class .= ' small-12 medium-4'; // Default to 3 per row
+if( $slider ){
+    $component = 'slider';
 }
+
+$rand_id = $component . '_' . wp_generate_uuid4();
+
+
+if( !$slider ){
+    switch ($per_row) {
+        case 2:
+            $class .= ' small-12 medium-6';
+            break;
+        case 3:
+            $class .= ' small-12 medium-4';
+            break;
+        case 4:
+            $class .= ' small-12 medium-3';
+            break; 
+        default:
+            $class .= ' small-12 medium-4'; // Default to 3 per row
+    }
+    
+}
+
 
 
 ?>
 
-<div class="fc-section-columns fc-section-cards">
+<div class="fc-section-columns fc-section-cards" id="<?php echo $rand_id; ?>">
 
   <div class="row padding-row" data-equalizer>
+    
     <?php get_template_part('flexible/section_header'); ?>
     
-
-    <?php foreach( $cards as $card ): ?>
-
-
-      <div class="<?php echo $class; ?>">
-        <div class="content content-cards" data-equalizer-watch>
-
-        <?php if( array_key_exists( 'card_link', $card) ): ?>
-            <?php if( is_array( $card['card_link']) ): ?>
-                <a href="<?php echo $card['card_link']['url']; ?>" class="card-link-wrapper" aria-label="<?php echo $card['card_title']; ?>">
-            <?php endif; ?>
-        <?php endif; ?>
+    <?php if($slider): ?><div class="carousel-wrapper"> <?php endif; ?>
+        <?php foreach( $cards as $card ): ?>
 
 
-            <div class="card-image">
-
-                <?php $image = wp_get_attachment_image($card['card_icon'], 'medium');  ?>
-                
-                <?php if( $image ): ?>
-                    <div class="card-image-inner">
-                        <?php echo $image; ?>
-                    </div>
-                <?php endif; ?>
-            </div>
-
-            <div class="card-content">
-
-                    
-
-                <h3 class="card-title">
-                    <?php echo $card['card_title']; ?>
-                </h3>
-            
-                <p class="card-p">
-                    <?php echo $card['card_description']; ?>
-                </p>
-
-                <?php if( array_key_exists( 'card_link', $card) ): ?>
-                    <?php if( is_array( $card['card_link']) ): ?>
-                        <a href="<?php echo $card['card_link']['url']; ?>" class="card-button">
-                            <span class="button-text">
-                                <?php if($card['card_link']['title']): ?>
-                                    <?php echo $card['card_link']['title']; ?>
-                                <?php else: ?>
-                                    Read More
-                                <?php endif; ?>
-                            </span>
-                            <div class="arrow">
-
-                            </div>
-                        </a>
-                    <?php endif; ?>
-                <?php endif; ?>
-            </div>
-
+        <div class="<?php echo $class; ?>">
+            <div class="content content-cards" data-equalizer-watch>
 
             <?php if( array_key_exists( 'card_link', $card) ): ?>
                 <?php if( is_array( $card['card_link']) ): ?>
-                    </a>
+                    <a href="<?php echo $card['card_link']['url']; ?>" class="card-link-wrapper" aria-label="<?php echo $card['card_title']; ?>">
                 <?php endif; ?>
             <?php endif; ?>
-        
+
+
+                <div class="card-image">
+
+                    <?php $image = wp_get_attachment_image($card['card_icon'], 'medium');  ?>
+                    
+                    <?php if( $image ): ?>
+                        <div class="card-image-inner">
+                            <?php echo $image; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+
+                <div class="card-content">
+
+                        
+
+                    <h3 class="card-title">
+                        <?php echo $card['card_title']; ?>
+                    </h3>
+                
+                    <p class="card-p">
+                        <?php echo $card['card_description']; ?>
+                    </p>
+
+                    <?php if( array_key_exists( 'card_link', $card) ): ?>
+                        <?php if( is_array( $card['card_link']) ): ?>
+                            <a href="<?php echo $card['card_link']['url']; ?>" class="card-button">
+                                <span class="button-text">
+                                    <?php if($card['card_link']['title']): ?>
+                                        <?php echo $card['card_link']['title']; ?>
+                                    <?php else: ?>
+                                        Read More
+                                    <?php endif; ?>
+                                </span>
+                                <div class="arrow">
+
+                                </div>
+                            </a>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                </div>
+
+
+                <?php if( array_key_exists( 'card_link', $card) ): ?>
+                    <?php if( is_array( $card['card_link']) ): ?>
+                        </a>
+                    <?php endif; ?>
+                <?php endif; ?>
+            
+            </div>
         </div>
-      </div>
 
-      <?php endforeach; ?>
-
+        <?php endforeach; ?>
+    <?php if($slider): ?></div> <?php endif; ?>
       
     </div>
 
 </div>
+
+
+<script>
+    jQuery(function($) {
+        $('#<?php echo $rand_id;?> .carousel-wrapper').slick({
+            infinite: true,
+            slidesToShow: <?php echo $per_row; ?>,
+            slidesToScroll: 1
+        });
+    });
+</script>
