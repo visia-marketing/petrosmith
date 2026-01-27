@@ -6393,15 +6393,17 @@ a, button, .button, [type=submit] {
 .button,
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
 .wpfFilterButton.wpfButton {
+  background-color: #31969E;
   padding: 6px 16px 11px 16px;
   position: relative;
   color: #fff;
   text-decoration: none !important;
-  border: 1px solid #062F6E;
+  border: 1px solid #31969E;
   text-transform: uppercase;
   font-size: 0.9375rem;
   font-style: normal;
   font-weight: 700;
+  border-radius: 3.5rem;
 }
 .button:after,
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button:after,
@@ -6420,6 +6422,12 @@ a, button, .button, [type=submit] {
   font-weight: 900;
   position: absolute;
   display: inline-block;
+}
+.button:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button:hover,
+.wpfFilterButton.wpfButton:hover {
+  background-color: #A7A8A9;
+  border-color: #A7A8A9;
 }
 
 a.button.button-primary {
@@ -7611,6 +7619,16 @@ body .main-footer .footer-contact p {
 body .main-footer .footer-cta {
   margin-bottom: 1.5rem;
 }
+@media screen and (max-width: 767px) {
+  body .main-footer .footer-cta {
+    text-align: center;
+  }
+  body .main-footer .footer-cta a {
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 body .main-footer .linkedin-link {
   display: flex;
   justify-content: flex-start;
@@ -7623,6 +7641,11 @@ body .main-footer .linkedin-link {
   line-height: normal;
   text-transform: uppercase;
   text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  body .main-footer .linkedin-link {
+    justify-content: center;
+  }
 }
 body .main-footer a.footer-cta-button {
   color: #ffffff;
@@ -7643,6 +7666,9 @@ body .main-footer a.footer-cta-button {
 body .main-footer a.footer-cta-button:after {
   right: 1.5rem;
   margin-top: 0.125rem;
+}
+body .main-footer a.footer-cta-button:hover {
+  background-color: #A7A8A9;
 }
 body .main-footer .footer-badges {
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
@@ -7709,6 +7735,15 @@ body .main-footer .footer-social li a {
 body .main-footer .footer-copyright {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 400px) {
+  body .main-footer .footer-copyright {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
 }
 body .main-footer .footer-copyright ul {
   display: flex;
