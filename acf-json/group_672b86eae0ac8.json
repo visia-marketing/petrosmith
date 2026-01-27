@@ -1,6 +1,6 @@
 {
     "key": "group_672b86eae0ac8",
-    "title": "COMPONENT: Boxed Cards",
+    "title": "COMPONENT: Boxed Cards --- [Flagged for Removal]",
     "fields": [
         {
             "key": "field_672b86eb2abcd",
@@ -256,5 +256,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764082974
+    "modified": 1769547038
 }
