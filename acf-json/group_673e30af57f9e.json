@@ -80,7 +80,8 @@
                 "light": "Light",
                 "dark": "Dark",
                 "grey": "Grey",
-                "image": "Image"
+                "image": "Image",
+                "gradient": "Brand Gradient"
             },
             "default_value": false,
             "return_format": "value",
@@ -391,5 +392,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764083002
+    "modified": 1769531740
 }

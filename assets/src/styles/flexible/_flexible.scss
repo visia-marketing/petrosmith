@@ -108,6 +108,16 @@ body{
 }
 
 body *{
+
+  & .fc-section-gradient{
+    background: linear-gradient(142deg, #062F6E 20.23%, #31969E 75.99%);
+
+    & *:not(a.button)  {
+      color: #fff;
+    }
+    
+  }
+
   & .background--light,
   & .fc-section-light {
     background-color: $white;
