@@ -221,15 +221,7 @@
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_6978e9bba2eb2",
-                                "operator": "==",
-                                "value": "enable"
-                            }
-                        ]
-                    ],
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -283,5 +275,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1770233094
+    "modified": 1770233959
 }
