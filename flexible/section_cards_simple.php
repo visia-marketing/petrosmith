@@ -30,13 +30,13 @@ switch ($per_row) {
   <div class="row padding-row" data-equalizer>
     <?php get_template_part('flexible/section_header'); ?>
     
-    <?php $delay = 0; ?>
+    
     <?php foreach( $cards as $card ): ?>
     
-        <?php $delay += 100; ?>
+        
 
       <div class="<?php echo $class; ?> ">
-        <div class="content content-cards card-padding-<?php echo $card_padding;?>" data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>" data-equalizer-watch>
+        <div class="content content-cards card-padding-<?php echo $card_padding;?>" data-equalizer-watch>
 
         <?php if( array_key_exists( 'card_link', $card) ): ?>
             <?php if( is_array( $card['card_link']) ): ?>

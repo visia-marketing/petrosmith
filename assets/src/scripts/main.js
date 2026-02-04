@@ -29,7 +29,8 @@ import AOS from 'aos';
         $(document).foundation(); // Foundation JavaScript
 
         AOS.init({
-          duration: 1000
+          duration: 1000,
+          once: true,
         });
 
         new SimpleLightbox('.some-element a', { /* options */ });
