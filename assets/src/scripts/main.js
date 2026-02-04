@@ -13,6 +13,7 @@ import $ from 'jquery';
 import 'foundation-sites';
 import 'slick-carousel';
 import SimpleLightbox from "simplelightbox";
+import AOS from 'aos';
 
 // If you only need specific modules:
 // import { Foundation, Accordion, Tabs } from 'foundation-sites';
@@ -26,6 +27,10 @@ import SimpleLightbox from "simplelightbox";
       init: function() {
         
         $(document).foundation(); // Foundation JavaScript
+
+        AOS.init({
+          duration: 1000
+        });
 
         new SimpleLightbox('.some-element a', { /* options */ });
       
