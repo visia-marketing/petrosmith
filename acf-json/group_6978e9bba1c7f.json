@@ -61,7 +61,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "20",
                 "class": "",
                 "id": ""
             },
@@ -81,6 +81,66 @@
             "placeholder": "",
             "create_options": 0,
             "save_options": 0
+        },
+        {
+            "key": "field_69839be2460e4",
+            "label": "Animate On Scroll",
+            "name": "aos",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "Disable",
+                "fade-up": "Enabled"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_69839cc4c205a",
+            "label": "Duration",
+            "name": "aos_duration",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_69839be2460e4",
+                        "operator": "==",
+                        "value": "fade-up"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1000,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": 100,
+            "prepend": "",
+            "append": "ms"
         },
         {
             "key": "field_6978e9bba3257",
@@ -223,5 +283,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1769532073
+    "modified": 1770233094
 }

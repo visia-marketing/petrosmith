@@ -4,6 +4,9 @@ $per_row = get_sub_field('cards_per_row');
 $card_style = 'primary';
 
 $card_hover = get_sub_field('hover_effect') ?? 'disabled';
+$aos = get_sub_field('aos') ?? 'none';
+$aos_duration = get_sub_field('aos_duration') ?? 1000;
+
 $slider = get_sub_field('card_display') ?? 0;
 
 
@@ -53,69 +56,71 @@ if( !$slider ){
     <?php get_template_part('flexible/section_header'); ?>
     
     <?php if($slider): ?><div class="carousel-wrapper"> <?php endif; ?>
+        <?php $delay = 0; ?>
+
         <?php foreach( $cards as $card ): ?>
+            <?php $delay += 100; ?>
 
-
-        <div class="<?php echo $class; ?>">
-            <div class="content content-cards"   data-equalizer-watch>
-
-            <?php if( array_key_exists( 'card_link', $card) ): ?>
-                <?php if( is_array( $card['card_link']) ): ?>
-                    <a href="<?php echo $card['card_link']['url']; ?>" class="card-link-wrapper" aria-label="<?php echo $card['card_title']; ?>">
-                <?php endif; ?>
-            <?php endif; ?>
-
-
-                <div class="card-image">
-
-                    <?php $image = wp_get_attachment_image($card['card_icon'], 'medium');  ?>
-                    
-                    <?php if( $image ): ?>
-                        <div class="card-image-inner">
-                            <?php echo $image; ?>
-                        </div>
-                    <?php endif; ?>
-                </div>
-
-                <div class="card-content">
-
-                        
-
-                    <h3 class="card-title">
-                        <?php echo $card['card_title']; ?>
-                    </h3>
-                
-                    <p class="card-p">
-                        <?php echo $card['card_description']; ?>
-                    </p>
-
-                    <?php if( array_key_exists( 'card_link', $card) ): ?>
-                        <?php if( is_array( $card['card_link']) ): ?>
-                            <a href="<?php echo $card['card_link']['url']; ?>" class="card-button">
-                                <span class="button-text">
-                                    <?php if($card['card_link']['title']): ?>
-                                        <?php echo $card['card_link']['title']; ?>
-                                    <?php else: ?>
-                                        Read More
-                                    <?php endif; ?>
-                                </span>
-                                <div class="arrow">
-
-                                </div>
-                            </a>
-                        <?php endif; ?>
-                    <?php endif; ?>
-                </div>
-
+            <div class="<?php echo $class; ?>">
+                <div class="content content-cards" <?php if($aos != 'none'): ?>data-aos="fade-up" data-aos-duration="<?php echo $aos_duration; ?>" data-aos-delay="<?php echo $delay; ?>"<?php endif; ?>  data-equalizer-watch>
 
                 <?php if( array_key_exists( 'card_link', $card) ): ?>
                     <?php if( is_array( $card['card_link']) ): ?>
-                        </a>
+                        <a href="<?php echo $card['card_link']['url']; ?>" class="card-link-wrapper" aria-label="<?php echo $card['card_title']; ?>">
                     <?php endif; ?>
                 <?php endif; ?>
-            
+
+
+                    <div class="card-image">
+
+                        <?php $image = wp_get_attachment_image($card['card_icon'], 'medium');  ?>
+                        
+                        <?php if( $image ): ?>
+                            <div class="card-image-inner">
+                                <?php echo $image; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+
+                    <div class="card-content">
+
+                            
+
+                        <h3 class="card-title">
+                            <?php echo $card['card_title']; ?>
+                        </h3>
+                    
+                        <p class="card-p">
+                            <?php echo $card['card_description']; ?>
+                        </p>
+
+                        <?php if( array_key_exists( 'card_link', $card) ): ?>
+                            <?php if( is_array( $card['card_link']) ): ?>
+                                <a href="<?php echo $card['card_link']['url']; ?>" class="card-button">
+                                    <span class="button-text">
+                                        <?php if($card['card_link']['title']): ?>
+                                            <?php echo $card['card_link']['title']; ?>
+                                        <?php else: ?>
+                                            Read More
+                                        <?php endif; ?>
+                                    </span>
+                                    <div class="arrow">
+
+                                    </div>
+                                </a>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                    </div>
+
+
+                    <?php if( array_key_exists( 'card_link', $card) ): ?>
+                        <?php if( is_array( $card['card_link']) ): ?>
+                            </a>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                
+                </div>
             </div>
-        </div>
 
         <?php endforeach; ?>
     <?php if($slider): ?></div> <?php endif; ?>
