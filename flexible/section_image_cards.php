@@ -57,7 +57,7 @@ if( !$slider ){
 
 
         <div class="<?php echo $class; ?>">
-            <div class="content content-cards" data-equalizer-watch>
+            <div class="content content-cards"   data-equalizer-watch>
 
             <?php if( array_key_exists( 'card_link', $card) ): ?>
                 <?php if( is_array( $card['card_link']) ): ?>
