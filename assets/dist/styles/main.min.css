@@ -9220,11 +9220,47 @@ body .g-round-image {
   padding-bottom: 1rem;
   transition: opacity 0.4s ease;
   text-align: center;
+  max-width: 26rem;
 }
 .fc-section-cards .cards-style--primary .content-cards .card-content .card-button {
   position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;
+}
+.fc-section-cards .cards-style--primary.medium-6 .content-cards .card-content {
+  top: calc(100% - 90px);
+}
+.fc-section-cards .cards-style--primary.medium-6 .content-cards .title-container {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.fc-section-cards .cards-style--primary.medium-6 .content-cards h3 {
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-size: 1.375rem;
+  padding-bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.fc-section-cards .cards-style--primary.medium-6 .content-cards p {
+  font-size: 1.125rem;
+  opacity: 0;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+  transition: opacity 0.4s ease;
+  text-align: center;
+  max-width: 26rem;
+}
+.fc-section-cards .cards-style--primary.medium-3 .content-cards p {
+  font-size: 0.875rem;
+  line-height: 1.4;
 }
 .fc-section-cards .cards-style--primary.card-hover--enable.card-hover--overlay-white .content-cards .card-content {
   background: rgba(255, 255, 255, 0.78);
@@ -9269,6 +9305,7 @@ body .g-round-image {
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-bottom: 1rem;
 }
 .fc-section-cards .cards-style--primary.card-hover--enable .content-cards:hover .card-content p {
   opacity: 1;
@@ -9825,21 +9862,6 @@ body .sl-wrapper .sl-counter {
   max-width: 100%;
   flex-grow: 0;
   flex-shrink: 0;
-  width: calc(33.3333% - 4rem);
-}
-@media screen and (max-width: 1024px) {
-  .animated-numbers .animated-numbers-grid .number-container {
-    width: calc(50% - 4rem);
-    max-width: 240px;
-  }
-  .animated-numbers .animated-numbers-grid .number-container:nth-child(3) {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .animated-numbers .animated-numbers-grid .number-container {
-    width: 100%;
-  }
 }
 .animated-numbers .animated-numbers-grid .number-container .number-ring {
   content: "";
@@ -9879,6 +9901,67 @@ body .sl-wrapper .sl-counter {
   letter-spacing: 0.1875rem;
   text-transform: uppercase;
   padding-bottom: 0;
+}
+.animated-numbers .animated-numbers-grid.number-columns--2 {
+  justify-content: space-evenly;
+}
+.animated-numbers .animated-numbers-grid.number-columns--2 .number-container {
+  width: calc(50% - 4rem);
+  max-width: 370px;
+}
+@media screen and (max-width: 1024px) {
+  .animated-numbers .animated-numbers-grid.number-columns--2 .number-container {
+    width: calc(50% - 4rem);
+    max-width: 240px;
+  }
+  .animated-numbers .animated-numbers-grid.number-columns--2 .number-container:nth-child(3) {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .animated-numbers .animated-numbers-grid.number-columns--2 .number-container {
+    width: 100%;
+  }
+}
+.animated-numbers .animated-numbers-grid.number-columns--3 .number-container {
+  width: calc(33.33% - 4rem);
+}
+@media screen and (max-width: 1024px) {
+  .animated-numbers .animated-numbers-grid.number-columns--3 .number-container {
+    width: calc(50% - 4rem);
+    max-width: 240px;
+  }
+  .animated-numbers .animated-numbers-grid.number-columns--3 .number-container:nth-child(3) {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .animated-numbers .animated-numbers-grid.number-columns--3 .number-container {
+    width: 100%;
+  }
+}
+.animated-numbers .animated-numbers-grid.number-columns--4 .number-container {
+  width: calc(25% - 4rem);
+}
+.animated-numbers .animated-numbers-grid.number-columns--4 .number-container .petro-animated-number {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+.animated-numbers .animated-numbers-grid.number-columns--4 .number-container .number-label {
+  font-size: 0.875rem;
+}
+@media screen and (max-width: 1024px) {
+  .animated-numbers .animated-numbers-grid.number-columns--4 .number-container {
+    width: calc(50% - 4rem);
+    max-width: 240px;
+  }
+  .animated-numbers .animated-numbers-grid.number-columns--4 .number-container:nth-child(3) {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .animated-numbers .animated-numbers-grid.number-columns--4 .number-container {
+    width: 100%;
+  }
 }
 
 .featured-callout .callout-content {

@@ -24,20 +24,8 @@
             max-width: 100%;
             flex-grow: 0;
             flex-shrink: 0;
-            width: calc(33.3333% - 4rem);
+            
 
-            @media screen and (max-width: 1024px){
-                width: calc(50% - 4rem);
-                max-width: 240px;
-
-                &:nth-child(3){
-                    width: 100%;
-                }
-            }
-
-            @media screen and (max-width: 768px){
-                    width: 100%;
-            }
 
 
 
@@ -94,6 +82,80 @@
                 
             }
 
+        }
+
+        &.number-columns--2{
+
+            justify-content: space-evenly;
+
+            & .number-container{
+                width: calc(50% - 4rem);
+                max-width: 370px;
+
+                @media screen and (max-width: 1024px){
+                    width: calc(50% - 4rem);
+                    max-width: 240px;
+    
+                    &:nth-child(3){
+                        width: 100%;
+                    }
+                }
+    
+                @media screen and (max-width: 768px){
+                        width: 100%;
+                }
+            }
+            
+        }
+
+        &.number-columns--3{
+
+            & .number-container{
+                width: calc(33.33% - 4rem);
+
+                @media screen and (max-width: 1024px){
+                    width: calc(50% - 4rem);
+                    max-width: 240px;
+    
+                    &:nth-child(3){
+                        width: 100%;
+                    }
+                }
+    
+                @media screen and (max-width: 768px){
+                        width: 100%;
+                }
+            }
+            
+        }
+
+        &.number-columns--4{
+
+            & .number-container{
+                width: calc(25% - 4rem);
+
+                & .petro-animated-number{
+                    font-size: clamp(1.5rem, 5vw, 3rem);
+                }
+
+                & .number-label{
+                    font-size: 0.875rem;
+                }
+
+                @media screen and (max-width: 1024px){
+                    width: calc(50% - 4rem);
+                    max-width: 240px;
+    
+                    &:nth-child(3){
+                        width: 100%;
+                    }
+                }
+    
+                @media screen and (max-width: 768px){
+                        width: 100%;
+                }
+            }
+            
         }
 
         
