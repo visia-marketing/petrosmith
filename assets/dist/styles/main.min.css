@@ -9872,6 +9872,7 @@ body .sl-wrapper .sl-counter {
   .featured-callout .callout-content {
     flex-direction: column;
     text-align: center;
+    gap: 0rem;
   }
 }
 .featured-callout .callout-content p {
@@ -9880,6 +9881,11 @@ body .sl-wrapper .sl-counter {
   font-weight: 400;
   line-height: 1.4;
   color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .featured-callout .callout-content p {
+    margin-top: 1.8rem;
+  }
 }
 .featured-callout .callout-background--teal {
   background-color: #31969E;
