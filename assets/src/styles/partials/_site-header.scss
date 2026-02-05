@@ -131,6 +131,17 @@ $top-header-link-color: $top-header-link-color;
 
 }
 
+.home header.main-header{
+  background: transparent;
+  width: 100%;
+  position: absolute;
+
+  & ul.primary-navigation > li:last-child a{
+    background: #fff;
+    color: $primary;
+  }
+}
+
 
 
 .main-header {
