@@ -14,6 +14,7 @@ import 'foundation-sites';
 import 'slick-carousel';
 import SimpleLightbox from "simplelightbox";
 import AOS from 'aos';
+import { CountUp } from 'countup.js';
 
 // If you only need specific modules:
 // import { Foundation, Accordion, Tabs } from 'foundation-sites';
@@ -32,6 +33,31 @@ import AOS from 'aos';
           duration: 1000,
           once: true,
         });
+
+
+        if( document.querySelector('.petro-animated-number') ) {
+          const animatedNumbers = document.querySelectorAll('.petro-animated-number .number-span');
+          //var delay = 100; // initial delay in milliseconds
+
+          animatedNumbers.forEach( (element) => {
+
+            let targetNumber = element.getAttribute('data-target');
+            let delayMs = element.getAttribute('data-delay');
+            let countUp = new CountUp(element, targetNumber, {
+              duration: 2,
+              separator: ',',
+            });
+            setTimeout( () => {
+              if (!countUp.error) {
+                countUp.start();
+              } else {
+                console.error(countUp.error);
+              }
+            }, delayMs);
+
+          });
+        }
+
 
         new SimpleLightbox('.some-element a', { /* options */ });
       

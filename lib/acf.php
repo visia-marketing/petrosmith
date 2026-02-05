@@ -85,6 +85,10 @@ function get_flexible_content() {
       $border = get_sub_field('border') ?: '';                      // Border style classes   
       $background = get_sub_field('background') ?: '';              // Background type (color/image/etc)
       $background_image_id = get_sub_field('background_image');     // Background image attachment ID
+
+
+      $overlay = get_sub_field('overlay') ?: '';                        // Overlay option
+      $opacity = get_sub_field('opacity') ?: 10;                        // Overlay opacity
       
       
       $top_padding = get_sub_field('top_padding') ?: 0;
@@ -95,6 +99,7 @@ function get_flexible_content() {
 
       //echo get_row_layout();
       echo '<style>
+
         #' . esc_html($id) . ' {
           padding-top: ' . esc_html( ($top_padding * 1.5) ) . 'rem;
           padding-bottom: ' . esc_html( ($bottom_padding * 1.5 ) ) . 'rem;
