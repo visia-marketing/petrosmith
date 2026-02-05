@@ -21,7 +21,7 @@ $content = get_sub_field('callout_content');
                 <?php endif; ?>
 
                 <?php if( $content ): ?>
-                   <p><?php echo $content; ?><p>
+                   <p><?php echo $content; ?></p>
                 <?php endif; ?>
 
             </div>
