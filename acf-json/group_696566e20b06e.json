@@ -69,6 +69,27 @@
             "placeholder": "",
             "prepend": "H1",
             "append": ""
+        },
+        {
+            "key": "field_6984ae06047bd",
+            "label": "Hero Subheadline",
+            "name": "home_hero_subheadline",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -92,5 +113,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1768254082
+    "modified": 1770302995
 }

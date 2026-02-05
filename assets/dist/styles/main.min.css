@@ -7104,6 +7104,16 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   color: #A4A2A3;
 }
 
+.home header.main-header {
+  background: transparent;
+  width: 100%;
+  position: absolute;
+}
+.home header.main-header ul.primary-navigation > li:last-child a {
+  background: #fff;
+  color: #062F6E;
+}
+
 .main-header {
   padding: 10px 0 16px;
   position: relative;
@@ -9998,7 +10008,7 @@ body * .background--image.background--dark * {
   z-index: -1;
 }
 #page_header_home_page .page-header-content-wrapper {
-  height: 37.5rem;
+  height: 51.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10006,7 +10016,7 @@ body * .background--image.background--dark * {
 }
 @media screen and (max-width: 768px) {
   #page_header_home_page .page-header-content-wrapper {
-    height: 23.5rem;
+    height: 33rem;
     padding: 0 1rem;
   }
 }
@@ -10017,16 +10027,33 @@ body * .background--image.background--dark * {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(6, 47, 110, 0.66);
+  background: linear-gradient(103deg, rgba(6, 47, 110, 0.4) 2.95%, rgba(49, 150, 158, 0.4) 95.03%), linear-gradient(0deg, rgba(0, 0, 0, 0) 64.56%, rgba(0, 0, 0, 0.7) 92.69%), radial-gradient(56.88% 56.88% at 50% 50%, rgba(0, 0, 0, 0.3) 25.48%, rgba(0, 0, 0, 0) 100%);
+  background-blend-mode: plus-lighter, normal, normal;
   z-index: -1;
 }
 #page_header_home_page .page-header-content-wrapper h1 {
   color: #fff;
   font-size: clamp(2rem, 6vw + 1rem, 5rem);
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+#page_header_home_page .page-header-content-wrapper p {
+  max-width: 64rem;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+#page_header_home_page .page-header-content-wrapper .scroll-down {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*# sourceMappingURL=main.min.css.map*/
