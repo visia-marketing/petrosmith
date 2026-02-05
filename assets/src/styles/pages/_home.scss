@@ -47,13 +47,17 @@
 
     & p{
       max-width: 64rem;
-      font-size: 1.75rem;
+      font-size: clamp(1.125rem, 2vw, 1.75rem);
       font-style: normal;
       font-weight: 500;
       line-height: 1.4;
       color:#fff;
       text-align: center;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      
+      @media screen and (max-width: 768px){
+        padding: 0 1.5rem;
+      }
       
     }
 

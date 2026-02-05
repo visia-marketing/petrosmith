@@ -46,7 +46,7 @@
                 font-style: normal;
                 font-weight: 800;
                 line-height: 1.15;
-                padding-bottom: 2rem;
+                padding-bottom: 1rem;
 
                 @media screen and (max-width: 992px){
                     font-size: 1rem;
@@ -140,6 +140,7 @@
 
                 & .number-label{
                     font-size: 0.875rem;
+                    padding-bottom:0;
                 }
 
                 @media screen and (max-width: 1024px){

@@ -34,18 +34,20 @@ if(  count($markets) == 3 && $per_row == 4 ){
         <?php foreach($markets as $m_id ): ?>
             <div class="icon-column">
                 <div class="market-icon-card">
-                    <?php 
-                        $icon = get_field('market_icon', $m_id);
-                        $name = get_the_title( $m_id );
-                    ?>
-                    <?php if( $icon ): ?>
-                        <div class="market-icon-card__icon">
-                            <?php echo wp_get_attachment_image( $icon, 'thumnmail' ); ?> 
+                    <a href="<?php echo get_the_permalink($m_id); ?>">
+                        <?php 
+                            $icon = get_field('market_icon', $m_id);
+                            $name = get_the_title( $m_id );
+                        ?>
+                        <?php if( $icon ): ?>
+                            <div class="market-icon-card__icon">
+                                <?php echo wp_get_attachment_image( $icon, 'thumnmail' ); ?> 
+                            </div>
+                        <?php endif; ?>
+                        <div class="market-icon-card__name">
+                            <?php echo esc_html( $name ); ?>
                         </div>
-                    <?php endif; ?>
-                    <div class="market-icon-card__name">
-                        <?php echo esc_html( $name ); ?>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -89,6 +91,20 @@ if(  count($markets) == 3 && $per_row == 4 ){
             dots: false,
             prevArrow: '<button type="button" class="slick-prev cards-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="41" viewBox="0 0 23 41" fill="none"> <path d="M21.123 1.5L2.12129 20.5018L21.123 39.5035" stroke="#062F6E" stroke-width="3" stroke-linecap="round"/></svg></button>',
             nextArrow: '<button type="button" class="slick-next cards-prev"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="41" viewBox="0 0 23 41" fill="none"><path d="M1.5 39.5034L20.5018 20.5017L1.5 1.4999" stroke="#062F6E" stroke-width="3" stroke-linecap="round"/></svg></button>',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                }
+            ]
         });
     });
 </script>

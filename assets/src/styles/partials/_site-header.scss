@@ -163,6 +163,11 @@ $top-header-link-color: $top-header-link-color;
   .menu-icon {
     margin-top: 9px;
     float: right;
+
+    &:after{
+      background: #fff;
+      box-shadow: 0 7px 0 #fff, 0 14px 0 #fff;
+    }
   }
   
   .main-logo {

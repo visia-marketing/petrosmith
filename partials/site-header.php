@@ -14,7 +14,7 @@
 
 <header class="main-header">
 	<div class="row">
-    <div class="small-6 medium-4 columns">
+    <div class="small-6 medium-3 columns">
       <div class="main-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php the_field('main_logo', 'option');?>" alt="<?php bloginfo('name'); ?>"></a>
       </div>
@@ -22,7 +22,7 @@
     <div class="small-2 small-offset-4 medium-1 medium-offset-7 columns hide-for-large">
       <button class="menu-icon" type="button" data-open="off-canvas-menu"></button>
 		</div>
-    <div class="small-4 medium-8 columns show-for-large">
+    <div class="small-4 medium-9 columns show-for-large">
       <div class="primary-navigation-wrapper">
       <?php
         if (has_nav_menu('primary_navigation')) :
