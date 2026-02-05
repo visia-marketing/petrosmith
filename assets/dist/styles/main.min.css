@@ -9258,6 +9258,10 @@ body .g-round-image {
   text-align: center;
   max-width: 26rem;
 }
+.fc-section-cards .cards-style--primary.medium-3 .content-cards p {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
 .fc-section-cards .cards-style--primary.card-hover--enable.card-hover--overlay-white .content-cards .card-content {
   background: rgba(255, 255, 255, 0.78);
 }
@@ -9301,7 +9305,7 @@ body .g-round-image {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 .fc-section-cards .cards-style--primary.card-hover--enable .content-cards:hover .card-content p {
   opacity: 1;
