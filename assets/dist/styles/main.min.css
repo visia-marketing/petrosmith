@@ -7224,7 +7224,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
 .main-header ul.primary-navigation > li ul.submenu.first-sub {
   background-color: #fff;
   border: none;
-  border-top: 4px solid #A4A2A3;
+  border-top: 4px solid #31969E;
   border-radius: 4px 4px 4px 4px;
   box-shadow: 0 2px 3px rgba(153, 153, 153, 0.1);
   top: 100%;
