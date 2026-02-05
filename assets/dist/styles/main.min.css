@@ -9195,6 +9195,16 @@ body .g-round-image {
   margin-top: 0;
   margin-bottom: 0;
 }
+.fc-section-cards .cards-style--primary .content-cards .card-content .title-container {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
 .fc-section-cards .cards-style--primary .content-cards .card-content h3 {
   font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
   font-size: 1rem;
@@ -9202,6 +9212,7 @@ body .g-round-image {
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
+  margin-bottom: 0;
 }
 .fc-section-cards .cards-style--primary .content-cards .card-content p {
   opacity: 0;
@@ -9250,6 +9261,14 @@ body .g-round-image {
   align-items: center;
   display: flex;
   flex-direction: column;
+}
+.fc-section-cards .cards-style--primary.card-hover--enable .content-cards:hover .card-content .title-container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .fc-section-cards .cards-style--primary.card-hover--enable .content-cards:hover .card-content p {
   opacity: 1;
