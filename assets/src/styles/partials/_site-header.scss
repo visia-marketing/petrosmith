@@ -430,6 +430,11 @@ $top-header-link-color: $top-header-link-color;
 .off-canvas {
   padding: 60px 30px;
 
+
+  &.is-transition-overlap{
+    z-index: 99 !important;
+  }
+
   .close-button {
     position: absolute;
     left: 1rem;
@@ -446,6 +451,7 @@ $top-header-link-color: $top-header-link-color;
         color: #fff;
         font-weight: 600;
         padding: 12px 0;
+        text-decoration: none;
       }
 
       &.active {
@@ -502,6 +508,7 @@ $top-header-link-color: $top-header-link-color;
           > a {
             color: #fff;
             font-size: 14px;
+            text-decoration: none;
           }
 
           &.active {
