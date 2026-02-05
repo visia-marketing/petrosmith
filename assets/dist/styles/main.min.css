@@ -3433,7 +3433,7 @@ select[multiple] {
   z-index: 1;
   transition: transform 0.5s ease;
   backface-visibility: hidden;
-  background: #e6e6e6;
+  background: #31969E;
 }
 .off-canvas.is-transition-overlap {
   z-index: 10;
@@ -3453,7 +3453,7 @@ select[multiple] {
   z-index: 1;
   transition: transform 0.5s ease;
   backface-visibility: hidden;
-  background: #e6e6e6;
+  background: #31969E;
 }
 .off-canvas-absolute.is-transition-overlap {
   z-index: 10;
@@ -7331,6 +7331,9 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
 .off-canvas {
   padding: 60px 30px;
 }
+.off-canvas.is-transition-overlap {
+  z-index: 99 !important;
+}
 .off-canvas .close-button {
   position: absolute;
   left: 1rem;
@@ -7344,6 +7347,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
   color: #fff;
   font-weight: 600;
   padding: 12px 0;
+  text-decoration: none;
 }
 .off-canvas > ul.mobile-navigation > li.active > a {
   background-color: transparent;
@@ -7384,6 +7388,7 @@ a.button.button-secondary:hover:after, a.button.button-secondary.active:after {
 .off-canvas > ul.mobile-navigation > li > ul > li > a {
   color: #fff;
   font-size: 14px;
+  text-decoration: none;
 }
 .off-canvas > ul.mobile-navigation > li > ul > li.active > a {
   background-color: transparent;

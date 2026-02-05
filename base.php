@@ -27,20 +27,10 @@ use Roots\Sage\Wrapper;
       </button>
 
       <?php
-      if (has_nav_menu('mobile_navigation')) :
-        wp_nav_menu(['theme_location' => 'mobile_navigation', 'depth' => 3, 'menu_class' => 'vertical menu accordion-menu mobile-navigation', 'items_wrap' => '<ul class="%2$s" id="mobile-navigation" data-accordion-menu data-submenu-toggle="true">%3$s</ul>' ]); 
+      if (has_nav_menu('primary_navigation')) :
+        wp_nav_menu(['theme_location' => 'primary_navigation', 'depth' => 3, 'menu_class' => 'vertical menu accordion-menu mobile-navigation', 'items_wrap' => '<ul class="%2$s" id="mobile-navigation" data-accordion-menu data-submenu-toggle="true">%3$s</ul>' ]); 
         endif;
       ?>
-
-      <div class="off-canvas-search">
-      <form role="search" method="get" class="search-form" action="<?= site_url(); ?>">
-        <label>
-          <span class="screen-reader-text">Search</span>
-          <input type="search" class="search-field" id="search-field" placeholder="Search…" value="" name="s">
-        </label>
-        <button class="button"> <i class="far fa-search"></i></button>
-      </form>
-      </div>
 
     </div>
 
