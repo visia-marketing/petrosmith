@@ -9783,12 +9783,15 @@ body .sl-wrapper .sl-counter {
 }
 
 .animated-numbers .animated-numbers-grid {
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 81.25rem;
-  margin: auto;
-  gap: 5rem;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .animated-numbers .animated-numbers-grid {
+    row-gap: 2rem;
+  }
 }
 .animated-numbers .animated-numbers-grid .number-container {
   aspect-ratio: 1;
@@ -9798,6 +9801,24 @@ body .sl-wrapper .sl-counter {
   justify-content: center;
   flex-direction: column;
   padding: 1rem;
+  max-width: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: calc(33.3333% - 4rem);
+}
+@media screen and (max-width: 1024px) {
+  .animated-numbers .animated-numbers-grid .number-container {
+    width: calc(50% - 4rem);
+    max-width: 240px;
+  }
+  .animated-numbers .animated-numbers-grid .number-container:nth-child(3) {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .animated-numbers .animated-numbers-grid .number-container {
+    width: 100%;
+  }
 }
 .animated-numbers .animated-numbers-grid .number-container .number-ring {
   content: "";
@@ -9816,13 +9837,58 @@ body .sl-wrapper .sl-counter {
   line-height: 1.15;
   padding-bottom: 2rem;
 }
+@media screen and (max-width: 992px) {
+  .animated-numbers .animated-numbers-grid .number-container .number-label {
+    font-size: 1rem;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .animated-numbers .animated-numbers-grid .number-container .number-label {
+    font-size: 0.875rem;
+    padding-bottom: 0;
+  }
+}
 .animated-numbers .animated-numbers-grid .number-container .petro-animated-number {
   font-size: 6.25rem;
+  font-size: clamp(2.5rem, 5vw, 6.25rem);
   font-style: normal;
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: 0.1875rem;
   text-transform: uppercase;
+  padding-bottom: 0;
+}
+
+.featured-callout .callout-content {
+  border-radius: 0.875rem;
+  padding: 2.6rem;
+  display: flex;
+  gap: 2.6rem;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .featured-callout .callout-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.featured-callout .callout-content p {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #fff;
+}
+.featured-callout .callout-background--teal {
+  background-color: #31969E;
+}
+.featured-callout .callout-background--blue {
+  background-color: #062F6E;
+}
+.featured-callout .callout-background--gray {
+  background-color: #A7A8A9;
 }
 
 .fc-wrapper .top-border > .fc-section-heading,
