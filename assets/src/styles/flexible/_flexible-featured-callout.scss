@@ -1,0 +1,42 @@
+
+.featured-callout{
+
+
+    & .callout-content{
+        border-radius: 0.875rem;
+        padding: 2.6rem;
+        display: flex;
+        gap: 2.6rem;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 768px){
+            flex-direction: column;
+            text-align: center;
+        }
+
+        & p{
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.4;
+            color:#fff;
+        }
+    }
+
+    & .callout-background{
+
+        &--teal{
+            background-color: $teal;
+        }
+
+        &--blue{
+            background-color: $primary;
+        }
+
+        &--gray{
+            background-color: $pet-md-gray;
+        }
+    }
+
+}
