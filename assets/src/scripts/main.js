@@ -46,6 +46,8 @@ import { CountUp } from 'countup.js';
             let countUp = new CountUp(element, targetNumber, {
               duration: 2,
               separator: ',',
+              enableScrollSpy: true,
+              scrollSpyOnce: true,
             });
             setTimeout( () => {
               if (!countUp.error) {
