@@ -85,10 +85,12 @@ if( !$slider ){
                     <div class="card-content">
 
                             
-
-                        <h3 class="card-title">
-                            <?php echo $card['card_title']; ?>
-                        </h3>
+                        <div class="title-container">
+                            <h3 class="card-title">
+                                <?php echo $card['card_title']; ?>
+                            </h3>
+                        </div>
+                        
                     
                         <p class="card-p">
                             <?php echo $card['card_description']; ?>
