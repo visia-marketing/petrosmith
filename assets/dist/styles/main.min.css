@@ -9787,6 +9787,8 @@ body .sl-wrapper .sl-counter {
   justify-content: space-around;
   width: 100%;
   flex-wrap: wrap;
+  max-width: 81.25rem;
+  margin: auto;
 }
 @media screen and (max-width: 768px) {
   .animated-numbers .animated-numbers-grid {
