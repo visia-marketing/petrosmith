@@ -3,11 +3,23 @@
 $column_1 = get_sub_field('number_group_1');
 $column_2 = get_sub_field('number_group_2');
 $column_3 = get_sub_field('number_group_3');
+$column_4 = get_sub_field('number_group_4');
 
-$number_columns = array( $column_1, $column_2, $column_3 );
+$number_columns = array( $column_1, $column_2, $column_3, $column_4 );
+
+if( empty( $column_2['number']) ) {
+    unset( $number_columns[1] );
+}
+if( empty( $column_3['number']) ) {
+    unset( $number_columns[2] );
+}
+if( empty( $column_4['number']) ) {
+    unset( $number_columns[3] );
+}
+
 
 // echo '<pre>';
-// print_r($number_columns );
+// print_r( );
 // echo '</pre>';
 
 ?>
@@ -15,7 +27,7 @@ $number_columns = array( $column_1, $column_2, $column_3 );
 
 <div class="fc-section-columns animated-numbers">
 
-    <div class="animated-numbers-grid">
+    <div class="animated-numbers-grid number-columns--<?php echo count( $number_columns ); ?>">
 
         <?php $delay = 0; ?>
         <?php foreach( $number_columns as $number_group ): ?>
