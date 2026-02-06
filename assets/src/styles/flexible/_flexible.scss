@@ -21,9 +21,13 @@
   }
 
   .fc-section {
-    padding: 30px 0;
+    padding: 30px 1rem;
     position: relative;
     overflow: hidden;
+
+    &:has(.fc-section-cta){
+      padding: 30px 0;
+    }
 
     @include breakpoint(medium) {
       padding: 50px 0;
@@ -113,6 +117,8 @@ body *{
 
   & .fc-section-gradient{
     background: linear-gradient(142deg, #062F6E 20.23%, #31969E 75.99%);
+    padding-left: 1rem !important;
+    padding-right: 1ren !important;
 
     & *:not(a.button)  {
       color: #fff;

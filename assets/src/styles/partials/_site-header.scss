@@ -163,6 +163,11 @@ $top-header-link-color: $top-header-link-color;
   .menu-icon {
     margin-top: 9px;
     float: right;
+
+    &:after{
+      background: #fff;
+      box-shadow: 0 7px 0 #fff, 0 14px 0 #fff;
+    }
   }
   
   .main-logo {
@@ -267,7 +272,7 @@ $top-header-link-color: $top-header-link-color;
         background-color: transparent;
 
         > a {
-          border-color: $secondary !important;
+          border-color: $pet-md-gray !important;
           background-color: transparent;
         }
 
@@ -425,6 +430,11 @@ $top-header-link-color: $top-header-link-color;
 .off-canvas {
   padding: 60px 30px;
 
+
+  &.is-transition-overlap{
+    z-index: 99 !important;
+  }
+
   .close-button {
     position: absolute;
     left: 1rem;
@@ -441,6 +451,7 @@ $top-header-link-color: $top-header-link-color;
         color: #fff;
         font-weight: 600;
         padding: 12px 0;
+        text-decoration: none;
       }
 
       &.active {
@@ -497,6 +508,7 @@ $top-header-link-color: $top-header-link-color;
           > a {
             color: #fff;
             font-size: 14px;
+            text-decoration: none;
           }
 
           &.active {
