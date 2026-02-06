@@ -167,42 +167,10 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_6978eb0415a7f": {
-                    "key": "layout_6978eb0415a7f",
-                    "name": "section_image_cards",
-                    "label": "Image Cards",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_6978eb0515a82",
-                            "label": "Image Cards",
-                            "name": "image_cards",
-                            "aria-label": "",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_6978e9bba1c7f"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_68f147bf15582": {
                     "key": "layout_68f147bf15582",
                     "name": "section_cards",
-                    "label": "Boxed Cards [Flagged for Removal]",
+                    "label": "Boxed Cards",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -285,6 +253,38 @@
                             },
                             "clone": [
                                 "group_672245220ae45"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_68f91244ca6ad": {
+                    "key": "layout_68f91244ca6ad",
+                    "name": "section_accordion_tabs",
+                    "label": "Tabbed Accordion",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68f91260ca6b0",
+                            "label": "accordion_tabs",
+                            "name": "tabs",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_67478f4bacf07"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -487,15 +487,15 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_6983d58ccedba": {
-                    "key": "layout_6983d58ccedba",
+                "layout_69861487ff2ee": {
+                    "key": "layout_69861487ff2ee",
                     "name": "section_animated_numbers",
                     "label": "Animated Numbers",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_6983d59bcedbd",
-                            "label": "Animated Numbers",
+                            "key": "field_69861491ff2f1",
+                            "label": "Animated Number",
                             "name": "animated_numbers",
                             "aria-label": "",
                             "type": "clone",
@@ -509,38 +509,6 @@
                             },
                             "clone": [
                                 "group_6983d4af7e06f"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_6984b21e6346a": {
-                    "key": "layout_6984b21e6346a",
-                    "name": "section_featured_callout",
-                    "label": "Featured Callout",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_6984b2256346d",
-                            "label": "Featured Callout",
-                            "name": "featured_callout",
-                            "aria-label": "",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_6984b17adfa83"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -576,5 +544,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1770304052
+    "modified": 1770396456
 }
