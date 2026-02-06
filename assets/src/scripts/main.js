@@ -43,11 +43,13 @@ import { CountUp } from 'countup.js';
 
             let targetNumber = element.getAttribute('data-target');
             let delayMs = element.getAttribute('data-delay');
+            let startVal = element.getAttribute('data-start') || 0;
             let countUp = new CountUp(element, targetNumber, {
               duration: 2,
               separator: ',',
               enableScrollSpy: true,
               scrollSpyOnce: true,
+              startVal: startVal,
             });
             setTimeout( () => {
               if (!countUp.error) {
