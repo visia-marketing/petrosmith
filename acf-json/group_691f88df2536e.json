@@ -3,27 +3,6 @@
     "title": "COMPONENT: Download Category Grid",
     "fields": [
         {
-            "key": "field_691f892a6af0b",
-            "label": "Title",
-            "name": "title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "Leave blank for default category title",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_691f88df05ace",
             "label": "Choose Category",
             "name": "download_category_ids",
@@ -42,7 +21,7 @@
             "save_terms": 0,
             "load_terms": 0,
             "return_format": "object",
-            "field_type": "select",
+            "field_type": "multi_select",
             "allow_null": 0,
             "allow_in_bindings": 0,
             "bidirectional": 0,
@@ -69,5 +48,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1770392220
+    "modified": 1770394141
 }
