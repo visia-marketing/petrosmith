@@ -2,9 +2,14 @@
     display: flex;
     width: 100%;
     max-width: 100%;
+   
 }
 
 .flexible-market-icons{
+
+    &.row{
+        max-width: $global-width;
+    }
     
     & .slick-slide > div{
         display: flex;
@@ -83,18 +88,30 @@
     }
 
     .slick-arrow{
+
+
         @media screen and (max-width: 768px){
             position: absolute;
             bottom: 0;
             top:calc(100% + 1rem);
-
         }
 
         &.slick-prev{
-            left: calc(50% - 3rem);
+            
+            @media screen and (max-width: 1300px){
+                left: 0;
+            }
+            @media screen and (max-width: 768px){
+                left: calc(50% - 3rem);
+            }
         }
         &.slick-next{
-            right: calc(50% - 3rem);
+            @media screen and (max-width: 1300px){
+                right: 0;
+            }
+            @media screen and (max-width: 768px){
+                right: calc(50% - 3rem);
+            }
         }
     }
 }
