@@ -10054,6 +10054,93 @@ body .sl-wrapper .sl-counter {
   background-color: #A7A8A9;
 }
 
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4.5rem;
+  margin-bottom: 4rem;
+  padding-right: 0.78125rem;
+  padding-left: 0.78125rem;
+}
+@media screen and (max-width: 1024px) {
+  .download-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .download-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.download-grid.row::before {
+  display: none;
+}
+.download-grid h2 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.download-grid .download-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  text-decoration: none;
+}
+.download-grid .download-item a {
+  width: 100%;
+  display: flex;
+}
+.download-grid .download-item .download-thumbnail {
+  aspect-ratio: 3/4;
+  background: #f5f5f5;
+  width: 100%;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.download-grid .download-item .download-thumbnail:not(:has(img)):after {
+  content: "\f56d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: block;
+  font-size: 3rem;
+  color: #31969E;
+  transition: color 0.3s ease;
+}
+.download-grid .download-item .download-thumbnail:hover:not(:has(img)):after {
+  color: #062F6E;
+}
+.download-grid .download-item .download-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border-radius: 3px;
+}
+.download-grid .download-item:hover img {
+  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.3);
+}
+.download-grid .download-item .download-title {
+  color: #000;
+  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.44;
+}
+
+.category-title-row.row:has(h2.download-category-title) {
+  width: 100%;
+}
+.category-title-row.row:has(h2.download-category-title) h2 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
 .fc-wrapper .top-border > .fc-section-heading,
 .fc-page-header .top-border > .fc-section-heading {
   border-top: 1px solid #000000;

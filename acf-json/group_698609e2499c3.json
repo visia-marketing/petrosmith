@@ -1,11 +1,11 @@
 {
-    "key": "group_691f88df2536e",
-    "title": "COMPONENT: Download Category Grid",
+    "key": "group_698609e2499c3",
+    "title": "COMPONENT: Downloads Grid",
     "fields": [
         {
-            "key": "field_691f88df05ace",
-            "label": "Choose Category",
-            "name": "download_category_ids",
+            "key": "field_698609e2ce3a0",
+            "label": "Choose Categories",
+            "name": "choose_categories",
             "aria-label": "",
             "type": "taxonomy",
             "instructions": "",
@@ -17,10 +17,10 @@
                 "id": ""
             },
             "taxonomy": "dlm_download_category",
-            "add_term": 0,
+            "add_term": 1,
             "save_terms": 0,
             "load_terms": 0,
-            "return_format": "object",
+            "return_format": "id",
             "field_type": "multi_select",
             "allow_null": 0,
             "allow_in_bindings": 0,
@@ -48,5 +48,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1770394141
+    "modified": 1770392109
 }
