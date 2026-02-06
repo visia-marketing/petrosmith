@@ -10078,7 +10078,9 @@ body .sl-wrapper .sl-counter {
 }
 .download-grid h2 {
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  padding-right: 0.78125rem;
+  padding-left: 0.78125rem;
 }
 .download-grid .download-item {
   display: flex;
@@ -10133,10 +10135,10 @@ body .sl-wrapper .sl-counter {
   line-height: 1.44;
 }
 
-.category-title-row.row:has(h2.download-category-title) {
+.row:has(h2.download-category-title) {
   width: 100%;
 }
-.category-title-row.row:has(h2.download-category-title) h2 {
+.row:has(h2.download-category-title) h2 {
   text-align: left;
   margin-bottom: 1.5rem;
   padding-right: 0.78125rem;
