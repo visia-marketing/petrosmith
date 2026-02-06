@@ -26,7 +26,6 @@
 //$terms = get_terms( 'dlm_download_category' );
 
 $terms = get_sub_field("download_category_ids");
-print_r($terms);
 
 foreach ( $terms as $term ) {
     echo '<div class="row category-title-row"><div class="column small-12">';
