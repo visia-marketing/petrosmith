@@ -9792,6 +9792,9 @@ body .sl-wrapper .sl-counter {
   max-width: 100%;
 }
 
+.flexible-market-icons.row {
+  max-width: 81.25rem;
+}
 .flexible-market-icons .slick-slide > div {
   display: flex;
   width: 100%;
@@ -9861,11 +9864,25 @@ body .sl-wrapper .sl-counter {
     top: calc(100% + 1rem);
   }
 }
-.flexible-market-icons .slick-arrow.slick-prev {
-  left: calc(50% - 3rem);
+@media screen and (max-width: 1300px) {
+  .flexible-market-icons .slick-arrow.slick-prev {
+    left: 0;
+  }
 }
-.flexible-market-icons .slick-arrow.slick-next {
-  right: calc(50% - 3rem);
+@media screen and (max-width: 768px) {
+  .flexible-market-icons .slick-arrow.slick-prev {
+    left: calc(50% - 3rem);
+  }
+}
+@media screen and (max-width: 1300px) {
+  .flexible-market-icons .slick-arrow.slick-next {
+    right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .flexible-market-icons .slick-arrow.slick-next {
+    right: calc(50% - 3rem);
+  }
 }
 
 .fc-section-dark .market-icon-card__name {
