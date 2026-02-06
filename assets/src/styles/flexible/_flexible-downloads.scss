@@ -27,7 +27,9 @@
 
     & h2{
         text-align: left;
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
+        padding-right: 0.78125rem;
+        padding-left: 0.78125rem;
     }
 
 
@@ -100,7 +102,7 @@
 }
 
 
-.category-title-row.row:has( h2.download-category-title ){
+.row:has( h2.download-category-title ){
 	width: 100%;
 
 	& h2{
