@@ -35,30 +35,26 @@ import { CountUp } from 'countup.js';
         });
 
 
-        if( document.querySelector('.petro-animated-number') ) {
+        if (document.querySelector('.petro-animated-number')) {
           const animatedNumbers = document.querySelectorAll('.petro-animated-number .number-span');
-          //var delay = 100; // initial delay in milliseconds
-
-          animatedNumbers.forEach( (element) => {
-
-            let targetNumber = element.getAttribute('data-target');
-            let delayMs = element.getAttribute('data-delay');
-            let startVal = element.getAttribute('data-start') || 0;
+        
+          animatedNumbers.forEach((element) => {
+            let targetNumber = parseInt(element.getAttribute('data-target'), 10);
+            let delayMs = parseInt(element.getAttribute('data-delay'), 10);
+            let startVal = parseInt(element.getAttribute('data-start'), 10) || 0;
+        
             let countUp = new CountUp(element, targetNumber, {
               duration: 2,
               separator: ',',
               enableScrollSpy: true,
               scrollSpyOnce: true,
+              scrollSpyDelay: delayMs,
               startVal: startVal,
             });
-            setTimeout( () => {
-              if (!countUp.error) {
-                countUp.start();
-              } else {
-                console.error(countUp.error);
-              }
-            }, delayMs);
-
+        
+            if (countUp.error) {
+              console.error(countUp.error);
+            }
           });
         }
 
