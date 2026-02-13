@@ -19,7 +19,7 @@ $terms = get_field('terms_and_conditions', 'option');
       <div class="footer-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo $footer_logo; ?>" alt="<?php bloginfo('name'); ?>"></a>
         <div class="footer-badges">
-          <?php echo esc_html( $footer_badges ); ?>
+          <?php echo $footer_badges; ?>
         </div>
       </div>
     </div>
