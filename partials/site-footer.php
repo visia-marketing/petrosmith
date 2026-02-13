@@ -3,6 +3,7 @@
 $footer_images = get_field('footer_images', 'option');
 $footer_logo = $footer_images['footer_logo'];
 $footer_badge = $footer_images['footer_badge'];
+$footer_badges = $footer_images['footer_badges'];
 
 $footer_links = get_field('footer_links', 'option');
 $button = $footer_links['cta_button'];
@@ -17,27 +18,8 @@ $terms = get_field('terms_and_conditions', 'option');
     <div class="small-12 large-4 columns">
       <div class="footer-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo $footer_logo; ?>" alt="<?php bloginfo('name'); ?>"></a>
-        <div class="footer-badges" style="display: flex; flex-direction: row; gap: 10px;">
-        <?php if ( have_rows('footer_badges', 'option') ) : ?>
-          <?php while ( have_rows('footer_badges', 'option') ) : the_row(); 
-            $footer_badge = get_sub_field('footer_badge'); // URL or array
-
-            // Support either return format
-            if ( is_array($footer_badge) && isset($footer_badge['url']) ) {
-              $footer_badge_url = $footer_badge['url'];
-              $footer_badge_alt = !empty($footer_badge['alt']) ? $footer_badge['alt'] : get_bloginfo('name');
-            } else {
-              $footer_badge_url = $footer_badge;
-              $footer_badge_alt = get_bloginfo('name');
-            }
-
-            if ( empty($footer_badge_url) ) continue;
-          ?>
-            <img src="<?php echo esc_url($footer_badge_url); ?>"
-            alt="<?php echo esc_attr($footer_badge_alt); ?>"
-            class="footer-badge">
-          <?php endwhile; ?>
-        <?php endif; ?>
+        <div class="footer-badges">
+          <?php echo esc_html( $footer_badges ); ?>
         </div>
       </div>
     </div>
