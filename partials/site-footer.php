@@ -17,7 +17,7 @@ $terms = get_field('terms_and_conditions', 'option');
     <div class="small-12 large-4 columns">
       <div class="footer-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo $footer_logo; ?>" alt="<?php bloginfo('name'); ?>"></a>
-        
+        <div class="footer-badges" style="display: flex; flex-direction: row; gap: 10px;">
         <?php if ( have_rows('footer_badges', 'option') ) : ?>
           <?php while ( have_rows('footer_badges', 'option') ) : the_row(); 
             $footer_badge = get_sub_field('footer_badge'); // URL or array
@@ -35,8 +35,7 @@ $terms = get_field('terms_and_conditions', 'option');
           ?>
             <img src="<?php echo esc_url($footer_badge_url); ?>"
             alt="<?php echo esc_attr($footer_badge_alt); ?>"
-            class="footer-badge"
-            style="display:block; height:40px; width:auto;">
+            class="footer-badge">
           <?php endwhile; ?>
         <?php endif; ?>
 
