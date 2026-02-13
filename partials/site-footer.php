@@ -17,7 +17,28 @@ $terms = get_field('terms_and_conditions', 'option');
     <div class="small-12 large-4 columns">
       <div class="footer-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo $footer_logo; ?>" alt="<?php bloginfo('name'); ?>"></a>
-        <img src="<?php echo $footer_badge;?>" alt="<?php bloginfo('name'); ?>" class="footer-badge">
+        
+        <?php if ( have_rows('footer_badges', 'option') ) : ?>
+          <?php while ( have_rows('footer_badges', 'option') ) : the_row(); 
+            $footer_badge = get_sub_field('footer_badge'); // URL or array
+
+            // Support either return format
+            if ( is_array($footer_badge) && isset($footer_badge['url']) ) {
+              $footer_badge_url = $footer_badge['url'];
+              $footer_badge_alt = !empty($footer_badge['alt']) ? $footer_badge['alt'] : get_bloginfo('name');
+            } else {
+              $footer_badge_url = $footer_badge;
+              $footer_badge_alt = get_bloginfo('name');
+            }
+
+            if ( empty($footer_badge_url) ) continue;
+          ?>
+            <img src="<?php echo esc_url($footer_badge_url); ?>"
+                alt="<?php echo esc_attr($footer_badge_alt); ?>"
+                class="footer-badge">
+          <?php endwhile; ?>
+        <?php endif; ?>
+
       </div>
     </div>
     <div class="small-12 medium-4 medium-offset-1 large-offset-0 large-3 columns">   
