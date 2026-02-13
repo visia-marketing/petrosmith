@@ -38,7 +38,7 @@ $terms = get_field('terms_and_conditions', 'option');
             class="footer-badge">
           <?php endwhile; ?>
         <?php endif; ?>
-
+        </div>
       </div>
     </div>
     <div class="small-12 medium-4 medium-offset-1 large-offset-0 large-3 columns">   
