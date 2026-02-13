@@ -33,8 +33,8 @@ $terms = get_field('terms_and_conditions', 'option');
 
             if ( empty($footer_badge_url) ) continue;
           ?>
-            <img src="<?php echo esc_url($url); ?>"
-            alt="<?php echo esc_attr($alt); ?>"
+            <img src="<?php echo esc_url($footer_badge_url); ?>"
+            alt="<?php echo esc_attr($footer_badge_alt); ?>"
             class="footer-badge"
             style="display:block; height:40px; width:auto;">
           <?php endwhile; ?>
