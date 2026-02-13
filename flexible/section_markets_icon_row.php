@@ -4,7 +4,14 @@ $markets = get_sub_field('choose_markets');
 
 $slider = get_sub_field('display');
 $per_row = get_sub_field('row_display');
-$class = '';  
+$class = ''; 
+
+$count_markets = count($markets);
+
+if( $count_markets < $per_row ){
+    $per_row = $count_markets;
+}
+
 
 
 if( $slider == 1 ){
