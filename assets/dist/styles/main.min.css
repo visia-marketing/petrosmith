@@ -9186,6 +9186,31 @@ body .g-round-image {
   margin-bottom: 0;
   aspect-ratio: 4/3;
 }
+.fc-section-cards .cards-style--primary .content-cards .card-color {
+  aspect-ratio: 4/3;
+}
+.fc-section-cards .cards-style--primary .content-cards .card-color--gradient {
+  background: linear-gradient(339deg, #062F6E -13.82%, #31969E 110.77%);
+}
+.fc-section-cards .cards-style--primary .content-cards .card-color--blue {
+  background-color: #062F6E;
+}
+.fc-section-cards .cards-style--primary .content-cards .card-color--gray {
+  background-color: #A4A2A3;
+}
+.fc-section-cards .cards-style--primary .content-cards .card-color--teal {
+  background-color: #31969E;
+}
+.fc-section-cards .cards-style--primary .content-cards .card-color + div.card-content {
+  background-color: transparent !important;
+  height: 100% !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fc-section-cards .cards-style--primary .content-cards .card-color + div.card-content .title-container {
+  position: relative !important;
+}
 .fc-section-cards .cards-style--primary .content-cards .card-content {
   width: 100%;
   position: absolute;
@@ -9300,6 +9325,19 @@ body .g-round-image {
   display: inline-block;
   background-size: cover;
   background-image: url("data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15\" height=\"13\" viewBox=\"0 0 15 13\" fill=\"none\"><path d=\"M8 11.8687L14 5.86865L8 0.368652\" stroke=\"%23FFFFFF\"/><path d=\"M0 5.86865H13.5\" stroke=\"%23FFFFFF\"/></svg>");
+}
+.fc-section-cards .cards-style--primary.card-hover--enable.card-hover--reveal .card-content {
+  top: 0;
+}
+.fc-section-cards .cards-style--primary.card-hover--enable.card-hover--reveal .card-content .card-p {
+  height: 0;
+}
+.fc-section-cards .cards-style--primary.card-hover--enable.card-hover--reveal .card-content .title-container {
+  margin-top: 0;
+  transition: margin 0.4s ease;
+}
+.fc-section-cards .cards-style--primary.card-hover--enable.card-hover--reveal .card-content:hover .title-container {
+  margin-top: -25%;
 }
 .fc-section-cards .cards-style--primary.card-hover--enable .content-cards:hover .card-content {
   top: 0;
