@@ -62,6 +62,38 @@
                     aspect-ratio: 4/3;
                 }
 
+                & .card-color{
+                    aspect-ratio: 4/3;
+
+                    &--gradient{
+                        background: linear-gradient(339deg, #062F6E -13.82%, #31969E 110.77%);
+                    }
+                    &--blue{
+                        background-color: $primary;
+                    }
+                    &--gray{
+                        background-color: $secondary;
+                    }
+                    &--teal{
+                        background-color: $teal;
+                    }
+
+
+
+                    & + div.card-content{
+                            background-color: transparent !important;
+                            height: 100% !important;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+
+                            & .title-container{
+                                position: relative !important;
+                            }
+                    }
+
+                }
+
 
                 & .card-content{
                     width: 100%;
@@ -224,6 +256,31 @@
                             }
                         }
                     }
+                }
+
+                &.card-hover--reveal{
+
+                    & .card-content{
+                        top: 0;
+
+                        & .card-p{
+                            height: 0;
+                        }
+
+                        & .title-container{
+                            margin-top: 0;
+                            transition: margin 0.4s ease;
+                        }
+
+                        &:hover{
+
+                            & .title-container{
+                                margin-top: -25%;
+                            }
+
+                        }
+                    }
+
                 }
                 
 

@@ -3,6 +3,7 @@
 $footer_images = get_field('footer_images', 'option');
 $footer_logo = $footer_images['footer_logo'];
 $footer_badge = $footer_images['footer_badge'];
+$footer_badges = $footer_images['footer_badges'];
 
 $footer_links = get_field('footer_links', 'option');
 $button = $footer_links['cta_button'];
@@ -17,7 +18,9 @@ $terms = get_field('terms_and_conditions', 'option');
     <div class="small-12 large-4 columns">
       <div class="footer-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo $footer_logo; ?>" alt="<?php bloginfo('name'); ?>"></a>
-        <img src="<?php echo $footer_badge;?>" alt="<?php bloginfo('name'); ?>" class="footer-badge">
+        <div class="footer-badges">
+          <?php echo $footer_badges; ?>
+        </div>
       </div>
     </div>
     <div class="small-12 medium-4 medium-offset-1 large-offset-0 large-3 columns">   
