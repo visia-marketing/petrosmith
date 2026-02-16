@@ -79,17 +79,19 @@ if( !$slider ){
 
                     <div class="card-content">
 
+                        <div class="content--inner">
+                            <div class="title-container">
+                                <h3 class="card-title">
+                                    <?php echo $card['card_title']; ?>
+                                </h3>
+                            </div>
                             
-                        <div class="title-container">
-                            <h3 class="card-title">
-                                <?php echo $card['card_title']; ?>
-                            </h3>
-                        </div>
                         
-                    
-                        <p class="card-p">
-                            <?php echo $card['card_description']; ?>
-                        </p>
+                            <p class="card-p">
+                                <?php echo $card['card_description']; ?>
+                            </p>
+                        </div>
+
 
                         <?php if( array_key_exists( 'card_link', $card) ): ?>
                             <?php if( is_array( $card['card_link']) ): ?>

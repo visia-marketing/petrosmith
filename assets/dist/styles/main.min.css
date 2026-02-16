@@ -9330,14 +9330,25 @@ body .g-round-image {
   top: 0;
 }
 .fc-section-cards .cards-style--primary.card-hover--enable.card-hover--reveal .card-content .card-p {
-  height: 0;
+  height: auto;
+  margin-top: 3rem;
+  transition: all 0.4s ease 0.1s;
+  padding-bottom: 0;
 }
 .fc-section-cards .cards-style--primary.card-hover--enable.card-hover--reveal .card-content .title-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.4s ease;
+}
+.fc-section-cards .cards-style--primary.card-hover--enable.card-hover--reveal .card-content:hover .card-p {
   margin-top: 0;
-  transition: margin 0.4s ease;
+  transition: all 0.4s ease 0s;
 }
 .fc-section-cards .cards-style--primary.card-hover--enable.card-hover--reveal .card-content:hover .title-container {
-  margin-top: -25%;
+  position: relative;
+  top: 0%;
+  transform: translateY(0%);
 }
 .fc-section-cards .cards-style--primary.card-hover--enable .content-cards:hover .card-content {
   top: 0;
