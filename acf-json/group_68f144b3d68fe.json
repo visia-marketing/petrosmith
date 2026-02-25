@@ -582,6 +582,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_699f072fb0184": {
+                    "key": "layout_699f072fb0184",
+                    "name": "section_featured_callout",
+                    "label": "Featured Callout",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_699f0737b0187",
+                            "label": "Featured Callout",
+                            "name": "featured_callout",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6984b17adfa83"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -608,5 +640,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1771536908
+    "modified": 1772029764
 }
