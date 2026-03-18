@@ -6,6 +6,7 @@
 }
 
 .flexible-market-icons{
+    position: relative;
 
     &.row{
         max-width: $global-width;
@@ -87,17 +88,22 @@
         }
     }
 
-    .slick-arrow{
+    .icon-row {
+        @media screen and (max-width: 768px){
+            padding-bottom: 3.5rem;
+        }
+    }
 
+    .slick-arrow{
 
         @media screen and (max-width: 768px){
             position: absolute;
+            top: auto !important;
             bottom: 0;
-            top:calc(100% + 1rem);
         }
 
         &.slick-prev{
-            
+
             @media screen and (max-width: 1300px){
                 left: 0;
             }

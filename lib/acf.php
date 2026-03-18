@@ -97,47 +97,39 @@ function get_flexible_content() {
       $vertical_align = get_sub_field('vertical_align') ?: '';
       $horizontal_align = get_sub_field('horizontal_align') ?: '';
 
-      //echo get_row_layout();
+      // Padding/spacing as CSS classes — avoids a <style> block per section
+      $section_classes  = 'fc-pt-' . (int)$top_padding . ' fc-pb-' . (int)$bottom_padding;
+      $section_classes .= $content_spacing ? ' fc-gap-' . (int)$content_spacing : '';
+
+      // Flex layout & alignment still use an inline <style> (ID specificity needed)
       echo '<style>
-
-        #' . esc_html($id) . ' {
-          padding-top: ' . esc_html( ($top_padding * 1.5) ) . 'rem;
-          padding-bottom: ' . esc_html( ($bottom_padding * 1.5 ) ) . 'rem;
-          position: relative;
-        }
-
         #' . esc_html($id) . '.fc-section {
           display: flex;
           flex-direction: column;
           align-items: center;
-          justify-content: ' . esc_html($horizontal_align) . ';
-          gap: ' . esc_html( ($content_spacing) ) . 'rem;
+          justify-content: ' . esc_html($horizontal_align ?: 'flex-start') . ';
+          gap: ' . esc_html((int)$content_spacing) . 'rem;
         }
-
         #' . esc_html($id) . ' > .fc-section-columns {
           min-width: 100%;
         }
       </style>';
 
       // add background image if set
-      echo '<style>';
-        if ($background === 'image' && $background_image_id) {
-          $background_image_url = wp_get_attachment_image_url($background_image_id, 'full');
-          echo '#' . esc_html($id) . '::before { 
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            display: block;
-            background-image: url(' . esc_url($background_image_url) . '); 
-            background-size: cover; 
-            background-position: center; 
-          }';
-        }
-      echo '</style>';
+      if ($background === 'image' && $background_image_id) {
+        $background_image_url = wp_get_attachment_image_url($background_image_id, 'full');
+        echo '<style>#' . esc_html($id) . '::before {
+          content: "";
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          z-index: -1;
+          display: block;
+          background-image: url(' . esc_url($background_image_url) . ');
+          background-size: cover;
+          background-position: center;
+        }</style>';
+      }
 
 
 
@@ -151,7 +143,7 @@ function get_flexible_content() {
        * - fc-section-[background]: Background type class
        * - Custom classes from ACF fields
        */
-      echo '<section class="fc-section fc-section-' . esc_attr(get_row_index()) . ' fc-section-' . esc_attr($background) . ' ' . esc_attr($class) . '" id="' . esc_attr($id) . '">';
+      echo '<section class="fc-section fc-section-' . esc_attr(get_row_index()) . ' fc-section-' . esc_attr($background) . ' ' . $section_classes . ' ' . esc_attr($class) . '" id="' . esc_attr($id) . '">';
 
       /**
        * Output background image if applicable

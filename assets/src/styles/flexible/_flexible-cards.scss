@@ -77,7 +77,7 @@
                     &--teal{
                         background-color: $teal;
                     }
-
+ 
 
 
                     & + div.card-content{
@@ -326,6 +326,14 @@
                 }
             }
 
+            &.card-hover--hidden{
+                & .content-cards{
+                    & .card-content{
+                        display: none;
+                    }
+                }
+            }
+
             &.card-hover--disable{
                 & .content-cards{
                     aspect-ratio: unset;
@@ -479,8 +487,101 @@
 
 }
 
+// Allow carousel arrows to extend outside the grid without being clipped.
+.fc-section.fc-section-has-slider {
+    overflow: visible;
+}
+
 .fc-section-columns + .fc-section-cards{
     margin-top: 2rem;
+}
+
+.fc-section-cards .padding-row {
+    width: 100%;
+}
+
+.fc-section-cards .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    clear: both;
+
+    .slick-prev,
+    .slick-next {
+        width: auto;
+        height: auto;
+        z-index: 1;
+
+        &:before {
+            content: '';
+            display: none;
+        }
+
+        svg {
+            display: block;
+
+            path {
+                stroke: $primary;
+            }
+        }
+    }
+
+    .slick-prev {
+        left: -2.5rem;
+    }
+
+    .slick-next {
+        right: -2.5rem;
+    }
+
+    @include breakpoint(small only) {
+        padding-bottom: 3.5rem;
+
+        .cards-style--primary .content-cards {
+            aspect-ratio: 4/3;
+            max-height: 75vw;
+        }
+
+        .slick-prev,
+        .slick-next {
+            top: auto;
+            bottom: 0;
+            transform: translateY(0);
+        }
+
+        .slick-prev {
+            left: calc(50% - 2.5rem);
+        }
+
+        .slick-next {
+            right: calc(50% - 2.5rem);
+        }
+    }
+}
+
+// Light/grey backgrounds — blue arrows (default, but explicit)
+.fc-section-light,
+.fc-section-grey,
+.fc-section-gray,
+.background--light {
+    .fc-section-cards .carousel-wrapper {
+        .slick-prev svg path,
+        .slick-next svg path {
+            stroke: $primary;
+        }
+    }
+}
+
+// Dark/gradient/image-dark backgrounds — white arrows
+.fc-section-dark,
+.fc-section-gradient,
+.background--dark {
+    .fc-section-cards .carousel-wrapper {
+        .slick-prev svg path,
+        .slick-next svg path {
+            stroke: #fff;
+        }
+    }
 }
 
 

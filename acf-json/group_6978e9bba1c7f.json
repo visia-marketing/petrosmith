@@ -69,7 +69,8 @@
                 "disable": "Disable",
                 "overlay-white": "White Overlay",
                 "overlay-blue": "Blue Overlay",
-                "overlay-teal": "Teal Overlay"
+                "overlay-teal": "Teal Overlay",
+                "hidden": "Hidden (no overlay)"
             },
             "default_value": false,
             "return_format": "value",
@@ -275,5 +276,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1770233959
+    "modified": 1773851632
 }

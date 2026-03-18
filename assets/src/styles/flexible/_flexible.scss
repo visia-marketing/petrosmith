@@ -27,7 +27,7 @@
     overflow: hidden;
 
     &:has(.fc-section-cta){
-      padding: 30px 0;
+      padding: 0;
     }
 
     @include breakpoint(medium) {
@@ -76,7 +76,7 @@
 
 
     & h2{
-      padding-top: 2.5rem;
+      padding-top: 0.5rem;
     }
 
     & p:has(.g-section-subtitle),
@@ -102,14 +102,14 @@
 }
 body{
   p, li, blockquote {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.6rem;
   }
 }
 
 body{
   p, li, blockquote {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.6rem;
   }
 }
@@ -180,6 +180,41 @@ body *{
 
 
 
+
+// ─── Section padding utility classes ────────────────────────────────────────
+// Values mirror ACF select index × 1.5rem (none/tiny/small/medium/large/xlarge)
+.fc-pt-0 { padding-top: 0; }
+.fc-pt-1 { padding-top: 1.5rem; }
+.fc-pt-2 { padding-top: 3rem; }
+.fc-pt-3 { padding-top: 4.5rem; }
+.fc-pt-4 { padding-top: 6rem; }
+.fc-pt-5 { padding-top: 7.5rem; }
+
+.fc-pb-0 { padding-bottom: 0; }
+.fc-pb-1 { padding-bottom: 1.5rem; }
+.fc-pb-2 { padding-bottom: 3rem; }
+.fc-pb-3 { padding-bottom: 4.5rem; }
+.fc-pb-4 { padding-bottom: 6rem; }
+.fc-pb-5 { padding-bottom: 7.5rem; }
+
+// Content gap (flex gap between modules inside a section)
+.fc-gap-0 { gap: 0; }
+.fc-gap-1 { gap: 1rem; }
+.fc-gap-2 { gap: 2rem; }
+.fc-gap-3 { gap: 3rem; }
+.fc-gap-4 { gap: 4rem; }
+.fc-gap-5 { gap: 5rem; }
+
+// Vertical alignment (align-items on the column flex container)
+.fc-va-start  { align-items: flex-start; }
+.fc-va-center { align-items: center; }
+.fc-va-end    { align-items: flex-end; }
+
+// Horizontal alignment (justify-content on the column flex container)
+.fc-ha-start  { justify-content: flex-start; }
+.fc-ha-center { justify-content: center; }
+.fc-ha-end    { justify-content: flex-end; }
+// ─────────────────────────────────────────────────────────────────────────────
 
 .fc-section-cta {
 

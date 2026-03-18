@@ -10,9 +10,11 @@ $aos_duration = get_sub_field('aos_duration') ?? 1000;
 $slider = get_sub_field('card_display') ?? 0;
 
 
-$class = 'columns cards cards-style--'.$card_style;
+$class = ($slider ? '' : 'columns ') . 'cards cards-style--'.$card_style;
 
-if( $card_hover != 'disable'){
+if( $card_hover == 'hidden' ){
+    $class .= ' card-hover--hidden';
+}elseif( $card_hover != 'disable'){
     $class .= ' card-hover--enable';
     $class .= ' card-hover--'.$card_hover;
 }else{
@@ -51,7 +53,7 @@ if( !$slider ){
 
 <div class="fc-section-columns fc-section-cards" id="<?php echo $rand_id; ?>">
 
-  <div class="row padding-row" data-equalizer>
+  <div class="row padding-row"<?php if(!$slider): ?> data-equalizer<?php endif; ?>>
     
     <?php get_template_part('flexible/section_header'); ?>
     
@@ -62,7 +64,7 @@ if( !$slider ){
             <?php $delay += 100; ?>
 
             <div class="<?php echo $class; ?>">
-                <div class="content content-cards" <?php if($aos != 'none'): ?>data-aos="fade-up" data-aos-duration="<?php echo $aos_duration; ?>" data-aos-delay="<?php echo $delay; ?>"<?php endif; ?>  data-equalizer-watch>
+                <div class="content content-cards" <?php if($aos != 'none'): ?>data-aos="fade-up" data-aos-duration="<?php echo $aos_duration; ?>" data-aos-delay="<?php echo $delay; ?>"<?php endif; ?><?php if(!$slider): ?> data-equalizer-watch<?php endif; ?>>
 
                 <?php if( array_key_exists( 'card_link', $card) ): ?>
                     <?php if( is_array( $card['card_link']) ): ?>
@@ -131,28 +133,54 @@ if( !$slider ){
 
 </div>
 
-<style>
-    #<?php echo $rand_id;?> .carousel-wrapper .slick-prev:before,
-    #<?php echo $rand_id;?> .carousel-wrapper .slick-next:before{
-        content: '';
-
-
-    }
-    #<?php echo $rand_id;?> .carousel-wrapper svg *{
-        stroke: #fff;
-    }
-</style>
-
+<?php if( $slider ): ?>
 <script>
     jQuery(function($) {
-        $('#<?php echo $rand_id;?> .carousel-wrapper').slick({
+        var $carousel = $('#<?php echo $rand_id;?> .carousel-wrapper');
+
+        // Allow the carousel arrows (positioned outside the carousel) to show
+        // beyond the grid without being clipped by the section's overflow:hidden.
+        $carousel.closest('.fc-section').addClass('fc-section-has-slider');
+
+        function setCarouselWidth() {
+            $carousel.width($carousel.parent().width());
+        }
+
+        setCarouselWidth();
+
+        $carousel.slick({
             infinite: true,
             slidesToShow: <?php echo $per_row; ?>,
             slidesToScroll: 1,
             arrows: true,
             dots: false,
-            prevArrow: '<button type="button" class="slick-prev cards-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="41" viewBox="0 0 23 41" fill="none"> <path d="M21.123 1.5L2.12129 20.5018L21.123 39.5035" stroke="#062F6E" stroke-width="3" stroke-linecap="round"/></svg></button>',
-            nextArrow: '<button type="button" class="slick-next cards-prev"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="41" viewBox="0 0 23 41" fill="none"><path d="M1.5 39.5034L20.5018 20.5017L1.5 1.4999" stroke="#062F6E" stroke-width="3" stroke-linecap="round"/></svg></button>',
+            prevArrow: '<button type="button" class="slick-prev cards-prev"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="41" viewBox="0 0 23 41" fill="none"> <path d="M21.123 1.5L2.12129 20.5018L21.123 39.5035" stroke="#062F6E" stroke-width="3" stroke-linecap="round"/></svg></button>',
+            nextArrow: '<button type="button" class="slick-next cards-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="41" viewBox="0 0 23 41" fill="none"><path d="M1.5 39.5034L20.5018 20.5017L1.5 1.4999" stroke="#062F6E" stroke-width="3" stroke-linecap="round"/></svg></button>',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: Math.min(<?php echo (int)$per_row; ?>, 2),
+                    }
+                },
+                {
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
+
+        // Keep carousel width correct when viewport is resized.
+        var resizeTimer;
+        $(window).on('resize.cards-<?php echo $rand_id; ?>', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                setCarouselWidth();
+                $carousel.slick('resize');
+            }, 150);
         });
     });
 </script>
+<?php endif; ?>

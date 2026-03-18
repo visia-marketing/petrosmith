@@ -16,12 +16,12 @@ body .main-footer {
   }
 
   & > .row:first-child{
-    border-top: 1px solid $white;
+    border-top: none;
     padding-top: 2.6rem;
   }
 
   & > .row:nth-child(2){
-    border-top: 1px solid $white;
+    border-top: 1px solid #ffffff14;
     padding-top: 2.6rem;
   }
 
@@ -200,9 +200,11 @@ body .main-footer {
   }
 
   .footer-badges {
-    border-bottom: 1px solid rgba(#fff,.7);
-    margin-top: 50px;
+    border-top: 1px solid rgba(#fff,.7);
+    border-bottom: none;
+    margin-top: 0;
     margin-bottom: 20px;
+    padding-top: 20px;
     padding-bottom: 15px;
     display: flex;
     flex-direction: column;
