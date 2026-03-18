@@ -84,7 +84,7 @@
         padding-right: 3rem;
 
         @include breakpoint(small only) {
-          font-size: 1.2rem;
+          font-size: 1.25rem;
         }
       }
 
@@ -193,6 +193,7 @@
   }
 
 }
+
 
 
 .fc-section-columns + .fc-section-accordion-simple,
