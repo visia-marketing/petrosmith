@@ -3,6 +3,18 @@
   text-align: center;
 }
 
+.not-rounded {
+  border-radius: 0 !important;
+}
+
+.icon-row {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 // Remove focus outline
 :focus {
   outline: none;
