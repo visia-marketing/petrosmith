@@ -8991,7 +8991,7 @@ body .g-round-image {
 }
 @media screen and (max-width: 39.9375em) {
   .fc-section-accordion-simple .accordion .accordion-topic h4, .fc-section-accordion-tabs .accordion .accordion-topic h4 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 }
 .fc-section-accordion-simple .accordion .accordion-topic .accordion-arrow, .fc-section-accordion-tabs .accordion .accordion-topic .accordion-arrow {
