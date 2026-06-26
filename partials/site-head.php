@@ -14,9 +14,9 @@
 
   <?php wp_head(); ?> 
 
-  <?php if ( get_field('google_tag_manager_id', 'options') ):?>
+  <?php if ( get_field('google_tag_manager_id', 'options') ): global $csp_nonce; ?>
     <!-- Google Tag Manager -->
-    <script nonce="<?php echo $csp_nonce;?>">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script nonce="<?php echo esc_attr( $csp_nonce ?? '' );?>">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
