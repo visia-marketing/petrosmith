@@ -53,7 +53,7 @@ add_filter( 'wpseo_metabox_prio',  __NAMESPACE__ . '\\yoasttobottom');
  * Add Gravity Form Events to GA4
  */
 
-add_action('gform_after_submission', 'send_ga4_server_event', 10, 2);
+add_action('gform_after_submission', __NAMESPACE__ . '\\send_ga4_server_event', 10, 2);
 function send_ga4_server_event($entry, $form) {
 
     $measurement_id = 'G-NY598NTE4V';
