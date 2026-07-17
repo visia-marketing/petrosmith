@@ -26,8 +26,6 @@ $content = get_sub_field('callout_content');
 
             </div>
 
-
-
         </div>
 
     </div>
